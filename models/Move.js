@@ -5,6 +5,10 @@ class Move extends Model {}
 
 Move.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     // ** id will auto generate
     name: {
       type: DataTypes.STRING,
@@ -13,15 +17,20 @@ Move.init(
       //   isAlpha: true,
       // },
     },
+
     power: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     accuracy: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
     },

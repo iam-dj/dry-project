@@ -13,15 +13,19 @@ Trainer.belongsTo(User);
 
 Trainer.hasMany(Pokemon);
 
-Pokemon.hasMany(Trainer);
-
 Pokemon.belongsTo(Trainer);
 
 Pokemon.hasMany(Move);
 
+Move.belongsTo(Pokemon);
+
 Gym.hasOne(NPC);
 
-NPC.hasOne(Pokemon);
+NPC.belongsTo(Gym);
+
+NPC.hasMany(Pokemon);
+
+Pokemon.belongsTo(NPC);
 
 module.exports = {
   NPC: NPC,
