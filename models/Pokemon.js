@@ -52,7 +52,18 @@ Pokemon.init(
       allowNull: false,
     },
     //add properties for moves
-
+    move1_id: {
+      type: DataTypes.INTEGER,
+    },
+    move2_id: {
+      type: DataTypes.INTEGER,
+    },
+    move3_id: {
+      type: DataTypes.INTEGER,
+    },
+    move4_id: {
+      type: DataTypes.INTEGER,
+    },
     //**attack foreign keys: will auto generate
   },
   {
