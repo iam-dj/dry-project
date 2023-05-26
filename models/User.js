@@ -1,32 +1,30 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Attack extends Model {}
+class User extends Model {}
 
-Attack.init(
+User.init(
   {
     // ** id will auto generate
-    attack_name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       // validate: {
       //   isAlpha: true,
       // },
     },
-    attack_power: {
-      type: DataTypes.NUMBER,
+    password: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    attack_accuracy: {
-      type: DataTypes.DATE,
-      allowNull: false,
+    new_user: {
+      type: DataTypes.BOOLEAN,
     },
-    //**trainer foreign key: will auto generate
-    //**pokemon foreign key: will auto generate
+    //**foreign key: will auto generate
   },
   {
     sequelize,
   }
 );
 
-module.exports = Attack;
+module.exports = User;
