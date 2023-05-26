@@ -5,18 +5,6 @@ class Trainer extends Model {}
 
 Trainer.init(
   {
-    // ** id will auto generate
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      // validate: {
-      //   isAlpha: true,
-      // },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     trainer_gender: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -36,9 +24,6 @@ Trainer.init(
     numLosses: {
       type: DataTypes.INT,
       allowNull: false,
-    },
-    new_user: {
-      type: DataTypes.INT,
     },
     //**foreign key: will auto generate
   },

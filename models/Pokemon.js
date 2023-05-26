@@ -7,15 +7,27 @@ Pokemon.init(
   {
     // ** id will auto generate
 
-    pokemon_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    pokemon_type: {
+    type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    pokemon_level: {
+    secondary_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    level: {
+      type: DataTypes.INT,
+      allowNull: false,
+    },
+    hp: {
+      type: DataTypes.INT,
+      allowNull: false,
+    },
+    experience: {
       type: DataTypes.INT,
       allowNull: false,
     },
@@ -23,22 +35,16 @@ Pokemon.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    pokemon_exp: {
-      type: DataTypes.INT,
-      allowNull: false,
-    },
     evolution_id: {
       type: DataTypes.INT,
       allowNull: false,
     },
     rarity: {
-      //change this to boolean?
       type: DataTypes.STRING,
       allowNull: false,
     },
     tier: {
-      //change this to boolean?
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     weakness: {
@@ -47,6 +53,10 @@ Pokemon.init(
     },
     strength: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    isCaught: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
 
