@@ -20,15 +20,15 @@ Pokemon.init(
       allowNull: false,
     },
     level: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     hp: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     experience: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     img_url: {
@@ -36,7 +36,7 @@ Pokemon.init(
       allowNull: false,
     },
     evolution_id: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     rarity: {
@@ -47,19 +47,23 @@ Pokemon.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    weakness: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    strength: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     isCaught: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-
+    //add properties for moves
+    move1_id: {
+      type: DataTypes.INTEGER,
+    },
+    move2_id: {
+      type: DataTypes.INTEGER,
+    },
+    move3_id: {
+      type: DataTypes.INTEGER,
+    },
+    move4_id: {
+      type: DataTypes.INTEGER,
+    },
     //**attack foreign keys: will auto generate
   },
   {
