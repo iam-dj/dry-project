@@ -17,9 +17,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    new_user: {
-      type: DataTypes.BOOLEAN,
-    },
+   
     //**foreign key: will auto generate
   },
   {

@@ -6,7 +6,7 @@ class Gym extends Model {}
 Gym.init(
   {
     // ** id will auto generate
-    gym_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
 
@@ -19,7 +19,7 @@ Gym.init(
       allowNull: false,
       //this will be from our npc table
     },
-    gym_badge: {
+    badge_name: {
       //put badge img link here?
       type: DataTypes.STRING,
       allowNull: false,
