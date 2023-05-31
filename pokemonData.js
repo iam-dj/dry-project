@@ -1,4 +1,4 @@
-[
+const pokemonReferenceData = [
   {
     name: "Bulbasaur",
     type: "grass",
@@ -19,7 +19,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/001bulbasaur_buvbux.png",
     hp: 100,
-    },
+  },
   {
     name: "Ivysaur",
     type: "grass",
@@ -40,7 +40,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/002ivysaur_abqi3c.png",
     hp: 100,
-    },
+  },
   {
     name: "Venusaur",
     type: "grass",
@@ -61,7 +61,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/003venusaur_zkyiww.png",
     hp: 100,
-    },
+  },
   {
     name: "Charmander",
     type: "fire",
@@ -82,7 +82,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/004charmander_h67gmz.png",
     hp: 100,
-    },
+  },
   {
     name: "Charmeleon",
     type: "fire",
@@ -103,7 +103,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/005charmeleon_tg2h5v.png",
     hp: 100,
-    },
+  },
   {
     name: "Charizard",
     type: "fire",
@@ -124,7 +124,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/006charizard_oshtvp.png",
     hp: 100,
-    },
+  },
   {
     name: "Squirtle",
     type: "water",
@@ -145,7 +145,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/007squirtle_rpx9yc.png",
     hp: 100,
-    },
+  },
   {
     name: "Wartortle",
     type: "water",
@@ -166,7 +166,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/008wartortle_elkrpj.png",
     hp: 100,
-    },
+  },
   {
     name: "Blastoise",
     type: "water",
@@ -187,7 +187,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/009blastoise_q3jis6.png",
     hp: 100,
-    },
+  },
   {
     name: "Caterpie",
     type: "bug",
@@ -208,7 +208,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/010caterpie_hoxnoy.png",
     hp: 100,
-    },
+  },
   {
     name: "Metapod",
     type: "bug",
@@ -229,7 +229,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/011metapod_znlhgt.png",
     hp: 100,
-    },
+  },
   {
     name: "Butterfree",
     type: "bug",
@@ -250,7 +250,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896180/012butterfree_ehxmmz.png",
     hp: 100,
-    },
+  },
   {
     name: "Weedle",
     type: "bug",
@@ -271,7 +271,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896180/013weedle_bjicdr.png",
     hp: 100,
-    },
+  },
   {
     name: "Kakuna",
     type: "bug",
@@ -292,7 +292,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896180/014kakuna_fn0p9n.png",
     hp: 100,
-    },
+  },
   {
     name: "Beedrill",
     type: "bug",
@@ -313,7 +313,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896180/015beedrill_oj8eye.png",
     hp: 100,
-    },
+  },
   {
     name: "Pidgey",
     type: "normal",
@@ -334,7 +334,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896180/016pidgey_dnc3a1.png",
     hp: 100,
-    },
+  },
   {
     name: "Pidgeotto",
     type: "normal",
@@ -355,7 +355,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896180/017pidgeotto_kurn9i.png",
     hp: 100,
-    },
+  },
   {
     name: "Pidgeot",
     type: "normal",
@@ -376,7 +376,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896180/018pidgeot_vrgb5y.png",
     hp: 100,
-    },
+  },
   {
     name: "Rattata",
     type: "normal",
@@ -397,7 +397,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/019rattata_murak1.png",
     hp: 100,
-    },
+  },
   {
     name: "Raticate",
     type: "normal",
@@ -418,7 +418,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/020raticate_p3udbn.png",
     hp: 100,
-    },
+  },
   {
     name: "Spearow",
     type: "normal",
@@ -439,7 +439,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/021spearow_oyyn65.png",
     hp: 100,
-    },
+  },
   {
     name: "Fearow",
     type: "normal",
@@ -460,7 +460,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/022fearow_gulf9l.png",
     hp: 100,
-    },
+  },
   {
     name: "Ekans",
     type: "poison",
@@ -481,7 +481,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896182/023ekans_aoinvc.png",
     hp: 100,
-    },
+  },
   {
     name: "Arbok",
     type: "poison",
@@ -502,7 +502,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/024arbok_pouikt.png",
     hp: 100,
-    },
+  },
   {
     name: "Pikachu",
     type: "electric",
@@ -523,7 +523,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/025pikachu_q66dwq.png",
     hp: 100,
-    },
+  },
   {
     name: "Raichu",
     type: "electric",
@@ -544,7 +544,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/026raichu_oi2nci.png",
     hp: 100,
-    },
+  },
   {
     name: "Sandshrew",
     type: "ground",
@@ -565,7 +565,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/027sandshrew_xpsxma.png",
     hp: 100,
-    },
+  },
   {
     name: "Sandslash",
     type: "ground",
@@ -586,7 +586,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896182/028sandslash_dqtrix.png",
     hp: 100,
-    },
+  },
   {
     name: "Nidoran♀",
     type: "poison",
@@ -607,7 +607,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896182/029nidoran_bo6c22.png",
     hp: 100,
-    },
+  },
   {
     name: "Nidorina",
     type: "poison",
@@ -628,7 +628,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896182/030nidorina_zxvqta.png",
     hp: 100,
-    },
+  },
   {
     name: "Nidoqueen",
     type: "poison",
@@ -649,7 +649,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896182/031nidoqueen_iyzwmv.png",
     hp: 100,
-    },
+  },
   {
     name: "Nidoran♂",
     type: "poison",
@@ -670,7 +670,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896182/032nidoran_yw0phh.png",
     hp: 100,
-    },
+  },
   {
     name: "Nidorino",
     type: "poison",
@@ -691,7 +691,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896182/033nidorino_kc4ae3.png",
     hp: 100,
-    },
+  },
   {
     name: "Nidoking",
     type: "poison",
@@ -712,7 +712,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896183/034nidoking_qrecwj.png",
     hp: 100,
-    },
+  },
   {
     name: "Clefairy",
     type: "fairy",
@@ -733,7 +733,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896183/035clefairy_veeacy.png",
     hp: 100,
-    },
+  },
   {
     name: "Clefable",
     type: "fairy",
@@ -754,7 +754,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896183/036clefable_c2ekjd.png",
     hp: 100,
-    },
+  },
   {
     name: "Vulpix",
     type: "fire",
@@ -775,7 +775,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896183/037vulpix_odwnss.png",
     hp: 100,
-    },
+  },
   {
     name: "Ninetales",
     type: "fire",
@@ -796,7 +796,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896183/038ninetales_nawnyy.png",
     hp: 100,
-    },
+  },
   {
     name: "Jigglypuff",
     type: "fairy",
@@ -817,7 +817,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896183/039jigglypuff_ycippk.png",
     hp: 100,
-    
   },
   {
     name: "Wigglytuff",
@@ -839,7 +838,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896184/040wigglytuff_yas06i.png",
     hp: 100,
-    
   },
   {
     name: "Zubat",
@@ -861,7 +859,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896184/041zubat_rodkvz.png",
     hp: 100,
-    },
+  },
   {
     name: "Golbat",
     type: "poison",
@@ -882,7 +880,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896184/042golbat_zswxfg.png",
     hp: 100,
-    },
+  },
   {
     name: "Oddish",
     type: "grass",
@@ -903,7 +901,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896184/043oddish_xsl2aw.png",
     hp: 100,
-    },
+  },
   {
     name: "Gloom",
     type: "grass",
@@ -924,7 +922,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896184/044gloom_wa5bdg.png",
     hp: 100,
-    },
+  },
   {
     name: "Vileplume",
     type: "grass",
@@ -945,7 +943,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896184/045vileplume_wrlvxl.png",
     hp: 100,
-    },
+  },
   {
     name: "Paras",
     type: "bug",
@@ -966,7 +964,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896185/046paras_mffg7w.png",
     hp: 100,
-    },
+  },
   {
     name: "Parasect",
     type: "bug",
@@ -987,7 +985,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896185/047parasect_she7i4.png",
     hp: 100,
-    },
+  },
   {
     name: "Venonat",
     type: "bug",
@@ -1008,7 +1006,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896185/048venonat_sl224y.png",
     hp: 100,
-    },
+  },
   {
     name: "Venomoth",
     type: "bug",
@@ -1029,7 +1027,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896185/049venomoth_trlfd0.png",
     hp: 100,
-    },
+  },
   {
     name: "Diglett",
     type: "ground",
@@ -1050,7 +1048,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896185/050diglett_mwvsmd.png",
     hp: 100,
-    },
+  },
   {
     name: "Dugtrio",
     type: "ground",
@@ -1071,7 +1069,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896185/051dugtrio_cl3zuz.png",
     hp: 100,
-    },
+  },
   {
     name: "Meowth",
     type: "normal",
@@ -1092,7 +1090,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/052meowth_tqld32.png",
     hp: 100,
-    },
+  },
   {
     name: "Persian",
     type: "normal",
@@ -1113,7 +1111,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/053persian_xgbopz.png",
     hp: 100,
-    },
+  },
   //
   //
   //
@@ -1142,7 +1140,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/054psyduck_s5pwcu.png",
     hp: 100,
-    },
+  },
   {
     name: "Golduck",
     type: "water",
@@ -1163,7 +1161,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/055golduck_xfa34l.png",
     hp: 100,
-    },
+  },
   {
     name: "Mankey",
     type: "Fighting",
@@ -1184,7 +1182,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/056mankey_kxpjlc.png",
     hp: 100,
-    },
+  },
   {
     name: "Primeape",
     type: "Fighting",
@@ -1205,7 +1203,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/057primeape_vniids.png",
     hp: 100,
-    },
+  },
   {
     name: "Growlithe",
     type: "fire",
@@ -1226,7 +1224,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/058growlithe_ajrmg5.png",
     hp: 100,
-    },
+  },
   {
     name: "Arcanine",
     type: "fire",
@@ -1247,7 +1245,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/059arcanine_p24is4.png",
     hp: 100,
-    },
+  },
   {
     name: "Poliwag",
     type: "water",
@@ -1268,7 +1266,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/060poliwag_qxbnfo.png",
     hp: 100,
-    },
+  },
   {
     name: "Poliwhirl",
     type: "water",
@@ -1289,7 +1287,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/061poliwhirl_apqrrj.png",
     hp: 100,
-    },
+  },
   {
     name: "Poliwrath",
     type: "water",
@@ -1310,7 +1308,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/062poliwrath_j5i0cp.png",
     hp: 100,
-    },
+  },
   {
     name: "Abra",
     type: "psychic",
@@ -1331,7 +1329,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/063abra_ntkn7l.png",
     hp: 100,
-    },
+  },
   {
     name: "Kadabra",
     type: "psychic",
@@ -1352,7 +1350,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/064kadabra_ccz8qo.png",
     hp: 100,
-    },
+  },
   {
     name: "Alakazam",
     type: "psychic",
@@ -1373,7 +1371,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/065alakazam_odb9na.png",
     hp: 100,
-    },
+  },
   {
     name: "Machop",
     type: "Fighting",
@@ -1394,7 +1392,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/066machop_rsrysv.png",
     hp: 100,
-    },
+  },
   {
     name: "Machoke",
     type: "Fighting",
@@ -1415,7 +1413,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/067machoke_kyeyxc.png",
     hp: 100,
-    },
+  },
   {
     name: "Machamp",
     type: "Fighting",
@@ -1436,7 +1434,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/068machamp_hi5tpy.png",
     hp: 100,
-    },
+  },
   {
     name: "Bellsprout",
     type: "grass",
@@ -1457,7 +1455,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/069bellsprout_l7gkvt.png",
     hp: 100,
-    },
+  },
   {
     name: "Weepinbell",
     type: "grass",
@@ -1478,7 +1476,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/070weepinbell_ah69mp.png",
     hp: 100,
-    },
+  },
   {
     name: "Victreebel",
     type: "grass",
@@ -1499,7 +1497,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/071victreebel_edpn4l.png",
     hp: 100,
-    },
+  },
   {
     name: "Tentacool",
     type: "water",
@@ -1520,7 +1518,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/072tentacool_pmrxpg.png",
     hp: 100,
-    },
+  },
   {
     name: "Tentacruel",
     type: "water",
@@ -1541,7 +1539,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/073tentacruel_vgmn4z.png",
     hp: 100,
-    },
+  },
   {
     name: "Geodude",
     type: "rock",
@@ -1562,7 +1560,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/074geodude_qmwjbw.png",
     hp: 100,
-    },
+  },
   {
     name: "Graveler",
     type: "rock",
@@ -1583,7 +1581,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/075graveler_lmzxsk.png",
     hp: 100,
-    },
+  },
   {
     name: "Golem",
     type: "rock",
@@ -1604,7 +1602,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/076golem_musf2s.png",
     hp: 100,
-    },
+  },
   {
     name: "Ponyta",
     type: "fire",
@@ -1625,7 +1623,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/077ponyta_zrwt7b.png",
     hp: 100,
-    },
+  },
   {
     name: "Rapidash",
     type: "fire",
@@ -1646,7 +1644,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/078rapidash_qmcy2n.png",
     hp: 100,
-    },
+  },
   {
     name: "Slowpoke",
     type: "psychic",
@@ -1667,7 +1665,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/079slowpoke_rlykll.png",
     hp: 100,
-    },
+  },
   {
     name: "Slowbro",
     type: "psychic",
@@ -1688,7 +1686,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/080slowbro_et5vqg.png",
     hp: 100,
-    },
+  },
   {
     name: "Magnemite",
     type: "electric",
@@ -1709,7 +1707,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/081magnemite_s7nep7.png",
     hp: 100,
-    },
+  },
   {
     name: "Magneton",
     type: "electric",
@@ -1730,7 +1728,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/082magneton_brbl3f.png",
     hp: 100,
-    },
+  },
   {
     name: "Farfetch'd",
     type: "normal",
@@ -1751,7 +1749,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/083farfetchd_dzp5rq.png",
     hp: 100,
-    },
+  },
   {
     name: "Doduo",
     type: "normal",
@@ -1772,7 +1770,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/084doduo_sxvkcu.png",
     hp: 100,
-    },
+  },
   {
     name: "Dodrio",
     type: "normal",
@@ -1793,7 +1791,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/085dodrio_srjeqx.png",
     hp: 100,
-    },
+  },
   {
     name: "Seel",
     type: "water",
@@ -1814,7 +1812,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/086seel_phja05.png",
     hp: 100,
-    },
+  },
   {
     name: "Dewgong",
     type: "Ice",
@@ -1835,7 +1833,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/087dewgong_i8r0cv.png",
     hp: 100,
-    },
+  },
   {
     name: "Grimer",
     type: "poison",
@@ -1856,7 +1854,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/088grimer_ohtu44.png",
     hp: 100,
-    },
+  },
   {
     name: "Muk",
     type: "poison",
@@ -1877,7 +1875,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/089muk_pnaen7.png",
     hp: 100,
-    
   },
   {
     name: "Shellder",
@@ -1899,7 +1896,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/090shellder_gm735j.png",
     hp: 100,
-    },
+  },
   {
     name: "Cloyster",
     type: "Ice",
@@ -1920,7 +1917,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/091cloyster_borxbq.png",
     hp: 100,
-    },
+  },
   {
     name: "Gastly",
     type: "Ghost",
@@ -1941,7 +1938,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/092gastly_dydqxr.png",
     hp: 100,
-    },
+  },
   {
     name: "Haunter",
     type: "Ghost",
@@ -1962,7 +1959,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/093haunter_xp0oie.png",
     hp: 100,
-    },
+  },
   {
     name: "Gengar",
     type: "Ghost",
@@ -1983,7 +1980,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/094gengar_eqqs0x.png",
     hp: 100,
-    },
+  },
   {
     name: "Onix",
     type: "rock",
@@ -2004,7 +2001,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/095onix_pprb9h.png",
     hp: 100,
-    },
+  },
   {
     name: "Drowzee",
     type: "psychic",
@@ -2025,7 +2022,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/096drowzee_cqpycs.png",
     hp: 100,
-    },
+  },
   {
     name: "Hypno",
     type: "psychic",
@@ -2046,7 +2043,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/097hypno_e34lmq.png",
     hp: 100,
-    },
+  },
   {
     name: "Krabby",
     type: "water",
@@ -2067,7 +2064,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/098krabby_uertei.png",
     hp: 100,
-    },
+  },
   {
     name: "Kingler",
     type: "water",
@@ -2088,7 +2085,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/099kingler_t10ern.png",
     hp: 100,
-    },
+  },
   {
     name: "Voltorb",
     type: "electric",
@@ -2109,7 +2106,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/100voltorb_wqm1xu.png",
     hp: 100,
-    },
+  },
   {
     name: "Electrode",
     type: "electric",
@@ -2130,7 +2127,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/101electrode_mzyjlp.png",
     hp: 100,
-    },
+  },
   {
     name: "Exeggcute",
     type: "grass",
@@ -2151,7 +2148,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/102exeggcute_wbwlbc.png",
     hp: 100,
-    },
+  },
   {
     name: "Exeggutor",
     type: "grass",
@@ -2172,7 +2169,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896192/103exeggutor_t5m5kt.png",
     hp: 100,
-    },
+  },
   {
     name: "Cubone",
     type: "ground",
@@ -2193,7 +2190,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896192/104cubone_gvgkq1.png",
     hp: 100,
-    },
+  },
   {
     name: "Marowak",
     type: "ground",
@@ -2214,7 +2211,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896192/105marowak_jafnpx.png",
     hp: 100,
-    },
+  },
   {
     name: "Hitmonlee",
     type: "Fighting",
@@ -2235,7 +2232,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896192/106hitmonlee_hj37uk.png",
     hp: 100,
-    },
+  },
   {
     name: "Hitmonchan",
     type: "Fighting",
@@ -2256,7 +2253,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896192/107hitmonchan_s1upzu.png",
     hp: 100,
-    },
+  },
   {
     name: "Lickitung",
     type: "normal",
@@ -2277,7 +2274,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896192/108lickitung_mj2vvc.png",
     hp: 100,
-    },
+  },
   {
     name: "Koffing",
     type: "poison",
@@ -2298,7 +2295,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896192/109koffing_i7yotl.png",
     hp: 100,
-    },
+  },
   {
     name: "Weezing",
     type: "poison",
@@ -2319,7 +2316,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/110weezing_nfjxlk.png",
     hp: 100,
-    },
+  },
   {
     name: "Rhyhorn",
     type: "ground",
@@ -2340,7 +2337,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/111rhyhorn_yi6s1w.png",
     hp: 100,
-    },
+  },
   {
     name: "Rhydon",
     type: "ground",
@@ -2361,7 +2358,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/112rhydon_qag8rn.png",
     hp: 100,
-    
   },
   {
     name: "Chansey",
@@ -2383,7 +2379,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/113chansey_faawf0.png",
     hp: 100,
-    
   },
   {
     name: "Tangela",
@@ -2405,7 +2400,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/114tangela_wplxop.png",
     hp: 100,
-    },
+  },
   {
     name: "Kangaskhan",
     type: "normal",
@@ -2426,7 +2421,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/115kangaskhan_jouywt.png",
     hp: 100,
-    
   },
   {
     name: "Horsea",
@@ -2448,7 +2442,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/116horsea_vxowfy.png",
     hp: 100,
-    },
+  },
   {
     name: "Seadra",
     type: "water",
@@ -2469,7 +2463,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896194/117seadra_beicdl.png",
     hp: 100,
-    },
+  },
   {
     name: "Goldeen",
     type: "water",
@@ -2490,7 +2484,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/118goldeen_dcyhb0.png",
     hp: 100,
-    },
+  },
   {
     name: "Seaking",
     type: "water",
@@ -2511,7 +2505,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896194/119seaking_doptqb.png",
     hp: 100,
-    },
+  },
   {
     name: "Staryu",
     type: "water",
@@ -2532,7 +2526,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896194/120staryu_dmpnmi.png",
     hp: 100,
-    },
+  },
   {
     name: "Starmie",
     type: "psychic",
@@ -2553,7 +2547,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/121starmie_eoheez.png",
     hp: 100,
-    },
+  },
   {
     name: "Mr. Mime",
     type: "psychic",
@@ -2574,7 +2568,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/122mrmime_hvyxb2.png",
     hp: 100,
-    },
+  },
   {
     name: "Scyther",
     type: "bug",
@@ -2595,7 +2589,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/123scyther_xmbhnn.png",
     hp: 100,
-    },
+  },
   {
     name: "Jynx",
     type: "psychic",
@@ -2616,7 +2610,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/124jynx_lj8v9p.png",
     hp: 100,
-    },
+  },
   {
     name: "Electabuzz",
     type: "electric",
@@ -2637,7 +2631,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/125electabuzz_jfp7qa.png",
     hp: 100,
-    },
+  },
   {
     name: "Magmar",
     type: "fire",
@@ -2658,7 +2652,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/126magmar_ltw1l2.png",
     hp: 100,
-    },
+  },
   {
     name: "Pinsir",
     type: "bug",
@@ -2679,7 +2673,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896196/127pinsir_mw4ces.png",
     hp: 100,
-    },
+  },
   {
     name: "Tauros",
     type: "normal",
@@ -2700,7 +2694,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/128tauros_ms5ozq.png",
     hp: 100,
-    },
+  },
   {
     name: "Magikarp",
     type: "water",
@@ -2721,7 +2715,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/129magikarp_ekylji.png",
     hp: 100,
-    },
+  },
   {
     name: "Gyarados",
     type: "water",
@@ -2742,7 +2736,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896196/130gyarados_gtodwf.png",
     hp: 100,
-    },
+  },
   {
     name: "Lapras",
     type: "water",
@@ -2763,7 +2757,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896196/131lapras_e3lkcw.png",
     hp: 100,
-    
   },
   {
     name: "Ditto",
@@ -2785,7 +2778,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896196/132ditto_amaimh.png",
     hp: 100,
-    },
+  },
   {
     name: "Eevee",
     type: "normal",
@@ -2806,7 +2799,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896196/133eevee_xs6iuy.png",
     hp: 100,
-    },
+  },
   {
     name: "Vaporeon",
     type: "water",
@@ -2827,7 +2820,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896197/134vaporeon_ry2jxi.png",
     hp: 100,
-    
   },
   {
     name: "Jolteon",
@@ -2849,7 +2841,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896197/135jolteon_nso7ba.png",
     hp: 100,
-    },
+  },
   {
     name: "Flareon",
     type: "fire",
@@ -2870,7 +2862,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896197/136flareon_sc9gs1.png",
     hp: 100,
-    },
+  },
   {
     name: "Porygon",
     type: "normal",
@@ -2891,7 +2883,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896197/137porygon_ur8og1.png",
     hp: 100,
-    },
+  },
   {
     name: "Omanyte",
     type: "rock",
@@ -2912,7 +2904,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896197/138omanyte_ezn3ma.png",
     hp: 100,
-    },
+  },
   {
     name: "Omastar",
     type: "rock",
@@ -2933,7 +2925,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896197/139omastar_sakq5o.png",
     hp: 100,
-    },
+  },
   {
     name: "Kabuto",
     type: "rock",
@@ -2954,7 +2946,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/140kabuto_pzdlp8.png",
     hp: 100,
-    },
+  },
   {
     name: "Kabutops",
     type: "rock",
@@ -2975,7 +2967,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/141kabutops_yc33hk.png",
     hp: 100,
-    },
+  },
   {
     name: "Aerodactyl",
     type: "rock",
@@ -2996,7 +2988,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/142aerodactyl_fjpooj.png",
     hp: 100,
-    },
+  },
   {
     name: "Snorlax",
     type: "normal",
@@ -3017,7 +3009,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/143snorlax_aoedmd.png",
     hp: 100,
-    
   },
   {
     name: "Articuno",
@@ -3039,7 +3030,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/144articuno_dxvgoo.png",
     hp: 100,
-    },
+  },
   {
     name: "Zapdos",
     type: "electric",
@@ -3060,7 +3051,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/145zapdos_ylomxx.png",
     hp: 100,
-    },
+  },
   {
     name: "Moltres",
     type: "fire",
@@ -3081,7 +3072,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/146moltres_vlxywq.png",
     hp: 100,
-    },
+  },
   {
     name: "Dratini",
     type: "dragon",
@@ -3102,7 +3093,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/147dratini_ugyggt.png",
     hp: 100,
-    },
+  },
   {
     name: "Dragonair",
     type: "dragon",
@@ -3123,7 +3114,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/148dragonair_c8f2td.png",
     hp: 100,
-    },
+  },
   {
     name: "Dragonite",
     type: "dragon",
@@ -3144,7 +3135,7 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896198/149dragonite_b1vnar.png",
     hp: 100,
-    },
+  },
   {
     name: "Mewtwo",
     type: "psychic",
@@ -3165,7 +3156,6 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896178/150mewtwo_nl7c61.png",
     hp: 100,
-    
   },
   {
     name: "Mew",
@@ -3187,6 +3177,5 @@
     img_url:
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684901802/mew-png_jppzde.png",
     hp: 100,
-    
   },
 ];

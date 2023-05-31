@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Pewter Gym",
+    "gym_master": "Brock",
+    "badge_name": "Boulder Badge"
+  },
+  {
+    "name": "Cerulean Gym",
+    "gym_master": "Misty",
+    "badge_name": "Cascade Badge"
+  },
+  {
+    "name": "Vermilion Gym",
+    "gym_master": "Lt. Surge",
+    "badge_name": "Thunder Badge"
+  },
+  {
+    "name": "Celadon Gym",
+    "gym_master": "Erika",
+    "badge_name": "Rainbow Badge"
+  },
+  {
+    "name": "Saffron Gym",
+    "gym_master": "Sabrina",
+    "badge_name": "Marsh Badge"
+  },
+  {
+    "name": "Fuchsia Gym",
+    "gym_master": "Koga",
+    "badge_name": "Soul Badge"
+  },
+  {
+    "name": "Cinnabar Gym",
+    "gym_master": "Blaine",
+    "badge_name": "Volcano Badge"
+  },
+  {
+    "name": "Viridian Gym",
+    "gym_master": "Giovanni",
+    "badge_name": "Earth Badge"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Lebron James",
+    "pokemonId": 25
+  },
+  {
+    "name": "Jimmy Butler",
+    "pokemonId": 120
+  },
+  {
+    "name": "Michael Jordan",
+    "pokemonId": 95
+  },
+  {
+    "name": "Karl Malone",
+    "pokemonId": 102
+  },
+  {
+    "name": "Scottie Pippin",
+    "pokemonId": 80
+  },
+  {
+    "name": "Larry Bird",
+    "pokemonId": 90
+  },
+  {
+    "name": "Paul Pierce",
+    "pokemonId": 50
+  },
+  {
+    "name": "John Stockton",
+    "pokemonId": 23
+  },
+  {
+    "name": "Rasheed Wallace",
+    "pokemonId": 73
+  },
+  {
+    "name": "Ben Wallace",
+    "pokemonId": 121
+  },
+  {
+    "name": "Amare Stoudemire",
+    "pokemonId": 95
+  },
+  {
+    "name": "Klay Thompson",
+    "pokemonId": 33
+  },
+  {
+    "name": "Jayson Tatum",
+    "pokemonId": 45
+  },
+  {
+    "name": "Giannis",
+    "pokemonId": 76
+  },
+  {
+    "name": "Anthony David",
+    "pokemonId": 18
+  },
+  {
+    "name": "Kevin Durant",
+    "pokemonId": 29
+  },
+  {
+    "name": "Nikola Jocic",
+    "pokemonId": 59
+  },
+  {
+    "name": "Steve Nash",
+    "pokemonId": 118
+  }
+]

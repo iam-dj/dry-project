@@ -17,11 +17,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-   
+
     //**foreign key: will auto generate
   },
   {
     sequelize,
+    underscored: true,
   }
 );
 

@@ -5,16 +5,17 @@ class Trainer extends Model {}
 
 Trainer.init(
   {
-    trainer_gender: {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
+
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    trainer_age: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    trainer_badges: {
-      type: DataTypes.STRING,
+    age: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     numWins: {
@@ -61,6 +62,10 @@ Trainer.init(
   },
   {
     sequelize,
+    timestamps: false,
+    modelName: "Trainer",
+    tableName: "trainer",
+    underscored: true,
   }
 );
 
