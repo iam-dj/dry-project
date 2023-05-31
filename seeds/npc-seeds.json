@@ -1,74 +1,767 @@
 [
   {
-    "name": "Lebron James",
-    "pokemonId": 25
+    "name": "Red",
+    "pokemon_1": {
+      "id": 1,
+      "name": "Bulbasaur",
+      "type": "grass",
+      "secondary_type": "poison",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/001bulbasaur_buvbux.png",
+      "evolutionId": 1,
+      "rarity": "common",
+      "tier": 1,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 32,
+      "move2Id": 21,
+      "move3Id": 73,
+      "move4Id": 74,
+      "NPCId": null,
+      "move1": {
+        "id": 32,
+        "name": "Tackle",
+        "power": 40,
+        "type": "Normal",
+        "description": "A physical attack in which the user charges and slams into the target with its whole body."
+      },
+      "move2": {
+        "id": 21,
+        "name": "Vine Whip",
+        "power": 45,
+        "type": "Normal",
+        "description": "The target is struck with slender, whiplike vines to inflict damage."
+      },
+      "move3": {
+        "id": 73,
+        "name": "Razor Leaf",
+        "power": 55,
+        "type": "Grass",
+        "description": "Sharp-edged leaves are launched to slash at opposing Pokémon. Critical hits land more easily."
+      },
+      "move4": {
+        "id": 74,
+        "name": "Solar Beam",
+        "power": 120,
+        "type": "Normal",
+        "description": "In this two-turn attack, the user gathers energy and blasts a bundled beam on the next turn."
+      }
+    }
   },
   {
-    "name": "Jimmy Butler",
-    "pokemonId": 120
+    "name": "Blue",
+    "pokemon_1": {
+      "id": 21,
+      "name": "Spearow",
+      "type": "normal",
+      "secondary_type": "flying",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/021spearow_oyyn65.png",
+      "evolutionId": 1,
+      "rarity": "common",
+      "tier": 1,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 62,
+      "move2Id": 63,
+      "move3Id": 16,
+      "move4Id": 390,
+      "NPCId": null,
+      "move1": {
+        "id": 62,
+        "name": "Peck",
+        "power": 35,
+        "type": "Flying",
+        "description": "The target is jabbed with a sharply pointed beak or horn."
+      },
+      "move2": {
+        "id": 63,
+        "name": "Drill Peck",
+        "power": 80,
+        "type": "Flying",
+        "description": "A corkscrewing attack that strikes the target with a sharp beak acting as a drill."
+      },
+      "move3": {
+        "id": 16,
+        "name": "Gust",
+        "power": 40,
+        "type": "Flying",
+        "description": "A gust of wind is whipped up by wings and launched at the target to inflict damage."
+      },
+      "move4": {
+        "id": 390,
+        "name": "Aerial Ace",
+        "power": 60,
+        "type": "Flying",
+        "description": "The user confounds the target with a swift and cutting air current. This attack always strikes first and cannot be evaded."
+      }
+    }
   },
   {
-    "name": "Michael Jordan",
-    "pokemonId": 95
+    "name": "Leaf",
+    "pokemon_1": {
+      "id": 44,
+      "name": "Gloom",
+      "type": "grass",
+      "secondary_type": "poison",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896184/044gloom_wa5bdg.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 2,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 69,
+      "move2Id": 49,
+      "move3Id": 78,
+      "move4Id": 398,
+      "NPCId": null,
+      "move1": {
+        "id": 69,
+        "name": "Absorb",
+        "power": 20,
+        "type": "Grass",
+        "description": "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target."
+      },
+      "move2": {
+        "id": 49,
+        "name": "Acid",
+        "power": 40,
+        "type": "Grass",
+        "description": "The opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stat."
+      },
+      "move3": {
+        "id": 78,
+        "name": "Petal Dance",
+        "power": 120,
+        "type": "Grass",
+        "description": "The user attacks the target by scattering petals for two to three turns. The user then becomes confused."
+      },
+      "move4": {
+        "id": 398,
+        "name": "Sludge Bomb",
+        "power": 90,
+        "type": "Poison",
+        "description": "The user strikes the target with a sludge bomb. It may also poison the target."
+      }
+    }
   },
   {
-    "name": "Karl Malone",
-    "pokemonId": 102
+    "name": "Ethan",
+    "pokemon_1": {
+      "id": 51,
+      "name": "Dugtrio",
+      "type": "ground",
+      "secondary_type": null,
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896185/051dugtrio_cl3zuz.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 3,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 163,
+      "move2Id": 327,
+      "move3Id": 280,
+      "move4Id": 189,
+      "NPCId": null,
+      "move1": {
+        "id": 163,
+        "name": "Slash",
+        "power": 70,
+        "type": "Normal",
+        "description": "The target is attacked with a slash of claws or blades. Critical hits land more easily."
+      },
+      "move2": {
+        "id": 327,
+        "name": "Earth Power",
+        "power": 90,
+        "type": "Ground",
+        "description": "The user makes the ground under the target erupt with power. It may also lower the target's Sp. Def."
+      },
+      "move3": {
+        "id": 280,
+        "name": "Earthquake",
+        "power": 100,
+        "type": "Ground",
+        "description": "The user sets off an earthquake that strikes every Pokémon around it."
+      },
+      "move4": {
+        "id": 189,
+        "name": "Stone Edge",
+        "power": 100,
+        "type": "Rock",
+        "description": "The user stabs the target from below with sharpened stones. Critical hits land more easily."
+      }
+    }
   },
   {
-    "name": "Scottie Pippin",
-    "pokemonId": 80
+    "name": "Silver",
+    "pokemon_1": {
+      "id": 54,
+      "name": "Psyduck",
+      "type": "water",
+      "secondary_type": null,
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/054psyduck_s5pwcu.png",
+      "evolutionId": 1,
+      "rarity": "common",
+      "tier": 1,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 10,
+      "move2Id": 53,
+      "move3Id": 388,
+      "move4Id": 54,
+      "NPCId": null,
+      "move1": {
+        "id": 10,
+        "name": "Scratch",
+        "power": 40,
+        "type": "Normal",
+        "description": "Hard, pointed, sharp claws rake the target to inflict damage."
+      },
+      "move2": {
+        "id": 53,
+        "name": "Water Gun",
+        "power": 40,
+        "type": "Water",
+        "description": "The target is blasted with a forceful shot of water."
+      },
+      "move3": {
+        "id": 388,
+        "name": "Confusion",
+        "power": 50,
+        "type": "Psychic",
+        "description": "The target is struck by a peculiar ray. This may also leave the target confused."
+      },
+      "move4": {
+        "id": 54,
+        "name": "Hydro Pump",
+        "power": 110,
+        "type": "Water",
+        "description": "The target is blasted with a giant volume of water launched under great pressure."
+      }
+    }
   },
   {
-    "name": "Larry Bird",
-    "pokemonId": 90
+    "name": "Brendan",
+    "pokemon_1": {
+      "id": 59,
+      "name": "Arcanine",
+      "type": "fire",
+      "secondary_type": null,
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/059arcanine_p24is4.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 3,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 42,
+      "move2Id": 248,
+      "move3Id": 402,
+      "move4Id": 126,
+      "NPCId": null,
+      "move1": {
+        "id": 42,
+        "name": "Bite",
+        "power": 60,
+        "type": "Dark",
+        "description": "The target is bitten with viciously sharp fangs. It may make the target flinch."
+      },
+      "move2": {
+        "id": 248,
+        "name": "Flamethrower",
+        "power": 90,
+        "type": "Fire",
+        "description": "The target is scorched with an intense blast of fire. It may also leave the target with a burn."
+      },
+      "move3": {
+        "id": 402,
+        "name": "Extreme Speed",
+        "power": 80,
+        "type": "Normal",
+        "description": "The user charges at the target with blinding speed. This move always goes first."
+      },
+      "move4": {
+        "id": 126,
+        "name": "Fire Blast",
+        "power": 110,
+        "type": "Fire",
+        "description": "The target is attacked with an intense blast of all-consuming fire. It may also leave the target with a burn."
+      }
+    }
   },
   {
-    "name": "Paul Pierce",
-    "pokemonId": 50
+    "name": "May",
+    "pokemon_1": {
+      "id": 64,
+      "name": "Kadabra",
+      "type": "psychic",
+      "secondary_type": null,
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/064kadabra_ccz8qo.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 2,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 58,
+      "move2Id": 388,
+      "move3Id": 292,
+      "move4Id": 211,
+      "NPCId": null,
+      "move1": {
+        "id": 58,
+        "name": "Psybeam",
+        "power": 65,
+        "type": "Normal",
+        "description": "The target is attacked with a peculiar ray. It may also confuse the target."
+      },
+      "move2": {
+        "id": 388,
+        "name": "Confusion",
+        "power": 50,
+        "type": "Psychic",
+        "description": "The target is struck by a peculiar ray. This may also leave the target confused."
+      },
+      "move3": {
+        "id": 292,
+        "name": "Shadow Ball",
+        "power": 80,
+        "type": "Ghost",
+        "description": "The user hurls a shadowy blob at the target. It may also lower the target's Special Defense stat."
+      },
+      "move4": {
+        "id": 211,
+        "name": "Psychic",
+        "power": 90,
+        "type": "Psychic",
+        "description": "The target is hit by a strong telekinetic force. It may also reduce the target's Special Defense stat."
+      }
+    }
   },
   {
-    "name": "John Stockton",
-    "pokemonId": 23
+    "name": "Lucas",
+    "pokemon_1": {
+      "id": 67,
+      "name": "Machoke",
+      "type": "Fighting",
+      "secondary_type": null,
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/067machoke_kyeyxc.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 2,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 2,
+      "move2Id": 232,
+      "move3Id": 303,
+      "move4Id": 64,
+      "NPCId": null,
+      "move1": {
+        "id": 2,
+        "name": "Karate Chop",
+        "power": 50,
+        "type": "Normal",
+        "description": "The target is attacked with a sharp chop. Critical hits land more easily."
+      },
+      "move2": {
+        "id": 232,
+        "name": "Low Sweep",
+        "power": 65,
+        "type": "Fighting",
+        "description": "The user makes a swift attack on the target's legs, which lowers the target's Speed stat."
+      },
+      "move3": {
+        "id": 303,
+        "name": "Cross Chop",
+        "power": 100,
+        "type": "Fighting",
+        "description": "The user delivers a double chop with its forearms crossed. Critical hits land more easily."
+      },
+      "move4": {
+        "id": 64,
+        "name": "Submission",
+        "power": 80,
+        "type": "Fighting",
+        "description": "The user grabs the target and recklessly dives for the ground. It also hurts the user slightly."
+      }
+    }
   },
   {
-    "name": "Rasheed Wallace",
-    "pokemonId": 73
+    "name": "Dawn",
+    "pokemon_1": {
+      "id": 70,
+      "name": "Weepinbell",
+      "type": "grass",
+      "secondary_type": "poison",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/070weepinbell_ah69mp.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 2,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 73,
+      "move2Id": 398,
+      "move3Id": 271,
+      "move4Id": 405,
+      "NPCId": null,
+      "move1": {
+        "id": 73,
+        "name": "Razor Leaf",
+        "power": 55,
+        "type": "Grass",
+        "description": "Sharp-edged leaves are launched to slash at opposing Pokémon. Critical hits land more easily."
+      },
+      "move2": {
+        "id": 398,
+        "name": "Sludge Bomb",
+        "power": 90,
+        "type": "Poison",
+        "description": "The user strikes the target with a sludge bomb. It may also poison the target."
+      },
+      "move3": {
+        "id": 271,
+        "name": "Seed Bomb",
+        "power": 80,
+        "type": "Grass",
+        "description": "The user slams a barrage of hard-shelled seeds down on the target from above."
+      },
+      "move4": {
+        "id": 405,
+        "name": "Power Whip",
+        "power": 120,
+        "type": "Grass",
+        "description": "The user violently whips its vines or tentacles to strike the target. This may also make the target flinch."
+      }
+    }
   },
   {
-    "name": "Ben Wallace",
-    "pokemonId": 121
+    "name": "Hilbert",
+    "pokemon_1": {
+      "id": 75,
+      "name": "Graveler",
+      "type": "rock",
+      "secondary_type": "ground",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/075graveler_lmzxsk.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 2,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 407,
+      "move2Id": 401,
+      "move3Id": 157,
+      "move4Id": 280,
+      "NPCId": null,
+      "move1": {
+        "id": 407,
+        "name": "Rock Throw",
+        "power": 50,
+        "type": "Rock",
+        "description": "The user throws rocks at the target to inflict damage."
+      },
+      "move2": {
+        "id": 401,
+        "name": "Magnitude",
+        "power": 100,
+        "type": "Ground",
+        "description": "The user creates a ground-shaking tremor to deal damage. The power of this move varies."
+      },
+      "move3": {
+        "id": 157,
+        "name": "Rock Slide",
+        "power": 75,
+        "type": "Rock",
+        "description": "Large boulders are hurled at the opposing team to inflict damage. It may also make the targets flinch."
+      },
+      "move4": {
+        "id": 280,
+        "name": "Earthquake",
+        "power": 100,
+        "type": "Ground",
+        "description": "The user sets off an earthquake that strikes every Pokémon around it."
+      }
+    }
   },
   {
-    "name": "Amare Stoudemire",
-    "pokemonId": 95
+    "name": "Hilda",
+    "pokemon_1": {
+      "id": 80,
+      "name": "Slowbro",
+      "type": "psychic",
+      "secondary_type": "water",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/080slowbro_et5vqg.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 3,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 53,
+      "move2Id": 388,
+      "move3Id": 211,
+      "move4Id": 56,
+      "NPCId": null,
+      "move1": {
+        "id": 53,
+        "name": "Water Gun",
+        "power": 40,
+        "type": "Water",
+        "description": "The target is blasted with a forceful shot of water."
+      },
+      "move2": {
+        "id": 388,
+        "name": "Confusion",
+        "power": 50,
+        "type": "Psychic",
+        "description": "The target is struck by a peculiar ray. This may also leave the target confused."
+      },
+      "move3": {
+        "id": 211,
+        "name": "Psychic",
+        "power": 90,
+        "type": "Psychic",
+        "description": "The target is hit by a strong telekinetic force. It may also reduce the target's Special Defense stat."
+      },
+      "move4": {
+        "id": 56,
+        "name": "Ice Beam",
+        "power": 90,
+        "type": "Ice",
+        "description": "The target is struck with an icy-cold beam. It may freeze the target solid."
+      }
+    }
   },
   {
-    "name": "Klay Thompson",
-    "pokemonId": 33
+    "name": "Nate",
+    "pokemon_1": {
+      "id": 81,
+      "name": "Magnemite",
+      "type": "electric",
+      "secondary_type": "Steel",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/081magnemite_s7nep7.png",
+      "evolutionId": 1,
+      "rarity": "common",
+      "tier": 1,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 391,
+      "move2Id": 407,
+      "move3Id": 243,
+      "move4Id": 215,
+      "NPCId": null,
+      "move1": {
+        "id": 391,
+        "name": "Thunder Shock",
+        "power": 40,
+        "type": "Electric",
+        "description": "A jolt of electricity is hurled at the target. This may also leave the target with paralysis."
+      },
+      "move2": {
+        "id": 407,
+        "name": "Rock Throw",
+        "power": 50,
+        "type": "Rock",
+        "description": "The user throws rocks at the target to inflict damage."
+      },
+      "move3": {
+        "id": 243,
+        "name": "Thunderbolt",
+        "power": 90,
+        "type": "Electric",
+        "description": "A strong electric blast is loosed at the target. It may also paralyze the target."
+      },
+      "move4": {
+        "id": 215,
+        "name": "Flash Cannon",
+        "power": 80,
+        "type": "Steel",
+        "description": "The user gathers all its light energy and releases it at once. It may also lower the target's Special Defense stat."
+      }
+    }
   },
   {
-    "name": "Jayson Tatum",
-    "pokemonId": 45
+    "name": "Rosa",
+    "pokemon_1": {
+      "id": 85,
+      "name": "Dodrio",
+      "type": "normal",
+      "secondary_type": "flying",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/085dodrio_srjeqx.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 2,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 63,
+      "move2Id": 161,
+      "move3Id": 25,
+      "move4Id": 370,
+      "NPCId": null,
+      "move1": {
+        "id": 63,
+        "name": "Drill Peck",
+        "power": 80,
+        "type": "Flying",
+        "description": "A corkscrewing attack that strikes the target with a sharp beak acting as a drill."
+      },
+      "move2": {
+        "id": 161,
+        "name": "Tri Attack",
+        "power": 80,
+        "type": "Normal",
+        "description": "The user strikes with a simultaneous three-beam attack. May also burn, freeze, or paralyze the target."
+      },
+      "move3": {
+        "id": 25,
+        "name": "Jump Kick",
+        "power": 100,
+        "type": "Fighting",
+        "description": "The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself."
+      },
+      "move4": {
+        "id": 370,
+        "name": "Brave Bird",
+        "power": 120,
+        "type": "Fighting",
+        "description": "The user tucks in its wings and charges from a low altitude. This also damages the user quite a lot."
+      }
+    }
   },
   {
-    "name": "Giannis",
-    "pokemonId": 76
+    "name": "Calem",
+    "pokemon_1": {
+      "id": 87,
+      "name": "Dewgong",
+      "type": "Ice",
+      "secondary_type": "water",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/087dewgong_i8r0cv.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 2,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 194,
+      "move2Id": 56,
+      "move3Id": 60,
+      "move4Id": 57,
+      "NPCId": null,
+      "move1": {
+        "id": 194,
+        "name": "Aqua Jet",
+        "power": 40,
+        "type": "Water",
+        "description": "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first."
+      },
+      "move2": {
+        "id": 56,
+        "name": "Ice Beam",
+        "power": 90,
+        "type": "Ice",
+        "description": "The target is struck with an icy-cold beam. It may freeze the target solid."
+      },
+      "move3": {
+        "id": 60,
+        "name": "Aurora Beam",
+        "power": 65,
+        "type": "Normal",
+        "description": "The target is hit with a rainbow-colored beam. This may also lower the target's Attack stat."
+      },
+      "move4": {
+        "id": 57,
+        "name": "Blizzard",
+        "power": 110,
+        "type": "Ice",
+        "description": "A howling blizzard is summoned to strike opposing Pokémon. It may freeze them solid."
+      }
+    }
   },
   {
-    "name": "Anthony David",
-    "pokemonId": 18
-  },
-  {
-    "name": "Kevin Durant",
-    "pokemonId": 29
-  },
-  {
-    "name": "Nikola Jocic",
-    "pokemonId": 59
-  },
-  {
-    "name": "Steve Nash",
-    "pokemonId": 118
+    "name": "Serena",
+    "pokemon_1": {
+      "id": 93,
+      "name": "Haunter",
+      "type": "Ghost",
+      "secondary_type": "poison",
+      "level": 1,
+      "hp": 100,
+      "experience": 0,
+      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/093haunter_xp0oie.png",
+      "evolutionId": 2,
+      "rarity": "uncommon",
+      "tier": 3,
+      "isCaught": false,
+      "TrainerId": null,
+      "move1Id": 304,
+      "move2Id": 292,
+      "move3Id": 398,
+      "move4Id": 212,
+      "NPCId": null,
+      "move1": {
+        "id": 304,
+        "name": "Shadow Punch",
+        "power": 60,
+        "type": "Ghost",
+        "description": "The user throws a punch from the shadows. This attack never misses."
+      },
+      "move2": {
+        "id": 292,
+        "name": "Shadow Ball",
+        "power": 80,
+        "type": "Ghost",
+        "description": "The user hurls a shadowy blob at the target. It may also lower the target's Special Defense stat."
+      },
+      "move3": {
+        "id": 398,
+        "name": "Sludge Bomb",
+        "power": 90,
+        "type": "Poison",
+        "description": "The user strikes the target with a sludge bomb. It may also poison the target."
+      },
+      "move4": {
+        "id": 212,
+        "name": "Dark Pulse",
+        "power": 80,
+        "type": "Dark",
+        "description": "The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch."
+      }
+    }
   }
 ]

@@ -29,8 +29,7 @@ Gym.init(
   {
     sequelize,
     timestamps: false,
-    modelName: "Gym",
-    tableName: "gym",
+    modelName: "gym",
     underscored: true,
   }
 );

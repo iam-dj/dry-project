@@ -1,20 +1,11 @@
 const sequelize = require("../config/connection");
-const {
-  User,
-  Pokemon,
-  Move,
-  NPC,
-  Trainer,
-  Gym,
-  // PokemonMove,
-} = require("../models");
+const { User, Pokemon, Move, NPC, Trainer, Gym } = require("../models");
 const gymData = require("./gym-seeds.json");
 const moveData = require("./move-seeds.json");
 const userData = require("./user-seeds.json");
 const npcData = require("./npc-seeds.json");
 const pokemonData = require("./pokemon-seeds.json");
 const trainerData = require("./trainer-seeds.json");
-// const pokemonMoveListData = require("./pokemonMove-seeds.json");
 
 //this filters out duplicates from our moves data
 // const uniqueMoves = [];
@@ -30,21 +21,19 @@ const seedDatabase = async () => {
   try {
     await sequelize.sync({ force: true });
 
-    await User.bulkCreate(userData, {
-      individualHooks: true,
-      returning: true,
-    });
-    await Trainer.bulkCreate(trainerData);
+    // await User.bulkCreate(userData, {
+    //   individualHooks: true,
+    //   returning: true,
+    // });
+    // await Trainer.bulkCreate(trainerData);
     // loop over trainers, for each trainer, bulk create all pokemon wutg trainerID
 
-    await Move.bulkCreate(moveData);
-    await Pokemon.bulkCreate(pokemonData);
+    // await Pokemon.bulkCreate(pokemonData);
 
-    // await PokemonMove.bulkCreate(pokemonMoveListData);
+    // await NPC.bulkCreate(npcData);
 
-    await NPC.bulkCreate(npcData);
-
-    await Gym.bulkCreate(gymData);
+    // await Gym.bulkCreate(gymData);
+    await createTrainer();
 
     process.exit(0);
   } catch (err) {
@@ -52,17 +41,39 @@ const seedDatabase = async () => {
   }
 };
 
-// const createTrainer = async () => {
-//   const newTrainer = await Trainer.create();
-//   const id = newTrainer.id;
+const createTrainer = async () => {
+  await Move.bulkCreate(moveData);
+  const newTrainer = await Trainer.create({
+    id: 4,
+    name: "Ash Ketchum",
+    age: 16,
+    numWins: 32,
+    numLosses: 12,
+    boulder_badge: true,
+    cascade_badge: true,
+    thunder_badge: true,
+    rainbow_badge: true,
+    soul_badge: true,
+    marsh_badge: true,
+    volcano_badge: true,
+    earth_badge: true,
+  });
+};
+//   const dbPokemonData = pokemonData;
 
-//   await Pokemon.bulkCreate(pokemonData);
-//   for (let i = 0; i < pokemonData.length; i++) {
-//     pokemonData[i].trainerId = id;
-//   }
-//   await Move.bulkCreate(uniqueMoves);
-//   await PokemonMove.bulkCreate(pokemonMoveListData);
-// };
+//   const pokedex = dbPokemonData.map(async (data) => {
+//     const pokemon = await Pokemon.create(data);
+//     await newTrainer.addPokemon(pokemon);
+//   });
+// //
+//
+//
+// await Pokemon.bulkCreate(pokemonData);
+// for (let i = 0; i < pokemonData.length; i++) {
+//   const pokemon = pokemonData[i];
+//   pokemon.trainer_id = id;
+//   const newPokemon = await Pokemon.create(pokemon);
+//   console.log(newPokemon);
+// }
 
 seedDatabase();
-// createTrainer();
