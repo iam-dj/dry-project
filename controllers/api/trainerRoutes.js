@@ -25,6 +25,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// routes to update the badge boolean
 router.put("/trainers/:id", async (req, res) => {
   try {
     const updatedTrainer = await Trainer.update(

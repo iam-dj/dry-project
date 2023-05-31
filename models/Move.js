@@ -20,12 +20,12 @@ Move.init(
 
     power: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
-    accuracy: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    // accuracy: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
     type: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -39,6 +39,9 @@ Move.init(
   },
   {
     sequelize,
+    timestamps: false,
+    modelName: "Move",
+    tableName: "Move",
   }
 );
 

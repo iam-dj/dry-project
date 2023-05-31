@@ -7,19 +7,18 @@ NPC.init(
   {
     // ** id will auto generate
 
-    NPC_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    NPC_gender: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
 
-    //**foreign key: will auto generate
+    //**pokemon foreign key: will auto generate
   },
   {
     sequelize,
+    timestamps: false,
+    modelName: "NPC",
+    tableName: "npc",
   }
 );
 

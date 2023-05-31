@@ -1,11 +1,26 @@
 const express = require("express");
 const router = express.Router();
-const { User, Pokemon, Gym, NPC, Trainer, Move } = require("../../models");
+const {
+  User,
+  Pokemon,
+  Gym,
+  NPC,
+  Trainer,
+  Move,
+  PokemonMove,
+} = require("../../models");
 
 //get all pokemon
 router.get("/", async (req, res) => {
   try {
-    const pokemon = await Pokemon.findAll();
+    const pokemon = await Pokemon.findAll({
+      include: [
+        { model: Move, as: "move1" },
+        { model: Move, as: "move2" },
+        { model: Move, as: "move3" },
+        { model: Move, as: "move4" },
+      ],
+    });
     res.json(pokemon);
   } catch (err) {
     console.log(err);
@@ -49,9 +64,11 @@ router.get("/:id", async (req, res) => {
 router.get("/:type", async (req, res) => {
   try {
     const dbPokemonData = await Pokemon.findAll({
-      where: { type: req.params.type },
-      include: { all: true, nested: true },
+      // include: { all: true, nested: true },
     });
+
+    const type = req.params.type;
+    const res = json.filter((type) => pokemon.tip_id === tipId);
     res.status(200).json(dbPokemonData);
   } catch (error) {
     console.log(error);
@@ -128,3 +145,5 @@ router.put("/:id", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+
+module.exports = router;

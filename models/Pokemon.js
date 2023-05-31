@@ -17,11 +17,12 @@ Pokemon.init(
     },
     secondary_type: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     level: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 1,
     },
     hp: {
       type: DataTypes.INTEGER,
@@ -30,12 +31,13 @@ Pokemon.init(
     experience: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 0,
     },
     img_url: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    evolution_id: {
+    evolutionId: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -50,24 +52,44 @@ Pokemon.init(
     isCaught: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      defaultValue: false,
     },
-    //add properties for moves
-    move1_id: {
-      type: DataTypes.INTEGER,
-    },
-    move2_id: {
-      type: DataTypes.INTEGER,
-    },
-    move3_id: {
-      type: DataTypes.INTEGER,
-    },
-    move4_id: {
-      type: DataTypes.INTEGER,
-    },
+    // move_1: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "moves",
+    //     key: "id",
+    //   },
+    // },
+    // move_2: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "moves",
+    //     key: "id",
+    //   },
+    // },
+    // move_3: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "moves",
+    //     key: "id",
+    //   },
+    // },
+    // move_4: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "moves",
+    //     key: "id",
+    //   },
+    // },
     //**attack foreign keys: will auto generate
   },
   {
     sequelize,
+    timestamps: false,
+    modelName: "Pokemon",
+    tableName: "pokemon",
+    underscored: true,
   }
 );
 
