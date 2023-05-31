@@ -1,18 +1,27 @@
 const router = require("express").Router();
 const { User, Pokemon, Gym, NPC, Trainer, Move } = require("../../models");
 
-//findall
-router.get("/", (req, res) => {
-  NPC.findAll({
-    include: [Pokemon, Move],
-  })
-    .then((npc) => {
-      res.json(npc);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json({ msg: "Uh oh, that NPC doesnt exist!", err });
+router.get("/", async (req, res) => {
+  try {
+    const npcs = await NPC.findAll({
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+      ],
     });
+    res.status(200).json(npcs);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
 });
 
 router.get("/:id", async (req, res) => {
