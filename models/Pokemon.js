@@ -87,8 +87,7 @@ Pokemon.init(
   {
     sequelize,
     timestamps: false,
-    modelName: "Pokemon",
-    tableName: "pokemon",
+    modelName: "pokemon",
     underscored: true,
   }
 );

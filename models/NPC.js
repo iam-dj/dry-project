@@ -12,13 +12,17 @@ NPC.init(
       allowNull: false,
     },
 
+    pokemon_1: {
+      type: DataTypes.JSON,
+    },
+
     //**pokemon foreign key: will auto generate
   },
   {
     sequelize,
     timestamps: false,
-    modelName: "NPC",
-    tableName: "npc",
+    modelName: "npc",
+    underscored: true,
   }
 );
 

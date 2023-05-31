@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const Pokemon = require("./Pokemon");
+const pokemonData = require("../seeds/pokemon-seeds.json");
 
 class Trainer extends Model {}
 
@@ -61,6 +63,17 @@ Trainer.init(
     //**foreign key: will auto generate
   },
   {
+    hooks: {
+      afterCreate: async (newTrainer) => {
+        const id = newTrainer.id;
+        for (let i = 0; i < pokemonData.length; i++) {
+          const pokemon = { ...pokemonData[i] };
+          pokemon.TrainerId = id;
+          const newPokemon = await Pokemon.create(pokemon);
+          // console.log(newPokemon);
+        }
+      },
+    },
     sequelize,
     timestamps: false,
     modelName: "Trainer",

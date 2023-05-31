@@ -40,8 +40,8 @@ Move.init(
   {
     sequelize,
     timestamps: false,
-    modelName: "Move",
-    tableName: "Move",
+    modelName: "move",
+    underscored: true,
   }
 );
 
