@@ -20,13 +20,19 @@ Trainer.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    profilePicUrl: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     numWins: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 0,
     },
     numLosses: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 0,
     },
     boulder_badge: {
       type: DataTypes.BOOLEAN,

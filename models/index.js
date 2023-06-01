@@ -6,11 +6,11 @@ const Trainer = require("./Trainer");
 const NPC = require("./NPC");
 const { move } = require("../controllers");
 
-// User.hasOne(Trainer, {
-//   onDelete: "Cascade",
-// });
+User.hasOne(Trainer, {
+  onDelete: "Cascade",
+});
 
-// Trainer.belongsTo(User);
+Trainer.belongsTo(User);
 
 Trainer.hasMany(Pokemon);
 

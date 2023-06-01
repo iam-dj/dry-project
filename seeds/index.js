@@ -47,6 +47,8 @@ const createTrainer = async () => {
     id: 4,
     name: "Ash Ketchum",
     age: 16,
+    profilePicUrl:
+      "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/001bulbasaur_buvbux.png",
     numWins: 32,
     numLosses: 12,
     boulder_badge: true,

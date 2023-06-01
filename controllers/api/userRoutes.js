@@ -4,6 +4,16 @@ const bcrypt = require("bcrypt");
 const { User } = require("../../models");
 const jwt = require("jsonwebtoken");
 
+router.get("/", async (req, res) => {
+  try {
+    const users = await User.findAll();
+    res.json(users);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ msg: "error occurred", err });
+  }
+});
+
 router.post("/login", (req, res) => {
   User.findOne({
     where: {
@@ -39,7 +49,7 @@ router.post("/login", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post("/signup", (req, res) => {
   //:create user, sign jwt
   User.create({
     username: req.body.username,
@@ -67,7 +77,7 @@ router.post("/", (req, res) => {
     });
 });
 
-router.get("/profile", (req, res) => {
+router.get("/verifytoken", (req, res) => {
   //: get userdata from jwt, verify jwt
   // console.log(req.headers);
   const token = req.headers.authorization?.split(" ")[1];
@@ -80,6 +90,23 @@ router.get("/profile", (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(403).json({ msg: "invalid token", err });
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const userData = await User.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!userData) {
+      res.status(404).json({ message: "No user found with this id!" });
+      return;
+    }
+    res.status(200).json({ message: "user deleted" });
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
