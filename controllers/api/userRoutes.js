@@ -4,10 +4,20 @@ const bcrypt = require("bcrypt");
 const { User } = require("../../models");
 const jwt = require("jsonwebtoken");
 
+router.get("/", async (req, res) => {
+  try {
+    const users = await User.findAll();
+    res.json(users);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ msg: "error occurred", err });
+  }
+});
+
 router.post("/login", (req, res) => {
   User.findOne({
     where: {
-      username: req.body.user,
+      username: req.body.username,
     },
   })
     .then((foundUser) => {
@@ -67,9 +77,9 @@ router.post("/", (req, res) => {
     });
 });
 
-router.get("/profile", (req, res) => {
+router.get("/verifytoken", (req, res) => {
   //: get userdata from jwt, verify jwt
-  // console.log(req.headers);
+  console.log(req.headers);
   const token = req.headers.authorization?.split(" ")[1];
   console.log(token);
   try {
