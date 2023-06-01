@@ -49,7 +49,7 @@ router.post("/login", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post("/signup", (req, res) => {
   //:create user, sign jwt
   User.create({
     username: req.body.username,
@@ -90,6 +90,23 @@ router.get("/verifytoken", (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(403).json({ msg: "invalid token", err });
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const userData = await User.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!userData) {
+      res.status(404).json({ message: "No user found with this id!" });
+      return;
+    }
+    res.status(200).json({ message: "user deleted" });
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
