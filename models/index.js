@@ -44,9 +44,11 @@ Pokemon.belongsTo(Move, { as: "move4" });
 
 // Gym.hasOne(NPC);
 
-// NPC.belongsTo(Gym);
+NPC.belongsTo(Gym);
 
-// NPC.hasMany(Pokemon);
+NPC.hasMany(Pokemon);
+Pokemon.belongsTo(NPC);
+Move.belongsTo(NPC);
 
 // Pokemon.belongsTo(NPC);
 
