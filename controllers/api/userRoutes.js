@@ -6,17 +6,29 @@ const jwt = require("jsonwebtoken");
 
 router.get("/", async (req, res) => {
   try {
-    const users = await User.findAll(
-      {include: [
-        {model:Trainer},
-      ]},
-    );
+    // const
+    const users = await User.findAll({
+      include: [{ model: Trainer }],
+    });
     res.json(users);
   } catch (err) {
     console.log(err);
     res.status(500).json({ msg: "error occurred", err });
   }
 });
+// router.get("/:id", async (req, res) => {
+//   try {
+//     // const
+//     const users = await User.findAll({
+//       where: {id: req.params.id},
+//       include: [{ model: Trainer }],
+//     });
+//     res.json(users);
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json({ msg: "error occurred", err });
+//   }
+// });
 
 router.post("/login", (req, res) => {
   User.findOne({
