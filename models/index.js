@@ -4,6 +4,7 @@ const Pokemon = require("./Pokemon");
 const User = require("./User");
 const Trainer = require("./Trainer");
 const NPC = require("./NPC");
+const PokemonReference = require("./PokemonReference");
 const { move } = require("../controllers");
 
 Trainer.belongsTo(User, {
@@ -67,4 +68,5 @@ module.exports = {
   Pokemon: Pokemon,
   User: User,
   Trainer: Trainer,
+  PokemonReference: PokemonReference,
 };
