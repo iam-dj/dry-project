@@ -13,8 +13,10 @@ router.get("/", async (req, res) => {
             { model: Move, as: "move2" },
             { model: Move, as: "move3" },
             { model: Move, as: "move4" },
+
           ],
         },
+        {model:User},
       ],
     });
     res.status(200).json(trainers);
@@ -26,9 +28,9 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const newTrainerData = {
-    name: req.body.first_name,
-    age: req.body.last_name,
-    profilePicUrl: req.body.username,
+    name: req.body.name,
+    age: req.body.age,
+    // profilePicUrl: req.body.username,
   };
   try {
     const newTrainer = await Trainer.create(newTrainerData);

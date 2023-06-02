@@ -1,12 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const { User } = require("../../models");
+const { User, Trainer } = require("../../models");
 const jwt = require("jsonwebtoken");
 
 router.get("/", async (req, res) => {
   try {
-    const users = await User.findAll();
+    const users = await User.findAll(
+      {include: [
+        {model:Trainer},
+      ]},
+    );
     res.json(users);
   } catch (err) {
     console.log(err);
@@ -49,7 +53,7 @@ router.post("/login", (req, res) => {
     });
 });
 
-router.post("/signup", (req, res) => {
+router.post("/", (req, res) => {
   //:create user, sign jwt
   User.create({
     username: req.body.username,
