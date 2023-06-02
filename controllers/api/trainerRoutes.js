@@ -24,6 +24,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+
 router.post("/", async (req, res) => {
   const newTrainerData = {
     name: req.body.first_name,
