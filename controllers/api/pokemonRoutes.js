@@ -61,14 +61,14 @@ router.get("/:id", async (req, res) => {
 });
 
 //search pokemon by type
-router.get("/:type", async (req, res) => {
+router.get("/:trainerId/:type", async (req, res) => {
+  const type = req.params;
   try {
     const dbPokemonData = await Pokemon.findAll({
-      // include: { all: true, nested: true },
+      where: {
+        type: type,
+      },
     });
-
-    const type = req.params.type;
-    const res = json.filter((type) => pokemon.tip_id === tipId);
     res.status(200).json(dbPokemonData);
   } catch (error) {
     console.log(error);

@@ -24,20 +24,20 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+
+router.post("/", async (req, res) => {
+  const newTrainerData = {
+    name: req.body.first_name,
+    age: req.body.last_name,
+    profilePicUrl: req.body.username,
+  };
   try {
-    const userData = await User.destroy({
-      where: {
-        id: req.params.id,
-      },
-    });
-    if (!userData) {
-      res.status(404).json({ message: "No user found with this id!" });
-      return;
-    }
-    res.status(200).json({message:"user deleted"});
+    const newTrainer = await Trainer.create(newTrainerData);
+
+    return res.status(200).json(newTrainer);
   } catch (err) {
-    res.status(500).json(err);
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
   }
 });
 
@@ -172,6 +172,73 @@ router.put("/trainers/:id", async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
+  }
+});
+
+//fire route
+router.get("/pokemon/fire/:id", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+      ],
+    });
+
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+    const response = await res.json(trainer);
+    const filteredPokemon = response.pokemons
+      .filter((pokemon) => pokemon.type === "fire")
+      .map((pokemon) => ({
+        id: pokemon.id,
+        name: pokemon.name,
+        type: pokemon.type,
+        moves: pokemon.moves,
+      }));
+
+    console.log(filteredPokemon);
+    // return filteredPokemon;
+    // res.json(trainer.Pokemons);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+router.get("/:id", async (req, res) => {
+  try {
+    const trainer = await Trainer.findOne(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+      ],
+    });
+
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    res.json(trainer);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
