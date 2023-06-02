@@ -32,6 +32,7 @@ router.get("/", async (req, res) => {
 
 router.post("/login", (req, res) => {
   User.findOne({
+    include: [{ model: Trainer }],
     where: {
       username: req.body.username,
     },
