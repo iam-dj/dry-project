@@ -28,7 +28,12 @@ Pokemon.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    experience: {
+    battlesWon: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+    battlesLost: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0,
@@ -54,34 +59,7 @@ Pokemon.init(
       allowNull: false,
       defaultValue: false,
     },
-    // move_1: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "moves",
-    //     key: "id",
-    //   },
-    // },
-    // move_2: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "moves",
-    //     key: "id",
-    //   },
-    // },
-    // move_3: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "moves",
-    //     key: "id",
-    //   },
-    // },
-    // move_4: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "moves",
-    //     key: "id",
-    //   },
-    // },
+
     //**attack foreign keys: will auto generate
   },
   {
