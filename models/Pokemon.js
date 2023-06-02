@@ -59,6 +59,11 @@ Pokemon.init(
       allowNull: false,
       defaultValue: false,
     },
+    isMain: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
 
     //**attack foreign keys: will auto generate
   },

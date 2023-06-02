@@ -26,6 +26,33 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.put("/:id/ismain/:name", async (req, res) => {
+  const pokemonName = req.params.name;
+  try {
+    const trainer = await Trainer.findByPk(req.params.id);
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const mainPokemon = trainer.pokemons.filter((p) => p.isMain === true);
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    } else {
+      mainPokemon.isMain = false;
+    }
+
+    const pokemon = trainer.pokemons.filter((p) => p.name === pokemonName);
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+    pokemon.isMain = true;
+    res.json(pokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
 router.post("/", async (req, res) => {
   // const token = localStorage.getItem("token");
   // console.log(token);

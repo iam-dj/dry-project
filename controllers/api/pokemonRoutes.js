@@ -28,6 +28,23 @@ router.get("/", async (req, res) => {
   }
 });
 
+//update pokemon to caught in the trainer's array of pokemon
+router.put("/:name", async (req, res) => {
+  try {
+    const updatedPokemon = await Pokemon.update(
+      { isMain: true },
+      { where: { name: req.params.name } }
+    );
+    if (!updatedPokemon) {
+      return res.status(404).json({ msg: "Pokemon not found" });
+    }
+    return res.status(200).json(updatedPokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
 //get all pokemon from specific user, filers to see if they are caught
 router.get("/:trainerId", async (req, res) => {
   try {

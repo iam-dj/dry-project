@@ -11,6 +11,10 @@ NPC.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    npcPicture_url: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
 
     pokemon_1: {
       type: DataTypes.JSON,
