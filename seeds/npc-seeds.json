@@ -1,6 +1,7 @@
 [
   {
     "name": "Red",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722666/Red_hznvmi.png",
     "pokemon_1": {
       "id": 1,
       "name": "Bulbasaur",
@@ -52,6 +53,7 @@
   },
   {
     "name": "Blue",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722668/blue_tshn8s.png",
     "pokemon_1": {
       "id": 21,
       "name": "Spearow",
@@ -103,6 +105,7 @@
   },
   {
     "name": "Leaf",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722665/leaf_xu3ine.png",
     "pokemon_1": {
       "id": 44,
       "name": "Gloom",
@@ -154,6 +157,7 @@
   },
   {
     "name": "Ethan",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722666/ethan_x0f6xs.png",
     "pokemon_1": {
       "id": 51,
       "name": "Dugtrio",
@@ -205,6 +209,7 @@
   },
   {
     "name": "Silver",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722668/silver_vpxq44.png",
     "pokemon_1": {
       "id": 54,
       "name": "Psyduck",
@@ -256,6 +261,7 @@
   },
   {
     "name": "Brendan",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722670/brenden_q2h0mi.png",
     "pokemon_1": {
       "id": 59,
       "name": "Arcanine",
@@ -307,6 +313,7 @@
   },
   {
     "name": "May",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722676/may_krwkdl.png",
     "pokemon_1": {
       "id": 64,
       "name": "Kadabra",
@@ -358,6 +365,7 @@
   },
   {
     "name": "Lucas",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722675/lucas_x7nw0a.png",
     "pokemon_1": {
       "id": 67,
       "name": "Machoke",
@@ -409,6 +417,7 @@
   },
   {
     "name": "Dawn",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722670/dawn_y6tp57.png",
     "pokemon_1": {
       "id": 70,
       "name": "Weepinbell",
@@ -460,6 +469,7 @@
   },
   {
     "name": "Hilbert",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722673/hilbert_ifubtc.png",
     "pokemon_1": {
       "id": 75,
       "name": "Graveler",
@@ -511,6 +521,7 @@
   },
   {
     "name": "Hilda",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722666/hilda_zneihg.png",
     "pokemon_1": {
       "id": 80,
       "name": "Slowbro",
@@ -562,6 +573,7 @@
   },
   {
     "name": "Nate",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722985/nate_bv6gpd.png",
     "pokemon_1": {
       "id": 81,
       "name": "Magnemite",
@@ -613,6 +625,7 @@
   },
   {
     "name": "Rosa",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722667/rosa_c9as9t.png",
     "pokemon_1": {
       "id": 85,
       "name": "Dodrio",
@@ -664,6 +677,7 @@
   },
   {
     "name": "Calem",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722669/calem_gxazcg.png",
     "pokemon_1": {
       "id": 87,
       "name": "Dewgong",
@@ -715,6 +729,7 @@
   },
   {
     "name": "Serena",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685722666/selena_toofud.png",
     "pokemon_1": {
       "id": 93,
       "name": "Haunter",
@@ -766,6 +781,7 @@
   },
   {
     "name": "Brock",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685723627/brock_dwhz8a.png",
     "pokemon_1": {
       "id": 74,
       "name": "Geodude",
@@ -911,13 +927,14 @@
   },
   {
     "name": "Misty",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685723627/misty_dikrf2.png",
     "pokemon_1": {
       "id": 116,
       "name": "Horsea",
       "type": "water",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 130,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/116horsea_vxowfy.png",
       "evolutionId": 1,
@@ -964,7 +981,7 @@
       "type": "psychic",
       "secondary_type": "water",
       "level": 1,
-      "hp": 100,
+      "hp": 130,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896195/121starmie_eoheez.png",
       "evolutionId": 2,
@@ -1011,7 +1028,7 @@
       "type": "water",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 130,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896194/120staryu_dmpnmi.png",
       "evolutionId": 1,
@@ -1056,13 +1073,14 @@
   },
   {
     "name": "Lt. Surge",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685723629/Lt._surge_dibq7t.png",
     "pokemon_1": {
       "id": 100,
       "name": "Voltorb",
       "type": "electric",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 160,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/100voltorb_wqm1xu.png",
       "evolutionId": 1,
@@ -1109,7 +1127,7 @@
       "type": "electric",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 160,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/025pikachu_q66dwq.png",
       "evolutionId": 1,
@@ -1156,7 +1174,7 @@
       "type": "electric",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 160,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896181/026raichu_oi2nci.png",
       "evolutionId": 2,
@@ -1201,13 +1219,14 @@
   },
   {
     "name": "Erika",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685723628/erika_fjphdk.png",
     "pokemon_1": {
       "id": 114,
       "name": "Tangela",
       "type": "grass",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 210,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/114tangela_wplxop.png",
       "evolutionId": 1,
@@ -1254,7 +1273,7 @@
       "type": "grass",
       "secondary_type": "poison",
       "level": 1,
-      "hp": 100,
+      "hp": 210,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/070weepinbell_ah69mp.png",
       "evolutionId": 2,
@@ -1301,7 +1320,7 @@
       "type": "grass",
       "secondary_type": "poison",
       "level": 1,
-      "hp": 100,
+      "hp": 210,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896184/045vileplume_wrlvxl.png",
       "evolutionId": 3,
@@ -1346,13 +1365,14 @@
   },
   {
     "name": "Koga",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685723626/koga_n9t79i.png",
     "pokemon_1": {
       "id": 109,
       "name": "Koffing",
       "type": "poison",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 240,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896192/109koffing_i7yotl.png",
       "evolutionId": 1,
@@ -1399,7 +1419,7 @@
       "type": "poison",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 240,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/110weezing_nfjxlk.png",
       "evolutionId": 2,
@@ -1446,7 +1466,7 @@
       "type": "poison",
       "secondary_type": "dark",
       "level": 1,
-      "hp": 100,
+      "hp": 240,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/089muk_pnaen7.png",
       "evolutionId": 2,
@@ -1491,13 +1511,14 @@
   },
   {
     "name": "Sabrina",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685723628/sabrina_yrgr99.png",
     "pokemon_1": {
       "id": 63,
       "name": "Abra",
       "type": "psychic",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 270,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/063abra_ntkn7l.png",
       "evolutionId": 1,
@@ -1544,7 +1565,7 @@
       "type": "psychic",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 270,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896187/064kadabra_ccz8qo.png",
       "evolutionId": 2,
@@ -1591,7 +1612,7 @@
       "type": "psychic",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 270,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896188/065alakazam_odb9na.png",
       "evolutionId": 3,
@@ -1636,13 +1657,14 @@
   },
   {
     "name": "Blaine",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685723627/blaine_f928nn.png",
     "pokemon_1": {
       "id": 58,
       "name": "Growlithe",
       "type": "fire",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 300,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896186/058growlithe_ajrmg5.png",
       "evolutionId": 1,
@@ -1689,7 +1711,7 @@
       "type": "fire",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 300,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/077ponyta_zrwt7b.png",
       "evolutionId": 1,
@@ -1736,7 +1758,7 @@
       "type": "fire",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 300,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896189/078rapidash_qmcy2n.png",
       "evolutionId": 2,
@@ -1781,13 +1803,14 @@
   },
   {
     "name": "Giovanni",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685723627/giovanni_q50use.png",
     "pokemon_1": {
       "id": 111,
       "name": "Rhyhorn",
       "type": "ground",
       "secondary_type": "rock",
       "level": 1,
-      "hp": 100,
+      "hp": 330,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896193/111rhyhorn_yi6s1w.png",
       "evolutionId": 1,
@@ -1834,7 +1857,7 @@
       "type": "ground",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 330,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896185/051dugtrio_cl3zuz.png",
       "evolutionId": 2,
@@ -1881,7 +1904,7 @@
       "type": "poison",
       "secondary_type": "ground",
       "level": 1,
-      "hp": 100,
+      "hp": 330,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896182/031nidoqueen_iyzwmv.png",
       "evolutionId": 3,
@@ -1926,13 +1949,14 @@
   },
   {
     "name": "LeBron James",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726545/lebron_ewlov0.png",
     "pokemon_1": {
       "id": 150,
       "name": "Mewtwo",
       "type": "psychic",
       "secondary_type": null,
       "level": 1,
-      "hp": 100,
+      "hp": 900,
       "experience": 0,
       "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896178/150mewtwo_nl7c61.png",
       "evolutionId": 1,
@@ -1978,6 +2002,7 @@
   },
   {
     "name": "Steph Curry",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726532/steph_xnnt8v.jpg",
     "pokemon_1": {
       "id": 146,
       "name": "Moltres",
@@ -2030,6 +2055,7 @@
   },
   {
     "name": "Kevin Durant",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726532/kevin_durant_tohq11.png",
     "pokemon_1": {
       "id": 149,
       "name": "Dragonite",
@@ -2082,6 +2108,7 @@
   },
   {
     "name": "Giannis Antetokounmpo",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726528/giannis_yzgpbj.png",
     "pokemon_1": {
       "id": 99,
       "name": "Kingler",
@@ -2134,6 +2161,7 @@
   },
   {
     "name": "James Harden",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726529/james_harden_o08ezm.png",
     "pokemon_1": {
       "id": 112,
       "name": "Rhydon",
@@ -2186,6 +2214,7 @@
   },
   {
     "name": "Kawhi Leonard",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726531/kawhi_gznvb6.png",
     "pokemon_1": {
       "id": 100,
       "name": "Voltorb",
@@ -2238,6 +2267,7 @@
   },
   {
     "name": "Anthony Davis",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726529/AD_fgnbzh.png",
     "pokemon_1": {
       "id": 27,
       "name": "Sandshrew",
@@ -2290,6 +2320,7 @@
   },
   {
     "name": "Luka Dončić",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726535/Luka_o66xhc.png",
     "pokemon_1": {
       "id": 34,
       "name": "Nidoking",
@@ -2342,6 +2373,7 @@
   },
   {
     "name": "Joel Embiid",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726533/joel_embiid_rifm2m.png",
     "pokemon_1": {
       "id": 41,
       "name": "Zubat",
@@ -2394,6 +2426,7 @@
   },
   {
     "name": "Damian Lillard",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726530/dame_yfukyx.png",
     "pokemon_1": {
       "id": 40,
       "name": "Wigglytuff",
@@ -2446,6 +2479,7 @@
   },
   {
     "name": "Zion Williamson",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726533/zion_r8ulll.png",
     "pokemon_1": {
       "id": 38,
       "name": "Ninetales",
@@ -2498,6 +2532,7 @@
   },
   {
     "name": "Nikola Jokić",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726534/joker_ev1ls2.png",
     "pokemon_1": {
       "id": 145,
       "name": "Zapdos",
@@ -2550,6 +2585,7 @@
   },
   {
     "name": "Devin Booker",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726534/dbook_p5jrcg.png",
     "pokemon_1": {
       "id": 144,
       "name": "Articuno",
@@ -2602,6 +2638,7 @@
   },
   {
     "name": "Jayson Tatum",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726535/tatum_g6hnwy.png",
     "pokemon_1": {
       "id": 17,
       "name": "Pidgeotto",
@@ -2654,6 +2691,7 @@
   },
   {
     "name": "Donovan Mitchell",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726529/donovan_mitchell_gcmgsx.png",
     "pokemon_1": {
       "id": 14,
       "name": "Kakuna",
@@ -2706,6 +2744,7 @@
   },
   {
     "name": "Karl-Anthony Towns",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726542/KAT_m3wgbq.png",
     "pokemon_1": {
       "id": 19,
       "name": "Rattata",
@@ -2758,6 +2797,7 @@
   },
   {
     "name": "Ben Simmons",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726546/ben_simmons_exm96r.png",
     "pokemon_1": {
       "id": 21,
       "name": "Spearow",
@@ -2809,7 +2849,8 @@
     "pokemon_3": null
   },
   {
-    "name": "De'Aaron Fox",
+    "name": "Anthony Edwards",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726544/anthony_edwards_kmak00.png",
     "pokemon_1": {
       "id": 23,
       "name": "Ekans",
@@ -2862,6 +2903,7 @@
   },
   {
     "name": "Ja Morant",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726537/Ja_morant_zo9tdm.png",
     "pokemon_1": {
       "id": 25,
       "name": "Pikachu",
@@ -2913,7 +2955,8 @@
     "pokemon_3": null
   },
   {
-    "name": "Trae Young",
+    "name": "Michael Jordan",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685726532/michael_jordan_oh7vqm.png",
     "pokemon_1": {
       "id": 44,
       "name": "Gloom",
@@ -2966,6 +3009,7 @@
   },
   {
     "name": "Mickey Mouse",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728070/mickey_d5yz8w.png",
     "pokemon_1": {
       "id": 43,
       "name": "Oddish",
@@ -3018,6 +3062,7 @@
   },
   {
     "name": "Donald Duck",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728069/donald_duck_nxsmst.png",
     "pokemon_1": {
       "id": 42,
       "name": "Golbat",
@@ -3070,6 +3115,7 @@
   },
   {
     "name": "Goofy",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728069/goofy_ubu4nb.png",
     "pokemon_1": {
       "id": 33,
       "name": "Nidorino",
@@ -3122,6 +3168,7 @@
   },
   {
     "name": "Mulan",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728071/mulan_aeow5w.png",
     "pokemon_1": {
       "id": 29,
       "name": "Nidoran♀",
@@ -3174,6 +3221,7 @@
   },
   {
     "name": "Simba",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728071/simba_g858p4.png",
     "pokemon_1": {
       "id": 25,
       "name": "Pikachu",
@@ -3226,6 +3274,7 @@
   },
   {
     "name": "Ariel",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728069/ariel_aay5ya.png",
     "pokemon_1": {
       "id": 21,
       "name": "Spearow",
@@ -3278,6 +3327,7 @@
   },
   {
     "name": "Buzz Lightyear",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728068/buzz_lightyear_g4an6q.png",
     "pokemon_1": {
       "id": 19,
       "name": "Rattata",
@@ -3330,6 +3380,7 @@
   },
   {
     "name": "Elsa",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728069/elsa_ve79om.png",
     "pokemon_1": {
       "id": 16,
       "name": "Pidgey",
@@ -3382,6 +3433,7 @@
   },
   {
     "name": "Woody",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728073/woody_thxlpd.png",
     "pokemon_1": {
       "id": 19,
       "name": "Rattata",
@@ -3434,6 +3486,7 @@
   },
   {
     "name": "Cinderella",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728071/cinderella_ht54ya.png",
     "pokemon_1": {
       "id": 21,
       "name": "Spearow",
@@ -3486,6 +3539,7 @@
   },
   {
     "name": "Pocahontas",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728076/pocahontas_ly2imk.png",
     "pokemon_1": {
       "id": 23,
       "name": "Ekans",
@@ -3538,6 +3592,7 @@
   },
   {
     "name": "Aladdin",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728068/aladdin_c781qe.png",
     "pokemon_1": {
       "id": 35,
       "name": "Clefairy",
@@ -3590,6 +3645,7 @@
   },
   {
     "name": "Belle",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728068/belle_d52usb.png",
     "pokemon_1": {
       "id": 37,
       "name": "Vulpix",
@@ -3642,6 +3698,7 @@
   },
   {
     "name": "Peter Pan",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728071/peter_pan_o6e4fj.png",
     "pokemon_1": {
       "id": 41,
       "name": "Zubat",
@@ -3694,6 +3751,7 @@
   },
   {
     "name": "Jasmine",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728076/jasmine_xt55hv.png",
     "pokemon_1": {
       "id": 43,
       "name": "Oddish",
@@ -3746,6 +3804,7 @@
   },
   {
     "name": "Mowgli",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728070/mowgli_fccf4p.png",
     "pokemon_1": {
       "id": 46,
       "name": "Paras",
@@ -3798,6 +3857,7 @@
   },
   {
     "name": "Rapunzel",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728077/rapunzel_rwgm64.png",
     "pokemon_1": {
       "id": 48,
       "name": "Venonat",
@@ -3850,6 +3910,7 @@
   },
   {
     "name": "Dory",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728088/dory_glsr0j.png",
     "pokemon_1": {
       "id": 50,
       "name": "Diglett",
@@ -3902,6 +3963,7 @@
   },
   {
     "name": "Hercules",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728070/hercules_nrstfr.png",
     "pokemon_1": {
       "id": 52,
       "name": "Meowth",
@@ -3954,6 +4016,7 @@
   },
   {
     "name": "Mufasa",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685728068/mufasa_vnexw8.png",
     "pokemon_1": {
       "id": 54,
       "name": "Psyduck",
@@ -4006,6 +4069,7 @@
   },
   {
     "name": "Rick Sanchez",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730244/rick_horsbt.png",
     "pokemon_1": {
       "id": 151,
       "name": "Mew",
@@ -4058,6 +4122,7 @@
   },
   {
     "name": "Morty Smith",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730244/morty_pkuiun.png",
     "pokemon_1": {
       "id": 143,
       "name": "Snorlax",
@@ -4110,6 +4175,7 @@
   },
   {
     "name": "Summer Smith",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730253/summer_smith_wddrxl.png",
     "pokemon_1": {
       "id": 148,
       "name": "Dragonair",
@@ -4162,6 +4228,7 @@
   },
   {
     "name": "Beth Smith",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730245/beth_smith_ds9wo7.png",
     "pokemon_1": {
       "id": 141,
       "name": "Kabutops",
@@ -4214,6 +4281,7 @@
   },
   {
     "name": "Jerry Smith",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730251/jerry_smith_c53b2l.png",
     "pokemon_1": {
       "id": 139,
       "name": "Omastar",
@@ -4266,6 +4334,7 @@
   },
   {
     "name": "Birdperson",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730246/birdperson_b28sc5.jpg",
     "pokemon_1": {
       "id": 128,
       "name": "Tauros",
@@ -4318,6 +4387,7 @@
   },
   {
     "name": "Squanchy",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730245/squanchy_fmfvkc.jpg",
     "pokemon_1": {
       "id": 124,
       "name": "Jynx",
@@ -4370,6 +4440,7 @@
   },
   {
     "name": "Mr. Meeseeks",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730243/mr_meeseeks_knqsl6.png",
     "pokemon_1": {
       "id": 119,
       "name": "Seaking",
@@ -4422,6 +4493,7 @@
   },
   {
     "name": "Evil Morty",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730245/evil_morty_pjmxoc.jpg",
     "pokemon_1": {
       "id": 117,
       "name": "Seadra",
@@ -4474,6 +4546,7 @@
   },
   {
     "name": "Snowball",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730247/snowball_sqvord.png",
     "pokemon_1": {
       "id": 115,
       "name": "Kangaskhan",
@@ -4526,6 +4599,7 @@
   },
   {
     "name": "Unity",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730244/unity_g5ular.jpg",
     "pokemon_1": {
       "id": 110,
       "name": "Weezing",
@@ -4578,6 +4652,7 @@
   },
   {
     "name": "Noob-Noob",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730243/noob_noob_vjzqfm.jpg",
     "pokemon_1": {
       "id": 105,
       "name": "Marowak",
@@ -4629,7 +4704,8 @@
     "pokemon_3": null
   },
   {
-    "name": "Scary Terry",
+    "name": "Pickle Rick",
+    "npcPicture_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1685730245/pickle_rick_u3xghq.png",
     "pokemon_1": {
       "id": 103,
       "name": "Exeggutor",
@@ -4675,110 +4751,6 @@
         "power": 120,
         "type": "Normal",
         "description": "In this two-turn attack, the user gathers energy and blasts a bundled beam on the next turn."
-      }
-    },
-    "pokemon_2": null,
-    "pokemon_3": null
-  },
-  {
-    "name": "Gazorpazorpfield",
-    "pokemon_1": {
-      "id": 101,
-      "name": "Electrode",
-      "type": "electric",
-      "secondary_type": null,
-      "level": 1,
-      "hp": 100,
-      "experience": 0,
-      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896191/101electrode_mzyjlp.png",
-      "evolutionId": 2,
-      "rarity": "uncommon",
-      "tier": 2,
-      "isCaught": false,
-      "TrainerId": 4,
-      "move1Id": 32,
-      "move2Id": 129,
-      "move3Id": 252,
-      "move4Id": 153,
-      "move1": {
-        "id": 32,
-        "name": "Tackle",
-        "power": 40,
-        "type": "Normal",
-        "description": "A physical attack in which the user charges and slams into the target with its whole body."
-      },
-      "move2": {
-        "id": 129,
-        "name": "Swift",
-        "power": 60,
-        "type": "Normal",
-        "description": "Star-shaped rays are shot at the target. This attack never misses."
-      },
-      "move3": {
-        "id": 252,
-        "name": "Thunder",
-        "power": 110,
-        "type": "Electric",
-        "description": "A wicked thunderbolt is dropped on the target to inflict damage. It may also leave the target with paralysis."
-      },
-      "move4": {
-        "id": 153,
-        "name": "Explosion",
-        "power": 250,
-        "type": "Fire",
-        "description": "The user explodes to inflict damage on all Pokémon in battle. The user faints upon using this move."
-      }
-    },
-    "pokemon_2": null,
-    "pokemon_3": null
-  },
-  {
-    "name": "Krombopulos Michael",
-    "pokemon_1": {
-      "id": 92,
-      "name": "Gastly",
-      "type": "Ghost",
-      "secondary_type": "poison",
-      "level": 1,
-      "hp": 100,
-      "experience": 0,
-      "img_url": "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896190/092gastly_dydqxr.png",
-      "evolutionId": 1,
-      "rarity": "common",
-      "tier": 2,
-      "isCaught": false,
-      "TrainerId": 4,
-      "move1Id": 122,
-      "move2Id": 304,
-      "move3Id": 398,
-      "move4Id": 212,
-      "move1": {
-        "id": 122,
-        "name": "Lick",
-        "power": 30,
-        "type": "Ghost",
-        "description": "The target is licked with a long tongue, causing damage. It may also paralyze the target."
-      },
-      "move2": {
-        "id": 304,
-        "name": "Shadow Punch",
-        "power": 60,
-        "type": "Ghost",
-        "description": "The user throws a punch from the shadows. This attack never misses."
-      },
-      "move3": {
-        "id": 398,
-        "name": "Sludge Bomb",
-        "power": 90,
-        "type": "Poison",
-        "description": "The user strikes the target with a sludge bomb. It may also poison the target."
-      },
-      "move4": {
-        "id": 212,
-        "name": "Dark Pulse",
-        "power": 80,
-        "type": "Dark",
-        "description": "The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch."
       }
     },
     "pokemon_2": null,
