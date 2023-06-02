@@ -87,7 +87,6 @@ Trainer.init(
           // console.log(newPokemon);
         }
       },
-      afterCreate: async (newTrainer) => {},
     },
     // hooks: {
     //   afterCreate: async (newTrainer) => {
