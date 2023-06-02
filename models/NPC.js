@@ -14,6 +14,15 @@ NPC.init(
 
     pokemon_1: {
       type: DataTypes.JSON,
+      allowNull: true,
+    },
+    pokemon_2: {
+      type: DataTypes.JSON,
+      allowNull: true,
+    },
+    pokemon_3: {
+      type: DataTypes.JSON,
+      allowNull: true,
     },
 
     //**pokemon foreign key: will auto generate

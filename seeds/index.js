@@ -28,7 +28,7 @@ const seedDatabase = async () => {
     // await Trainer.bulkCreate(trainerData);
     // loop over trainers, for each trainer, bulk create all pokemon wutg trainerID
 
-    // await Gym.bulkCreate(gymData);
+    await Gym.bulkCreate(gymData);
     await createTrainer();
 
     // await Pokemon.bulkCreate(pokemonData);
