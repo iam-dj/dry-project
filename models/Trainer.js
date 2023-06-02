@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const Pokemon = require("./Pokemon");
+const User = require("./User");
 const pokemonData = require("../seeds/pokemon-seeds.json");
 
 class Trainer extends Model {}
@@ -20,10 +21,10 @@ Trainer.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // profilePicUrl: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+    profilePicUrl: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     numWins: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -69,6 +70,7 @@ Trainer.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
+        model: User,
         key: "id",
       },
     },
@@ -85,6 +87,7 @@ Trainer.init(
           // console.log(newPokemon);
         }
       },
+      afterCreate: async (newTrainer) => {},
     },
     // hooks: {
     //   afterCreate: async (newTrainer) => {

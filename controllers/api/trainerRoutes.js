@@ -9,12 +9,12 @@ router.get("/", async (req, res) => {
         {
           model: Pokemon,
           as: "pokemons",
-          include: [
-            { model: Move, as: "move1" },
-            { model: Move, as: "move2" },
-            { model: Move, as: "move3" },
-            { model: Move, as: "move4" },
-          ],
+          // include: [
+          //   { model: Move, as: "move1" },
+          //   { model: Move, as: "move2" },
+          //   { model: Move, as: "move3" },
+          //   { model: Move, as: "move4" },
+          // ],
         },
         { model: User },
       ],
@@ -27,23 +27,8 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  // const token = localStorage.getItem("token");
-  // console.log(token);
-  const newTrainerData = {
-    name: req.body.name,
-    age: req.body.age,
-
-    // profilePicUrl: req.body.username,
-  };
-  // const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-  // const userId = decodedToken.id;
   try {
-    const newTrainer = await Trainer.create(newTrainerData, {
-      // include: [{ association: Trainer.User }],
-    });
-    // newTrainer.user_id = userId;
-    // await newTrainer.save();
-
+    const newTrainer = await Trainer.create(req.body);
     return res.status(200).json(newTrainer);
   } catch (err) {
     console.error(err);

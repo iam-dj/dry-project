@@ -17,7 +17,9 @@ User.hasOne(Trainer, {
 
 Trainer.hasMany(Pokemon);
 
-Pokemon.belongsTo(Trainer);
+Pokemon.belongsTo(Trainer, {
+  onDelete: "CASCADE",
+});
 
 // Pokemon.belongsToMany(Trainer, {
 //   through: "TrainerPokemon",
