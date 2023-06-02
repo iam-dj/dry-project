@@ -12,19 +12,18 @@ Trainer.init(
       primaryKey: true,
       autoIncrement: true,
     },
-
     name: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     age: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
-    profilePicUrl: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    // profilePicUrl: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     numWins: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -67,17 +66,48 @@ Trainer.init(
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        key: "id",
+      },
+    },
     //**foreign key: will auto generate
   },
   {
+    hooks: {
+      afterCreate: async (newTrainer) => {
+        const id = newTrainer.id;
+        for (let i = 0; i < pokemonData.length; i++) {
+          const pokemon = { ...pokemonData[i] };
+          pokemon.TrainerId = id;
+          const newPokemon = await Pokemon.create(pokemon);
+          // console.log(newPokemon);
+        }
+      },
+    },
     // hooks: {
     //   afterCreate: async (newTrainer) => {
     //     const id = newTrainer.id;
+    //     const promises = [];
     //     for (let i = 0; i < pokemonData.length; i++) {
     //       const pokemon = { ...pokemonData[i] };
     //       pokemon.TrainerId = id;
-    //       const newPokemon = await Pokemon.create(pokemon);
-    //       // console.log(newPokemon);
+    //       promises.push(Pokemon.create(pokemon));
+    //     }
+    //     await Promise.all(promises);
+    //   },
+    // },
+    // hooks: {
+    //   afterCreate: async (newTrainer) => {
+    //     console.log(pokemonData);
+    //     const id = newTrainer.id;
+    //     let pokemonId = 2;
+    //     for (let i = 0; i < pokemonData.length; i++) {
+    //       const pokemon = { ...pokemonData[i] };
+    //       pokemon.TrainerId = id;
+    //       pokemon.id = pokemonId++;
+    //       await Pokemon.create(pokemon);
     //     }
     //   },
     // },

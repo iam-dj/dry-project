@@ -6,11 +6,13 @@ const Trainer = require("./Trainer");
 const NPC = require("./NPC");
 const { move } = require("../controllers");
 
-User.hasOne(Trainer, {
-  onDelete: "Cascade",
+Trainer.belongsTo(User, {
+  foreignKey: "user_id",
 });
-
-Trainer.belongsTo(User);
+User.hasOne(Trainer, {
+  onDelete: "CASCADE",
+  foreignKey: "user_id",
+});
 
 Trainer.hasMany(Pokemon);
 

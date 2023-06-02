@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Pokemon, Gym, NPC, Trainer, Move } = require("../../models");
+const jwt = require("jsonwebtoken");
 
 router.get("/", async (req, res) => {
   try {
@@ -13,10 +14,9 @@ router.get("/", async (req, res) => {
             { model: Move, as: "move2" },
             { model: Move, as: "move3" },
             { model: Move, as: "move4" },
-
           ],
         },
-        {model:User},
+        { model: User },
       ],
     });
     res.status(200).json(trainers);
@@ -26,15 +26,23 @@ router.get("/", async (req, res) => {
   }
 });
 
-
 router.post("/", async (req, res) => {
+  // const token = localStorage.getItem("token");
+  // console.log(token);
   const newTrainerData = {
     name: req.body.name,
     age: req.body.age,
+
     // profilePicUrl: req.body.username,
   };
+  // const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+  // const userId = decodedToken.id;
   try {
-    const newTrainer = await Trainer.create(newTrainerData);
+    const newTrainer = await Trainer.create(newTrainerData, {
+      // include: [{ association: Trainer.User }],
+    });
+    // newTrainer.user_id = userId;
+    // await newTrainer.save();
 
     return res.status(200).json(newTrainer);
   } catch (err) {

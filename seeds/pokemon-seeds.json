@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "name": "Bulbasaur",
     "type": "grass",
     "secondary_type": "poison",
@@ -18,7 +17,6 @@
     "hp": 100
   },
   {
-    "id": 2,
     "name": "Ivysaur",
     "type": "grass",
     "secondary_type": "poison",
@@ -36,7 +34,6 @@
     "hp": 100
   },
   {
-    "id": 3,
     "name": "Venusaur",
     "type": "grass",
     "secondary_type": "poison",
@@ -54,7 +51,6 @@
     "hp": 100
   },
   {
-    "id": 4,
     "name": "Charmander",
     "type": "fire",
     "secondary_type": null,
@@ -72,7 +68,6 @@
     "hp": 100
   },
   {
-    "id": 5,
     "name": "Charmeleon",
     "type": "fire",
     "secondary_type": null,
@@ -90,7 +85,6 @@
     "hp": 100
   },
   {
-    "id": 6,
     "name": "Charizard",
     "type": "fire",
     "secondary_type": "flying",
@@ -108,7 +102,6 @@
     "hp": 100
   },
   {
-    "id": 7,
     "name": "Squirtle",
     "type": "water",
     "secondary_type": null,
@@ -126,7 +119,6 @@
     "hp": 100
   },
   {
-    "id": 8,
     "name": "Wartortle",
     "type": "water",
     "secondary_type": null,
@@ -144,7 +136,6 @@
     "hp": 100
   },
   {
-    "id": 9,
     "name": "Blastoise",
     "type": "water",
     "secondary_type": null,
@@ -162,7 +153,6 @@
     "hp": 100
   },
   {
-    "id": 10,
     "name": "Caterpie",
     "type": "bug",
     "secondary_type": null,
@@ -180,7 +170,6 @@
     "hp": 100
   },
   {
-    "id": 11,
     "name": "Metapod",
     "type": "bug",
     "secondary_type": null,
@@ -198,7 +187,6 @@
     "hp": 100
   },
   {
-    "id": 12,
     "name": "Butterfree",
     "type": "bug",
     "secondary_type": "flying",
@@ -216,7 +204,6 @@
     "hp": 100
   },
   {
-    "id": 13,
     "name": "Weedle",
     "type": "bug",
     "secondary_type": "poison",
@@ -234,7 +221,6 @@
     "hp": 100
   },
   {
-    "id": 14,
     "name": "Kakuna",
     "type": "bug",
     "secondary_type": "poison",
@@ -252,7 +238,6 @@
     "hp": 100
   },
   {
-    "id": 15,
     "name": "Beedrill",
     "type": "bug",
     "secondary_type": "poison",
@@ -270,7 +255,6 @@
     "hp": 100
   },
   {
-    "id": 16,
     "name": "Pidgey",
     "type": "normal",
     "secondary_type": "flying",
@@ -288,7 +272,6 @@
     "hp": 100
   },
   {
-    "id": 17,
     "name": "Pidgeotto",
     "type": "normal",
     "secondary_type": "flying",
@@ -306,7 +289,6 @@
     "hp": 100
   },
   {
-    "id": 18,
     "name": "Pidgeot",
     "type": "normal",
     "secondary_type": "flying",
@@ -324,7 +306,6 @@
     "hp": 100
   },
   {
-    "id": 19,
     "name": "Rattata",
     "type": "normal",
     "secondary_type": "dark",
@@ -342,7 +323,6 @@
     "hp": 100
   },
   {
-    "id": 20,
     "name": "Raticate",
     "type": "normal",
     "secondary_type": "dark",
@@ -360,7 +340,6 @@
     "hp": 100
   },
   {
-    "id": 21,
     "name": "Spearow",
     "type": "normal",
     "secondary_type": "flying",
@@ -378,7 +357,6 @@
     "hp": 100
   },
   {
-    "id": 22,
     "name": "Fearow",
     "type": "normal",
     "secondary_type": "flying",
@@ -396,7 +374,6 @@
     "hp": 100
   },
   {
-    "id": 23,
     "name": "Ekans",
     "type": "poison",
     "secondary_type": null,
@@ -414,7 +391,6 @@
     "hp": 100
   },
   {
-    "id": 24,
     "name": "Arbok",
     "type": "poison",
     "secondary_type": null,
@@ -432,7 +408,6 @@
     "hp": 100
   },
   {
-    "id": 25,
     "name": "Pikachu",
     "type": "electric",
     "secondary_type": null,
@@ -450,7 +425,6 @@
     "hp": 100
   },
   {
-    "id": 26,
     "name": "Raichu",
     "type": "electric",
     "secondary_type": null,
@@ -468,7 +442,6 @@
     "hp": 100
   },
   {
-    "id": 27,
     "name": "Sandshrew",
     "type": "ground",
     "secondary_type": null,
@@ -486,7 +459,6 @@
     "hp": 100
   },
   {
-    "id": 28,
     "name": "Sandslash",
     "type": "ground",
     "secondary_type": null,
@@ -504,7 +476,6 @@
     "hp": 100
   },
   {
-    "id": 29,
     "name": "Nidoran♀",
     "type": "poison",
     "secondary_type": null,
@@ -522,7 +493,6 @@
     "hp": 100
   },
   {
-    "id": 30,
     "name": "Nidorina",
     "type": "poison",
     "secondary_type": null,
@@ -540,7 +510,6 @@
     "hp": 100
   },
   {
-    "id": 31,
     "name": "Nidoqueen",
     "type": "poison",
     "secondary_type": "ground",
@@ -558,7 +527,6 @@
     "hp": 100
   },
   {
-    "id": 32,
     "name": "Nidoran♂",
     "type": "poison",
     "secondary_type": null,
@@ -576,7 +544,6 @@
     "hp": 100
   },
   {
-    "id": 33,
     "name": "Nidorino",
     "type": "poison",
     "secondary_type": null,
@@ -594,7 +561,6 @@
     "hp": 100
   },
   {
-    "id": 34,
     "name": "Nidoking",
     "type": "poison",
     "secondary_type": "ground",
@@ -612,7 +578,6 @@
     "hp": 100
   },
   {
-    "id": 35,
     "name": "Clefairy",
     "type": "fairy",
     "secondary_type": null,
@@ -630,7 +595,6 @@
     "hp": 100
   },
   {
-    "id": 36,
     "name": "Clefable",
     "type": "fairy",
     "secondary_type": null,
@@ -648,7 +612,6 @@
     "hp": 100
   },
   {
-    "id": 37,
     "name": "Vulpix",
     "type": "fire",
     "secondary_type": null,
@@ -666,7 +629,6 @@
     "hp": 100
   },
   {
-    "id": 38,
     "name": "Ninetales",
     "type": "fire",
     "secondary_type": null,
@@ -684,7 +646,6 @@
     "hp": 100
   },
   {
-    "id": 39,
     "name": "Jigglypuff",
     "type": "fairy",
     "secondary_type": "normal",
@@ -702,7 +663,6 @@
     "hp": 100
   },
   {
-    "id": 40,
     "name": "Wigglytuff",
     "type": "fairy",
     "secondary_type": "normal",
@@ -720,7 +680,6 @@
     "hp": 100
   },
   {
-    "id": 41,
     "name": "Zubat",
     "type": "poison",
     "secondary_type": "flying",
@@ -738,7 +697,6 @@
     "hp": 100
   },
   {
-    "id": 42,
     "name": "Golbat",
     "type": "poison",
     "secondary_type": "flying",
@@ -756,7 +714,6 @@
     "hp": 100
   },
   {
-    "id": 43,
     "name": "Oddish",
     "type": "grass",
     "secondary_type": "poison",
@@ -774,7 +731,6 @@
     "hp": 100
   },
   {
-    "id": 44,
     "name": "Gloom",
     "type": "grass",
     "secondary_type": "poison",
@@ -792,7 +748,6 @@
     "hp": 100
   },
   {
-    "id": 45,
     "name": "Vileplume",
     "type": "grass",
     "secondary_type": "poison",
@@ -810,7 +765,6 @@
     "hp": 100
   },
   {
-    "id": 46,
     "name": "Paras",
     "type": "bug",
     "secondary_type": "grass",
@@ -828,7 +782,6 @@
     "hp": 100
   },
   {
-    "id": 47,
     "name": "Parasect",
     "type": "bug",
     "secondary_type": "grass",
@@ -846,7 +799,6 @@
     "hp": 100
   },
   {
-    "id": 48,
     "name": "Venonat",
     "type": "bug",
     "secondary_type": "poison",
@@ -864,7 +816,6 @@
     "hp": 100
   },
   {
-    "id": 49,
     "name": "Venomoth",
     "type": "bug",
     "secondary_type": "poison",
@@ -882,7 +833,6 @@
     "hp": 100
   },
   {
-    "id": 50,
     "name": "Diglett",
     "type": "ground",
     "secondary_type": null,
@@ -900,7 +850,6 @@
     "hp": 100
   },
   {
-    "id": 51,
     "name": "Dugtrio",
     "type": "ground",
     "secondary_type": null,
@@ -918,7 +867,6 @@
     "hp": 100
   },
   {
-    "id": 52,
     "name": "Meowth",
     "type": "normal",
     "secondary_type": null,
@@ -936,7 +884,6 @@
     "hp": 100
   },
   {
-    "id": 53,
     "name": "Persian",
     "type": "normal",
     "secondary_type": null,
@@ -954,7 +901,6 @@
     "hp": 100
   },
   {
-    "id": 54,
     "name": "Psyduck",
     "type": "water",
     "secondary_type": null,
@@ -972,7 +918,6 @@
     "hp": 100
   },
   {
-    "id": 55,
     "name": "Golduck",
     "type": "water",
     "secondary_type": null,
@@ -990,7 +935,6 @@
     "hp": 100
   },
   {
-    "id": 56,
     "name": "Mankey",
     "type": "Fighting",
     "secondary_type": null,
@@ -1008,7 +952,6 @@
     "hp": 100
   },
   {
-    "id": 57,
     "name": "Primeape",
     "type": "Fighting",
     "secondary_type": null,
@@ -1026,7 +969,6 @@
     "hp": 100
   },
   {
-    "id": 58,
     "name": "Growlithe",
     "type": "fire",
     "secondary_type": null,
@@ -1044,7 +986,6 @@
     "hp": 100
   },
   {
-    "id": 59,
     "name": "Arcanine",
     "type": "fire",
     "secondary_type": null,
@@ -1062,7 +1003,6 @@
     "hp": 100
   },
   {
-    "id": 60,
     "name": "Poliwag",
     "type": "water",
     "secondary_type": null,
@@ -1080,7 +1020,6 @@
     "hp": 100
   },
   {
-    "id": 61,
     "name": "Poliwhirl",
     "type": "water",
     "secondary_type": null,
@@ -1098,7 +1037,6 @@
     "hp": 100
   },
   {
-    "id": 62,
     "name": "Poliwrath",
     "type": "water",
     "secondary_type": "Fighting",
@@ -1116,7 +1054,6 @@
     "hp": 100
   },
   {
-    "id": 63,
     "name": "Abra",
     "type": "psychic",
     "secondary_type": null,
@@ -1134,7 +1071,6 @@
     "hp": 100
   },
   {
-    "id": 64,
     "name": "Kadabra",
     "type": "psychic",
     "secondary_type": null,
@@ -1152,7 +1088,6 @@
     "hp": 100
   },
   {
-    "id": 65,
     "name": "Alakazam",
     "type": "psychic",
     "secondary_type": null,
@@ -1170,7 +1105,6 @@
     "hp": 100
   },
   {
-    "id": 66,
     "name": "Machop",
     "type": "Fighting",
     "secondary_type": null,
@@ -1188,7 +1122,6 @@
     "hp": 100
   },
   {
-    "id": 67,
     "name": "Machoke",
     "type": "Fighting",
     "secondary_type": null,
@@ -1206,7 +1139,6 @@
     "hp": 100
   },
   {
-    "id": 68,
     "name": "Machamp",
     "type": "Fighting",
     "secondary_type": null,
@@ -1224,7 +1156,6 @@
     "hp": 100
   },
   {
-    "id": 69,
     "name": "Bellsprout",
     "type": "grass",
     "secondary_type": "poison",
@@ -1242,7 +1173,6 @@
     "hp": 100
   },
   {
-    "id": 70,
     "name": "Weepinbell",
     "type": "grass",
     "secondary_type": "poison",
@@ -1260,7 +1190,6 @@
     "hp": 100
   },
   {
-    "id": 71,
     "name": "Victreebel",
     "type": "grass",
     "secondary_type": "poison",
@@ -1278,7 +1207,6 @@
     "hp": 100
   },
   {
-    "id": 72,
     "name": "Tentacool",
     "type": "water",
     "secondary_type": "poison",
@@ -1296,7 +1224,6 @@
     "hp": 100
   },
   {
-    "id": 73,
     "name": "Tentacruel",
     "type": "water",
     "secondary_type": "poison",
@@ -1314,7 +1241,6 @@
     "hp": 100
   },
   {
-    "id": 74,
     "name": "Geodude",
     "type": "rock",
     "secondary_type": "ground",
@@ -1332,7 +1258,6 @@
     "hp": 100
   },
   {
-    "id": 75,
     "name": "Graveler",
     "type": "rock",
     "secondary_type": "ground",
@@ -1350,7 +1275,6 @@
     "hp": 100
   },
   {
-    "id": 76,
     "name": "Golem",
     "type": "rock",
     "secondary_type": "ground",
@@ -1368,7 +1292,6 @@
     "hp": 100
   },
   {
-    "id": 77,
     "name": "Ponyta",
     "type": "fire",
     "secondary_type": null,
@@ -1386,7 +1309,6 @@
     "hp": 100
   },
   {
-    "id": 78,
     "name": "Rapidash",
     "type": "fire",
     "secondary_type": null,
@@ -1404,7 +1326,6 @@
     "hp": 100
   },
   {
-    "id": 79,
     "name": "Slowpoke",
     "type": "psychic",
     "secondary_type": "water",
@@ -1422,7 +1343,6 @@
     "hp": 100
   },
   {
-    "id": 80,
     "name": "Slowbro",
     "type": "psychic",
     "secondary_type": "water",
@@ -1440,7 +1360,6 @@
     "hp": 100
   },
   {
-    "id": 81,
     "name": "Magnemite",
     "type": "electric",
     "secondary_type": "Steel",
@@ -1458,7 +1377,6 @@
     "hp": 100
   },
   {
-    "id": 82,
     "name": "Magneton",
     "type": "electric",
     "secondary_type": "Steel",
@@ -1476,7 +1394,6 @@
     "hp": 100
   },
   {
-    "id": 83,
     "name": "Farfetch'd",
     "type": "normal",
     "secondary_type": "flying",
@@ -1494,7 +1411,6 @@
     "hp": 100
   },
   {
-    "id": 84,
     "name": "Doduo",
     "type": "normal",
     "secondary_type": "flying",
@@ -1512,7 +1428,6 @@
     "hp": 100
   },
   {
-    "id": 85,
     "name": "Dodrio",
     "type": "normal",
     "secondary_type": "flying",
@@ -1530,7 +1445,6 @@
     "hp": 100
   },
   {
-    "id": 86,
     "name": "Seel",
     "type": "water",
     "secondary_type": null,
@@ -1548,7 +1462,6 @@
     "hp": 100
   },
   {
-    "id": 87,
     "name": "Dewgong",
     "type": "Ice",
     "secondary_type": "water",
@@ -1566,7 +1479,6 @@
     "hp": 100
   },
   {
-    "id": 88,
     "name": "Grimer",
     "type": "poison",
     "secondary_type": "dark",
@@ -1584,7 +1496,6 @@
     "hp": 100
   },
   {
-    "id": 89,
     "name": "Muk",
     "type": "poison",
     "secondary_type": "dark",
@@ -1602,7 +1513,6 @@
     "hp": 100
   },
   {
-    "id": 90,
     "name": "Shellder",
     "type": "water",
     "secondary_type": null,
@@ -1620,7 +1530,6 @@
     "hp": 100
   },
   {
-    "id": 91,
     "name": "Cloyster",
     "type": "Ice",
     "secondary_type": "water",
@@ -1638,7 +1547,6 @@
     "hp": 100
   },
   {
-    "id": 92,
     "name": "Gastly",
     "type": "Ghost",
     "secondary_type": "poison",
@@ -1656,7 +1564,6 @@
     "hp": 100
   },
   {
-    "id": 93,
     "name": "Haunter",
     "type": "Ghost",
     "secondary_type": "poison",
@@ -1674,7 +1581,6 @@
     "hp": 100
   },
   {
-    "id": 94,
     "name": "Gengar",
     "type": "Ghost",
     "secondary_type": "poison",
@@ -1692,7 +1598,6 @@
     "hp": 100
   },
   {
-    "id": 95,
     "name": "Onix",
     "type": "rock",
     "secondary_type": "ground",
@@ -1710,7 +1615,6 @@
     "hp": 100
   },
   {
-    "id": 96,
     "name": "Drowzee",
     "type": "psychic",
     "secondary_type": null,
@@ -1728,7 +1632,6 @@
     "hp": 100
   },
   {
-    "id": 97,
     "name": "Hypno",
     "type": "psychic",
     "secondary_type": null,
@@ -1746,7 +1649,6 @@
     "hp": 100
   },
   {
-    "id": 98,
     "name": "Krabby",
     "type": "water",
     "secondary_type": null,
@@ -1764,7 +1666,6 @@
     "hp": 100
   },
   {
-    "id": 99,
     "name": "Kingler",
     "type": "water",
     "secondary_type": null,
@@ -1782,7 +1683,6 @@
     "hp": 100
   },
   {
-    "id": 100,
     "name": "Voltorb",
     "type": "electric",
     "secondary_type": null,
@@ -1800,7 +1700,6 @@
     "hp": 100
   },
   {
-    "id": 101,
     "name": "Electrode",
     "type": "electric",
     "secondary_type": null,
@@ -1818,7 +1717,6 @@
     "hp": 100
   },
   {
-    "id": 102,
     "name": "Exeggcute",
     "type": "grass",
     "secondary_type": "psychic",
@@ -1836,7 +1734,6 @@
     "hp": 100
   },
   {
-    "id": 103,
     "name": "Exeggutor",
     "type": "grass",
     "secondary_type": "psychic",
@@ -1854,7 +1751,6 @@
     "hp": 100
   },
   {
-    "id": 104,
     "name": "Cubone",
     "type": "ground",
     "secondary_type": null,
@@ -1872,7 +1768,6 @@
     "hp": 100
   },
   {
-    "id": 105,
     "name": "Marowak",
     "type": "ground",
     "secondary_type": null,
@@ -1890,7 +1785,6 @@
     "hp": 100
   },
   {
-    "id": 106,
     "name": "Hitmonlee",
     "type": "Fighting",
     "secondary_type": null,
@@ -1908,7 +1802,6 @@
     "hp": 100
   },
   {
-    "id": 107,
     "name": "Hitmonchan",
     "type": "Fighting",
     "secondary_type": null,
@@ -1926,7 +1819,6 @@
     "hp": 100
   },
   {
-    "id": 108,
     "name": "Lickitung",
     "type": "normal",
     "secondary_type": null,
@@ -1944,7 +1836,6 @@
     "hp": 100
   },
   {
-    "id": 109,
     "name": "Koffing",
     "type": "poison",
     "secondary_type": null,
@@ -1962,7 +1853,6 @@
     "hp": 100
   },
   {
-    "id": 110,
     "name": "Weezing",
     "type": "poison",
     "secondary_type": null,
@@ -1980,7 +1870,6 @@
     "hp": 100
   },
   {
-    "id": 111,
     "name": "Rhyhorn",
     "type": "ground",
     "secondary_type": "rock",
@@ -1998,7 +1887,6 @@
     "hp": 100
   },
   {
-    "id": 112,
     "name": "Rhydon",
     "type": "ground",
     "secondary_type": "rock",
@@ -2016,7 +1904,6 @@
     "hp": 100
   },
   {
-    "id": 113,
     "name": "Chansey",
     "type": "normal",
     "secondary_type": null,
@@ -2034,7 +1921,6 @@
     "hp": 100
   },
   {
-    "id": 114,
     "name": "Tangela",
     "type": "grass",
     "secondary_type": null,
@@ -2052,7 +1938,6 @@
     "hp": 100
   },
   {
-    "id": 115,
     "name": "Kangaskhan",
     "type": "normal",
     "secondary_type": null,
@@ -2070,7 +1955,6 @@
     "hp": 100
   },
   {
-    "id": 116,
     "name": "Horsea",
     "type": "water",
     "secondary_type": null,
@@ -2088,7 +1972,6 @@
     "hp": 100
   },
   {
-    "id": 117,
     "name": "Seadra",
     "type": "water",
     "secondary_type": null,
@@ -2106,7 +1989,6 @@
     "hp": 100
   },
   {
-    "id": 118,
     "name": "Goldeen",
     "type": "water",
     "secondary_type": null,
@@ -2124,7 +2006,6 @@
     "hp": 100
   },
   {
-    "id": 119,
     "name": "Seaking",
     "type": "water",
     "secondary_type": null,
@@ -2142,7 +2023,6 @@
     "hp": 100
   },
   {
-    "id": 120,
     "name": "Staryu",
     "type": "water",
     "secondary_type": null,
@@ -2160,7 +2040,6 @@
     "hp": 100
   },
   {
-    "id": 121,
     "name": "Starmie",
     "type": "psychic",
     "secondary_type": "water",
@@ -2178,7 +2057,6 @@
     "hp": 100
   },
   {
-    "id": 122,
     "name": "Mr. Mime",
     "type": "psychic",
     "secondary_type": "fairy",
@@ -2196,7 +2074,6 @@
     "hp": 100
   },
   {
-    "id": 123,
     "name": "Scyther",
     "type": "bug",
     "secondary_type": "flying",
@@ -2214,7 +2091,6 @@
     "hp": 100
   },
   {
-    "id": 124,
     "name": "Jynx",
     "type": "psychic",
     "secondary_type": null,
@@ -2232,7 +2108,6 @@
     "hp": 100
   },
   {
-    "id": 125,
     "name": "Electabuzz",
     "type": "electric",
     "secondary_type": null,
@@ -2250,7 +2125,6 @@
     "hp": 100
   },
   {
-    "id": 126,
     "name": "Magmar",
     "type": "fire",
     "secondary_type": null,
@@ -2268,7 +2142,6 @@
     "hp": 100
   },
   {
-    "id": 127,
     "name": "Pinsir",
     "type": "bug",
     "secondary_type": null,
@@ -2286,7 +2159,6 @@
     "hp": 100
   },
   {
-    "id": 128,
     "name": "Tauros",
     "type": "normal",
     "secondary_type": null,
@@ -2304,7 +2176,6 @@
     "hp": 100
   },
   {
-    "id": 129,
     "name": "Magikarp",
     "type": "water",
     "secondary_type": null,
@@ -2322,7 +2193,6 @@
     "hp": 100
   },
   {
-    "id": 130,
     "name": "Gyarados",
     "type": "water",
     "secondary_type": "flying",
@@ -2340,7 +2210,6 @@
     "hp": 100
   },
   {
-    "id": 131,
     "name": "Lapras",
     "type": "water",
     "secondary_type": null,
@@ -2358,7 +2227,6 @@
     "hp": 100
   },
   {
-    "id": 132,
     "name": "Ditto",
     "type": "normal",
     "secondary_type": null,
@@ -2376,7 +2244,6 @@
     "hp": 100
   },
   {
-    "id": 133,
     "name": "Eevee",
     "type": "normal",
     "secondary_type": null,
@@ -2394,7 +2261,6 @@
     "hp": 100
   },
   {
-    "id": 134,
     "name": "Vaporeon",
     "type": "water",
     "secondary_type": null,
@@ -2412,7 +2278,6 @@
     "hp": 100
   },
   {
-    "id": 135,
     "name": "Jolteon",
     "type": "electric",
     "secondary_type": null,
@@ -2430,7 +2295,6 @@
     "hp": 100
   },
   {
-    "id": 136,
     "name": "Flareon",
     "type": "fire",
     "secondary_type": null,
@@ -2448,7 +2312,6 @@
     "hp": 100
   },
   {
-    "id": 137,
     "name": "Porygon",
     "type": "normal",
     "secondary_type": null,
@@ -2466,7 +2329,6 @@
     "hp": 100
   },
   {
-    "id": 138,
     "name": "Omanyte",
     "type": "rock",
     "secondary_type": "water",
@@ -2484,7 +2346,6 @@
     "hp": 100
   },
   {
-    "id": 139,
     "name": "Omastar",
     "type": "rock",
     "secondary_type": "water",
@@ -2502,7 +2363,6 @@
     "hp": 100
   },
   {
-    "id": 140,
     "name": "Kabuto",
     "type": "rock",
     "secondary_type": "water",
@@ -2520,7 +2380,6 @@
     "hp": 100
   },
   {
-    "id": 141,
     "name": "Kabutops",
     "type": "rock",
     "secondary_type": "water",
@@ -2538,7 +2397,6 @@
     "hp": 100
   },
   {
-    "id": 142,
     "name": "Aerodactyl",
     "type": "rock",
     "secondary_type": "flying",
@@ -2556,7 +2414,6 @@
     "hp": 100
   },
   {
-    "id": 143,
     "name": "Snorlax",
     "type": "normal",
     "secondary_type": null,
@@ -2574,7 +2431,6 @@
     "hp": 100
   },
   {
-    "id": 144,
     "name": "Articuno",
     "type": "Ice",
     "secondary_type": "flying",
@@ -2592,7 +2448,6 @@
     "hp": 100
   },
   {
-    "id": 145,
     "name": "Zapdos",
     "type": "electric",
     "secondary_type": "flying",
@@ -2610,7 +2465,6 @@
     "hp": 100
   },
   {
-    "id": 146,
     "name": "Moltres",
     "type": "fire",
     "secondary_type": "flying",
@@ -2628,7 +2482,6 @@
     "hp": 100
   },
   {
-    "id": 147,
     "name": "Dratini",
     "type": "dragon",
     "secondary_type": null,
@@ -2646,7 +2499,6 @@
     "hp": 100
   },
   {
-    "id": 148,
     "name": "Dragonair",
     "type": "dragon",
     "secondary_type": null,
@@ -2664,7 +2516,6 @@
     "hp": 100
   },
   {
-    "id": 149,
     "name": "Dragonite",
     "type": "dragon",
     "secondary_type": "flying",
@@ -2682,7 +2533,6 @@
     "hp": 100
   },
   {
-    "id": 150,
     "name": "Mewtwo",
     "type": "psychic",
     "secondary_type": null,
@@ -2700,7 +2550,6 @@
     "hp": 100
   },
   {
-    "id": 151,
     "name": "Mew",
     "type": "psychic",
     "secondary_type": null,
