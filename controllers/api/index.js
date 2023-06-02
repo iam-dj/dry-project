@@ -7,7 +7,7 @@ const gymRoutes = require("./gymRoutes");
 const npcRoutes = require("./npcRoutes");
 const trainerRoutes = require("./trainerRoutes");
 const moveRoutes = require("./moveRoutes");
-// const pokemonMoveListRoutes = require("./pokemonMoveListRoutes");
+const pokemonReferenceRoutes = require("./pokemonReferenceRoutes");
 
 router.use("/pokemon", pokemonRoutes);
 router.use("/gyms", gymRoutes);
@@ -15,6 +15,6 @@ router.use("/users", userRoutes);
 router.use("/moves", moveRoutes);
 router.use("/trainers", trainerRoutes);
 router.use("/npcs", npcRoutes);
-// router.use("/pokemonmovelists", pokemonMoveListRoutes);
+router.use("/pokemonreferences", pokemonReferenceRoutes);
 
 module.exports = router;

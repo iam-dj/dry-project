@@ -4,6 +4,7 @@ const Pokemon = require("./Pokemon");
 const User = require("./User");
 const Trainer = require("./Trainer");
 const NPC = require("./NPC");
+const PokemonReference = require("./PokemonReference");
 const { move } = require("../controllers");
 
 Trainer.belongsTo(User, {
@@ -44,13 +45,19 @@ Pokemon.belongsTo(Move, { as: "move2" });
 Pokemon.belongsTo(Move, { as: "move3" });
 Pokemon.belongsTo(Move, { as: "move4" });
 
-// Gym.hasOne(NPC);
+Gym.hasOne(NPC, {
+  // foreignKey: "GymId",
+  // as: "npc",
+});
 
-NPC.belongsTo(Gym);
+NPC.belongsTo(Gym, {
+  // foreignKey: "GymId",
+  // as: "gym",
+});
 
-NPC.hasMany(Pokemon);
-Pokemon.belongsTo(NPC);
-Move.belongsTo(NPC);
+// NPC.hasMany(Pokemon);
+// Pokemon.belongsTo(NPC);
+// Move.belongsTo(NPC);
 
 // Pokemon.belongsTo(NPC);
 
@@ -61,4 +68,5 @@ module.exports = {
   Pokemon: Pokemon,
   User: User,
   Trainer: Trainer,
+  PokemonReference: PokemonReference,
 };

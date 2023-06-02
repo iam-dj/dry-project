@@ -2,17 +2,16 @@ const router = require("express").Router();
 const { User, Pokemon, Gym, NPC, Trainer, Move } = require("../../models");
 
 //findall
-router.get("/", (req, res) => {
-  Gym.findAll({
-    include: [Pokemon, Move],
-  })
-    .then((gym) => {
-      res.json(gym);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json({ msg: "Uh oh, that gym doesnt exist!", err });
+router.get("/", async (req, res) => {
+  try {
+    const gyms = await Gym.findAll({
+      include: NPC,
     });
+    res.status(200).json(gyms);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
 });
 
 router.get("/:id", async (req, res) => {
