@@ -54,14 +54,14 @@ const createTrainer = async () => {
       "https://res.cloudinary.com/duaznt4wg/image/upload/v1684896179/001bulbasaur_buvbux.png",
     numWins: 32,
     numLosses: 12,
-    boulder_badge: true,
-    cascade_badge: true,
-    thunder_badge: true,
-    rainbow_badge: true,
-    soul_badge: true,
-    marsh_badge: true,
-    volcano_badge: true,
-    earth_badge: true,
+    boulder_badge: false,
+    cascade_badge: false,
+    thunder_badge: false,
+    rainbow_badge: false,
+    soul_badge: false,
+    marsh_badge: false,
+    volcano_badge: false,
+    earth_badge: false,
   });
 };
 
