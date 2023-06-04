@@ -26,7 +26,83 @@ router.get("/", async (req, res) => {
   }
 });
 
-//route for incrementing battles won
+router.get("/:id", async (req, res) => {
+  try {
+    const trainers = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    res.status(200).json(trainers);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//route to get pokemon by trainer id that returns the pokemon that isMain:true
+router.get("/main/:id", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+          where: { isMain: true }, // Filter to show only the Pokémon with "isMain: true"
+        },
+        { model: User },
+      ],
+    });
+    res.status(200).json(trainer);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//route to get isCaught:true pokemon of trainer by id  
+router.get("/caught/:id", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+          where: { isCaught: true }, // Filter to show only the Pokémon with "isMain: true"
+        },
+        { model: User },
+      ],
+    });
+    res.status(200).json(trainer);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//route for incrementing battles won for pokemon
 router.put("/:id/increment-battles-won/:name", async (req, res) => {
   const pokemonName = req.params.name;
   try {
@@ -49,7 +125,7 @@ router.put("/:id/increment-battles-won/:name", async (req, res) => {
       return res.status(404).json({ error: "Trainer not found" });
     }
 
-    console.log(trainer);
+    // console.log(trainer);
 
     const pokemon = trainer.pokemons.find(
       (p) => p.name === pokemonName && p.isCaught === true
@@ -426,6 +502,7 @@ router.put("/:id/increment-num-wins", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+
 // route to update trainer numLosses by one
 router.put("/:id/increment-num-loss", async (req, res) => {
   const trainerId = req.params.id;
