@@ -189,6 +189,47 @@ router.put("/:id/increment-battles-lost/:name", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+//route for incrementing pokehp
+router.put("/:id/hp/:name", async (req, res) => {
+  const pokemonName = req.params.name;
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find(
+      (p) => p.name === pokemonName && p.isMain === true
+    );
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    // Update HP by 15
+    pokemon.hp += 15;
+
+    await pokemon.save();
+
+    res.json(pokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
 
 //route for getting switching iscaught boolean
 router.put("/:id/iscaught/:name", async (req, res) => {
