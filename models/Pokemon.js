@@ -24,6 +24,11 @@ Pokemon.init(
       allowNull: false,
       defaultValue: 1,
     },
+    experience: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      defaultValue: 0,
+    },
     hp: {
       type: DataTypes.INTEGER,
       allowNull: false,
