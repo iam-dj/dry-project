@@ -76,7 +76,7 @@ router.get("/main/:id", async (req, res) => {
   }
 });
 
-//route to get isCaught:true pokemon of trainer by id  
+//route to get isCaught:true pokemon of trainer by id
 router.get("/caught/:id", async (req, res) => {
   try {
     const trainer = await Trainer.findByPk(req.params.id, {
@@ -136,6 +136,12 @@ router.put("/:id/increment-battles-won/:name", async (req, res) => {
 
     // Increment battlesWon by one
     pokemon.battlesWon += 1;
+    pokemon.experience += 1;
+
+    if (pokemon.experience >= 20) {
+      pokemon.hp += 20;
+      pokemon.experience = 0;
+    }
 
     await pokemon.save();
 
@@ -527,17 +533,56 @@ router.put("/:id/flip-marsh-badge", async (req, res) => {
 router.put("/:id/increment-num-wins", async (req, res) => {
   const trainerId = req.params.id;
   try {
-    const trainer = await Trainer.findByPk(trainerId);
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
     if (!trainer) {
       return res.status(404).json({ error: "Trainer not found" });
     }
 
+    const pokemon = trainer.pokemons.find((p) => p.isMain === true);
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    // Increment battlesWon by one
+    pokemon.battlesWon++;
+    const experienceGained = Math.floor(Math.random() * 10) + 1; // Random value between 1 and 10
+    pokemon.experience += experienceGained;
+
+    let levelChange = 0;
+    let hpChange = 0;
+
+    if (pokemon.experience >= 10) {
+      pokemon.hp += 10;
+      pokemon.experience = 0;
+      pokemon.level++;
+      levelChange = 1;
+      hpChange = 10;
+    }
+
+    await pokemon.save();
     // Increment the numWins field by one
     trainer.numWins += 1;
 
     await trainer.save();
-
-    res.json(trainer);
+    // console.log(trainer);
+    // console.log(pokemon);
+    res
+      .status(200)
+      .json({ trainer, pokemon, experienceGained, levelChange, hpChange });
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
@@ -548,17 +593,60 @@ router.put("/:id/increment-num-wins", async (req, res) => {
 router.put("/:id/increment-num-loss", async (req, res) => {
   const trainerId = req.params.id;
   try {
-    const trainer = await Trainer.findByPk(trainerId);
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
     if (!trainer) {
       return res.status(404).json({ error: "Trainer not found" });
     }
 
+    const pokemon = trainer.pokemons.find((p) => p.isMain === true);
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    // Increment battlesLost by one
+    pokemon.battlesLost++;
+    const shouldGainExperience = Math.random() <= 0.3;
+    console.log("Should gain experience:", shouldGainExperience); // Log the result of the randomizer
+    if (shouldGainExperience) {
+      pokemon.experience++;
+      console.log("Experience gained!"); // Log the experience gain
+    }
+
+    let experienceChange = 1;
+    let levelChange = 0;
+    let hpChange = 0;
+
+    if (pokemon.experience >= 10) {
+      pokemon.hp += 10;
+      pokemon.experience = 0;
+      pokemon.level++;
+      levelChange = 1;
+      hpChange = 10;
+    }
+
+    await pokemon.save();
     // Increment the numWins field by one
     trainer.numLosses += 1;
 
     await trainer.save();
 
-    res.json(trainer);
+    res
+      .status(200)
+      .json({ trainer, pokemon, experienceChange, levelChange, hpChange });
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
