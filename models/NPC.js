@@ -28,6 +28,11 @@ NPC.init(
       type: DataTypes.JSON,
       allowNull: true,
     },
+    isGymMaster: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      defaultValue: false,
+    },
 
     //**pokemon foreign key: will auto generate
   },

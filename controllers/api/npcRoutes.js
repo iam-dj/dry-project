@@ -14,16 +14,4 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
-  try {
-    const npc = await NPC.findByPk(req.params.id, {
-      include: { all: true, nested: true },
-    });
-    res.status(200).json(npc);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json(error);
-  }
-});
-
 module.exports = router;
