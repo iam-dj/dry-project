@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "name": "Ash Ketchum",
+  "age": 16,
+  "numWins": 32,
+  "numLosses": 12,
+  "boulder_badge": true,
+  "cascade_badge": true,
+  "thunder_badge": true,
+  "rainbow_badge": true,
+  "soul_badge": true,
+  "marsh_badge": true,
+  "volcano_badge": true,
+  "earth_badge": true
+}
