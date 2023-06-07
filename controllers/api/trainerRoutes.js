@@ -237,7 +237,7 @@ router.put("/:id/hp/:name", async (req, res) => {
   }
 });
 
-//route for getting switching iscaught boolean
+//route for switching iscaught boolean
 router.put("/:id/iscaught/:name", async (req, res) => {
   const pokemonName = req.params.name;
   try {
@@ -268,12 +268,50 @@ router.put("/:id/iscaught/:name", async (req, res) => {
         .status(404)
         .json({ error: "Pokemon not found or already caught" });
     }
+    const numSpins = trainer.numSpins;
 
     pokemon.isCaught = true;
 
+    if (numSpins > 0) {
+      trainer.numSpins--;
+    }
+
     await pokemon.save();
 
+    await trainer.save();
     res.json(pokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
+//route for adding spins to trainer
+router.put("/:id/numspins-add", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    trainer.numSpins++;
+
+    await trainer.save();
+    res.json(trainer);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });

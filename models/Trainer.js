@@ -35,6 +35,12 @@ Trainer.init(
       allowNull: false,
       defaultValue: 0,
     },
+    numSpins: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+
     boulder_badge: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
