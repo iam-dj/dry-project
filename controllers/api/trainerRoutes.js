@@ -825,4 +825,340 @@ router.put("/:id/pokemon/:name/update-move3", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+
+//updates stage 1 in gyms for pokemon
+router.put("/:id/increment-num-wins-stage-1/:gymId", async (req, res) => {
+  const trainerId = req.params.id;
+  const gymId = req.params.gymId;
+  try {
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find((p) => p.isMain === true);
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    // Increment battlesWon by one
+    pokemon.battlesWon++;
+    const experienceGained = Math.floor(Math.random() * 10) + 1; // Random value between 1 and 10
+    pokemon.experience += experienceGained;
+
+    let levelChange = 0;
+    let hpChange = 0;
+    let gymStageChange = "";
+
+    if (pokemon.experience >= 10) {
+      pokemon.hp += 10;
+      pokemon.experience = 0;
+      pokemon.level++;
+      levelChange = 1;
+      hpChange = 10;
+    }
+    console.log(gymId);
+    //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
+    if (gymId === "1") {
+      if (pokemon.gymOneStage === 1) pokemon.gymOneStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 1 of gym 1!");
+    } else if (gymId === "2") {
+      if (pokemon.gymTwoStage === 1) pokemon.gymTwoStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 1 of gym 2!");
+    } else if (gymId === "3") {
+      if (pokemon.gymThreeStage === 1) pokemon.gymThreeStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 1 of gym 3!");
+    } else if (gymId === "4") {
+      if (pokemon.gymFourStage === 1) pokemon.gymFourStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 1 of gym 4!");
+    } else if (gymId === "5") {
+      if (pokemon.gymFiveStage === 1) pokemon.gymFiveStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 1 of gym 5!");
+    } else if (gymId === "6") {
+      if (pokemon.gymSixStage === 1) pokemon.gymSixStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 1 of gym 6!");
+    } else if (gymId === "7") {
+      if (pokemon.gymSevenStage === 1) pokemon.gymSevenStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 1 of gym 7!");
+    } else if (gymId === "8") {
+      if (pokemon.gymEightStage === 1) pokemon.gymEightStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 1 of gym 8!");
+    } else {
+      // Invalid gymId
+      console.log("Invalid gymId");
+    }
+
+    await pokemon.save();
+    // Increment the numWins field by one
+    trainer.numWins += 1;
+
+    await trainer.save();
+    // console.log(trainer);
+    // console.log(pokemon);
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceGained,
+      levelChange,
+      hpChange,
+      gymStageChange,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+router.put("/:id/increment-num-wins-stage-2/:gymId", async (req, res) => {
+  const trainerId = req.params.id;
+  const gymId = req.params.gymId;
+  try {
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find((p) => p.isMain === true);
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    // Increment battlesWon by one
+    pokemon.battlesWon++;
+    const experienceGained = Math.floor(Math.random() * 10) + 1; // Random value between 1 and 10
+    pokemon.experience += experienceGained;
+
+    let levelChange = 0;
+    let hpChange = 0;
+    let gymStageChange = "";
+
+    if (pokemon.experience >= 10) {
+      pokemon.hp += 10;
+      pokemon.experience = 0;
+      pokemon.level++;
+      levelChange = 1;
+      hpChange = 10;
+    }
+
+    //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
+    if (gymId === "1") {
+      if (pokemon.gymOneStage === 2) pokemon.gymOneStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 1!");
+    } else if (gymId === "2") {
+      if (pokemon.gymTwoStage === 2) pokemon.gymTwoStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 2!");
+    } else if (gymId === "3") {
+      if (pokemon.gymThreeStage === 2) pokemon.gymThreeStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 3!");
+    } else if (gymId === "4") {
+      if (pokemon.gymFourStage === 2) pokemon.gymFourStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 4!");
+    } else if (gymId === "5") {
+      if (pokemon.gymFiveStage === 2) pokemon.gymFiveStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 5!");
+    } else if (gymId === "6") {
+      if (pokemon.gymSixStage === 2) pokemon.gymSixStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 6!");
+    } else if (gymId === "7") {
+      if (pokemon.gymSevenStage === 2) pokemon.gymSevenStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 7!");
+    } else if (gymId === "8") {
+      if (pokemon.gymEightStage === 2) pokemon.gymEightStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 8!");
+    } else {
+      // Invalid gymId
+      console.log("Invalid gymId");
+    }
+
+    await pokemon.save();
+    // Increment the numWins field by one
+    trainer.numWins += 1;
+
+    await trainer.save();
+    // console.log(trainer);
+    // console.log(pokemon);
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceGained,
+      levelChange,
+      hpChange,
+      gymStageChange,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+router.put("/:id/increment-num-wins-stage-3/:gymId", async (req, res) => {
+  const trainerId = req.params.id;
+  const gymId = req.params.gymId;
+  try {
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find((p) => p.isMain === true);
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    // Increment battlesWon by one
+    pokemon.battlesWon++;
+    const experienceGained = Math.floor(Math.random() * 10) + 1; // Random value between 1 and 10
+    pokemon.experience += experienceGained;
+
+    let levelChange = 0;
+    let hpChange = 0;
+    let gymStageChange = "";
+
+    if (pokemon.experience >= 10) {
+      pokemon.hp += 10;
+      pokemon.experience = 0;
+      pokemon.level++;
+      levelChange = 1;
+      hpChange = 10;
+    }
+    console.log(trainer);
+    //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
+    if (gymId === "1") {
+      if (pokemon.gymOneStage === 3) pokemon.gymOneStage = 1;
+      pokemon.boulderBadgeVictory++;
+      trainer.boulder_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Boulder Badge!";
+      console.log("You have beaten stage 3 of gym 1!");
+    } else if (gymId === "2") {
+      if (pokemon.gymTwoStage === 3) pokemon.gymTwoStage = 1;
+      pokemon.cascadeBadgeVictory++;
+      trainer.cascade_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Cascade Badge!";
+      console.log("You have beaten stage 3 of gym 2!");
+    } else if (gymId === "3") {
+      if (pokemon.gymThreeStage === 3) pokemon.gymThreeStage = 1;
+      pokemon.thunderBadgeVictory++;
+      trainer.thunder_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Thunder Badge!";
+      console.log("You have beaten stage 3 of gym 3!");
+    } else if (gymId === "4") {
+      if (pokemon.gymFourStage === 3) pokemon.gymFourStage = 1;
+      pokemon.rainbowBadgeVictory++;
+      trainer.rainbow_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Rainbow Badge!";
+      console.log("You have beaten stage 3 of gym 4!");
+    } else if (gymId === "5") {
+      if (pokemon.gymFiveStage === 3) pokemon.gymFiveStage = 1;
+      pokemon.marshBadgeVictory++;
+      trainer.marsh_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Marsh Badge!";
+      console.log("You have beaten stage 3 of gym 5!");
+    } else if (gymId === "6") {
+      if (pokemon.gymSixStage === 3) pokemon.gymSixStage = 1;
+      pokemon.soulBadgeVictory++;
+      trainer.soul_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Soul Badge!";
+      console.log("You have beaten stage 3 of gym 6!");
+    } else if (gymId === "7") {
+      if (pokemon.gymSevenStage === 3) pokemon.gymSevenStage = 1;
+      pokemon.volcanoBadgeVictory++;
+      trainer.volcano_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Volcano Badge!";
+      console.log("You have beaten stage 3 of gym 7!");
+    } else if (gymId === "8") {
+      if (pokemon.gymEightStage === 3) pokemon.gymEightStage = 1;
+      pokemon.earthBadgeVictory++;
+      trainer.earth_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Earth Badge!";
+      console.log("You have beaten stage 3 of gym 8!");
+    } else {
+      // Invalid gymId
+      console.log("Invalid gymId");
+    }
+
+    await pokemon.save();
+    // Increment the numWins field by one
+    trainer.numWins += 1;
+
+    await trainer.save();
+    // console.log(trainer);
+    // console.log(pokemon);
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceGained,
+      levelChange,
+      hpChange,
+      gymStageChange,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
 module.exports = router;
