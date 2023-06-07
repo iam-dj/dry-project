@@ -573,6 +573,7 @@ router.put("/:id/increment-num-wins", async (req, res) => {
       hpChange = 10;
     }
 
+    let pokemonNewLevel = pokemon.level;
     await pokemon.save();
     // Increment the numWins field by one
     trainer.numWins += 1;
@@ -580,9 +581,14 @@ router.put("/:id/increment-num-wins", async (req, res) => {
     await trainer.save();
     // console.log(trainer);
     // console.log(pokemon);
-    res
-      .status(200)
-      .json({ trainer, pokemon, experienceGained, levelChange, hpChange });
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceGained,
+      levelChange,
+      hpChange,
+      pokemonNewLevel,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
@@ -638,15 +644,21 @@ router.put("/:id/increment-num-loss", async (req, res) => {
       hpChange = 10;
     }
 
+    let pokemonNewLevel = pokemon.level;
     await pokemon.save();
     // Increment the numWins field by one
     trainer.numLosses += 1;
 
     await trainer.save();
 
-    res
-      .status(200)
-      .json({ trainer, pokemon, experienceChange, levelChange, hpChange });
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceChange,
+      levelChange,
+      hpChange,
+      pokemonNewLevel,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
@@ -871,39 +883,42 @@ router.put("/:id/increment-num-wins-stage-1/:gymId", async (req, res) => {
       levelChange = 1;
       hpChange = 10;
     }
+
+    let pokemonNewLevel = pokemon.level;
+
     console.log(gymId);
     //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
     if (gymId === "1") {
       if (pokemon.gymOneStage === 1) pokemon.gymOneStage++;
-      gymStageChange = "You have progressed to the next stage of the Gym!";
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
       console.log("You have beaten stage 1 of gym 1!");
     } else if (gymId === "2") {
       if (pokemon.gymTwoStage === 1) pokemon.gymTwoStage++;
-      gymStageChange = "You have progressed to the next stage of the Gym!";
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
       console.log("You have beaten stage 1 of gym 2!");
     } else if (gymId === "3") {
       if (pokemon.gymThreeStage === 1) pokemon.gymThreeStage++;
-      gymStageChange = "You have progressed to the next stage of the Gym!";
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
       console.log("You have beaten stage 1 of gym 3!");
     } else if (gymId === "4") {
       if (pokemon.gymFourStage === 1) pokemon.gymFourStage++;
-      gymStageChange = "You have progressed to the next stage of the Gym!";
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
       console.log("You have beaten stage 1 of gym 4!");
     } else if (gymId === "5") {
       if (pokemon.gymFiveStage === 1) pokemon.gymFiveStage++;
-      gymStageChange = "You have progressed to the next stage of the Gym!";
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
       console.log("You have beaten stage 1 of gym 5!");
     } else if (gymId === "6") {
       if (pokemon.gymSixStage === 1) pokemon.gymSixStage++;
-      gymStageChange = "You have progressed to the next stage of the Gym!";
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
       console.log("You have beaten stage 1 of gym 6!");
     } else if (gymId === "7") {
       if (pokemon.gymSevenStage === 1) pokemon.gymSevenStage++;
-      gymStageChange = "You have progressed to the next stage of the Gym!";
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
       console.log("You have beaten stage 1 of gym 7!");
     } else if (gymId === "8") {
       if (pokemon.gymEightStage === 1) pokemon.gymEightStage++;
-      gymStageChange = "You have progressed to the next stage of the Gym!";
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
       console.log("You have beaten stage 1 of gym 8!");
     } else {
       // Invalid gymId
@@ -924,6 +939,7 @@ router.put("/:id/increment-num-wins-stage-1/:gymId", async (req, res) => {
       levelChange,
       hpChange,
       gymStageChange,
+      pokemonNewLevel,
     });
   } catch (err) {
     console.error(err);
@@ -974,6 +990,8 @@ router.put("/:id/increment-num-wins-stage-2/:gymId", async (req, res) => {
       levelChange = 1;
       hpChange = 10;
     }
+
+    let pokemonNewLevel = pokemon.level;
 
     //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
     if (gymId === "1") {
@@ -1027,6 +1045,7 @@ router.put("/:id/increment-num-wins-stage-2/:gymId", async (req, res) => {
       levelChange,
       hpChange,
       gymStageChange,
+      pokemonNewLevel,
     });
   } catch (err) {
     console.error(err);
@@ -1077,6 +1096,9 @@ router.put("/:id/increment-num-wins-stage-3/:gymId", async (req, res) => {
       levelChange = 1;
       hpChange = 10;
     }
+
+    let pokemonNewLevel = pokemon.level;
+
     console.log(trainer);
     //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
     if (gymId === "1") {
@@ -1154,6 +1176,7 @@ router.put("/:id/increment-num-wins-stage-3/:gymId", async (req, res) => {
       levelChange,
       hpChange,
       gymStageChange,
+      pokemonNewLevel,
     });
   } catch (err) {
     console.error(err);
