@@ -51,6 +51,9 @@ router.put("/:id/iscaught/:name", async (req, res) => {
   }
 });
 
+
+
+
 router.put("/:id/pokemon/:name/update-move1/:tmName", async (req, res) => {
   const trainerId = req.params.id;
   const pokemonName = req.params.name;
@@ -164,6 +167,7 @@ router.put("/:id/pokemon/:name/update-move2/:tmName", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+
 //route to change move 1, needs an INT on the request body
 router.put("/:id/pokemon/:name/update-move3/:tmName", async (req, res) => {
   const trainerId = req.params.id;

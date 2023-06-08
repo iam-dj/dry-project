@@ -17,7 +17,35 @@ router.get("/", async (req, res) => {
           ],
         },
         { model: User },
-        { model: TM },
+        // { model: TM },
+      ],
+    });
+    res.status(200).json(trainers);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//get trainers TMs route
+router.get("/:id/tms", async (req, res) => {
+  try {
+    const trainers = await Trainer.findByPk(req.params.id, {
+      include: [
+        // {
+        //   model: Pokemon,
+        //   as: "pokemons",
+        //   include: [
+        //     { model: Move, as: "move1" },
+        //     { model: Move, as: "move2" },
+        //     { model: Move, as: "move3" },
+        //     { model: Move, as: "move4" },
+        //   ],
+        // },
+        { 
+          model: TM, 
+          where: { inInventory: true },
+        },
       ],
     });
     res.status(200).json(trainers);
@@ -495,6 +523,8 @@ router.put("/:id/ismain/:name", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+
+
 
 //create a new trainer
 router.post("/", async (req, res) => {
