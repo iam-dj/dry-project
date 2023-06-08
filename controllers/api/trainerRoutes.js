@@ -76,6 +76,103 @@ router.get("/main/:id", async (req, res) => {
   }
 });
 
+//Route to get numSpins
+router.get("/spinNum/:id", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+
+    // Accessing the value of numSpins
+    const numSpins = trainer.numSpins;
+
+    res.status(200).json({ numSpins });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//Route to get NumWins
+router.get("/numwins/:id", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+
+    // Accessing the value of numWins
+    const numWins = trainer.numWins;
+
+    res.status(200).json({ numWins });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//Route to update numSpins for insomnia
+router.put("/spinNum/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { numSpins } = req.body;
+
+    // Update the numSpins value in the database
+    await Trainer.update(
+      { numSpins },
+      {
+        where: { id },
+      }
+    );
+
+    res.status(200).json({ message: "numSpins updated successfully" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});   
+
+//Route to auto add spin
+router.put("/spin-add/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const trainer = await Trainer.findByPk(id);
+
+    trainer.numSpins++;
+
+    await trainer.save();
+
+    res.status(200).json({ message: "numSpins updated successfully" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
 //route to get isCaught:true pokemon of trainer by id
 router.get("/caught/:id", async (req, res) => {
   try {
@@ -309,6 +406,38 @@ router.put("/:id/numspins-add", async (req, res) => {
     }
 
     trainer.numSpins++;
+
+    await trainer.save();
+    res.json(trainer);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
+//route for subtracting spins from trainer
+router.put("/:id/numspins-sub", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    trainer.numSpins--;
 
     await trainer.save();
     res.json(trainer);
