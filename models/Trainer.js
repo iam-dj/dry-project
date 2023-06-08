@@ -2,7 +2,9 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const Pokemon = require("./Pokemon");
 const User = require("./User");
+const TM = require("./TM");
 const pokemonData = require("../seeds/pokemon-seeds.json");
+const TmData = require("../seeds/TM-seeds.json");
 
 class Trainer extends Model {}
 
@@ -86,10 +88,18 @@ Trainer.init(
     hooks: {
       afterCreate: async (newTrainer) => {
         const id = newTrainer.id;
+
         for (let i = 0; i < pokemonData.length; i++) {
           const pokemon = { ...pokemonData[i] };
           pokemon.TrainerId = id;
           const newPokemon = await Pokemon.create(pokemon);
+          // console.log(newPokemon);
+        }
+
+        for (let i = 0; i < TmData.length; i++) {
+          const tm = { ...TmData[i] };
+          tm.TrainerId = id;
+          const newTM = await TM.create(tm);
           // console.log(newPokemon);
         }
       },
