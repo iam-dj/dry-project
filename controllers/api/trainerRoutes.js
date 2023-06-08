@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Pokemon, Gym, NPC, Trainer, Move } = require("../../models");
+const { User, Pokemon, Gym, NPC, Trainer, Move, TM } = require("../../models");
 const jwt = require("jsonwebtoken");
 
 router.get("/", async (req, res) => {
@@ -17,6 +17,7 @@ router.get("/", async (req, res) => {
           ],
         },
         { model: User },
+        { model: TM },
       ],
     });
     res.status(200).json(trainers);
@@ -833,177 +834,6 @@ router.put("/:id/increment-num-loss", async (req, res) => {
 });
 
 //route to change move 1, needs an INT on the request body
-router.put("/:id/pokemon/:name/update-move1", async (req, res) => {
-  const trainerId = req.params.id;
-  const pokemonName = req.params.name;
-  const move1Id = req.body.move1Id; // Assuming the move1Id is provided in the request body
-
-  try {
-    const trainer = await Trainer.findByPk(trainerId, {
-      include: [
-        {
-          model: Pokemon,
-          as: "pokemons",
-          include: [
-            { model: Move, as: "move1" },
-            { model: Move, as: "move2" },
-            { model: Move, as: "move3" },
-            { model: Move, as: "move4" },
-          ],
-        },
-        { model: User },
-      ],
-    });
-
-    if (!trainer) {
-      return res.status(404).json({ error: "Trainer not found" });
-    }
-
-    const pokemon = trainer.pokemons.find((p) => p.name === pokemonName);
-
-    if (!pokemon) {
-      return res.status(404).json({ error: "Pokemon not found" });
-    }
-
-    pokemon.move1Id = move1Id;
-
-    await pokemon.save();
-
-    res.json(pokemon);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: "Server error" });
-  }
-});
-//route to change move 1, needs an INT on the request body
-router.put("/:id/pokemon/:name/update-move4", async (req, res) => {
-  const trainerId = req.params.id;
-  const pokemonName = req.params.name;
-  const move4Id = req.body.move4Id; // Assuming the move4Id is provided in the request body
-
-  try {
-    const trainer = await Trainer.findByPk(trainerId, {
-      include: [
-        {
-          model: Pokemon,
-          as: "pokemons",
-          include: [
-            { model: Move, as: "move1" },
-            { model: Move, as: "move2" },
-            { model: Move, as: "move3" },
-            { model: Move, as: "move4" },
-          ],
-        },
-        { model: User },
-      ],
-    });
-
-    if (!trainer) {
-      return res.status(404).json({ error: "Trainer not found" });
-    }
-
-    const pokemon = trainer.pokemons.find((p) => p.name === pokemonName);
-
-    if (!pokemon) {
-      return res.status(404).json({ error: "Pokemon not found" });
-    }
-
-    pokemon.move4Id = move4Id;
-
-    await pokemon.save();
-
-    res.json(pokemon);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: "Server error" });
-  }
-});
-//route to change move 1, needs an INT on the request body
-router.put("/:id/pokemon/:name/update-move2", async (req, res) => {
-  const trainerId = req.params.id;
-  const pokemonName = req.params.name;
-  const move2Id = req.body.move2Id; // Assuming the move2Id is provided in the request body
-
-  try {
-    const trainer = await Trainer.findByPk(trainerId, {
-      include: [
-        {
-          model: Pokemon,
-          as: "pokemons",
-          include: [
-            { model: Move, as: "move1" },
-            { model: Move, as: "move2" },
-            { model: Move, as: "move3" },
-            { model: Move, as: "move4" },
-          ],
-        },
-        { model: User },
-      ],
-    });
-
-    if (!trainer) {
-      return res.status(404).json({ error: "Trainer not found" });
-    }
-
-    const pokemon = trainer.pokemons.find((p) => p.name === pokemonName);
-
-    if (!pokemon) {
-      return res.status(404).json({ error: "Pokemon not found" });
-    }
-
-    pokemon.move2Id = move2Id;
-
-    await pokemon.save();
-
-    res.json(pokemon);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: "Server error" });
-  }
-});
-//route to change move 1, needs an INT on the request body
-router.put("/:id/pokemon/:name/update-move3", async (req, res) => {
-  const trainerId = req.params.id;
-  const pokemonName = req.params.name;
-  const move3Id = req.body.move3Id; // Assuming the move3Id is provided in the request body
-
-  try {
-    const trainer = await Trainer.findByPk(trainerId, {
-      include: [
-        {
-          model: Pokemon,
-          as: "pokemons",
-          include: [
-            { model: Move, as: "move1" },
-            { model: Move, as: "move2" },
-            { model: Move, as: "move3" },
-            { model: Move, as: "move4" },
-          ],
-        },
-        { model: User },
-      ],
-    });
-
-    if (!trainer) {
-      return res.status(404).json({ error: "Trainer not found" });
-    }
-
-    const pokemon = trainer.pokemons.find((p) => p.name === pokemonName);
-
-    if (!pokemon) {
-      return res.status(404).json({ error: "Pokemon not found" });
-    }
-
-    pokemon.move3Id = move3Id;
-
-    await pokemon.save();
-
-    res.json(pokemon);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: "Server error" });
-  }
-});
 
 //updates stage 1 in gyms for pokemon
 router.put("/:id/increment-num-wins-stage-1/:gymId", async (req, res) => {
