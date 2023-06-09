@@ -522,9 +522,10 @@ router.put("/:id/numspins-sub", async (req, res) => {
       return res.status(404).json({ error: "Trainer not found" });
     }
 
-    trainer.numSpins--;
+    trainer.numSpins = trainer.numSpins - 1;
 
     await trainer.save();
+    
     res.json(trainer);
   } catch (err) {
     console.error(err);
