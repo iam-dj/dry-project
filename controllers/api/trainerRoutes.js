@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Pokemon, Gym, NPC, Trainer, Move } = require("../../models");
+const { User, Pokemon, Gym, NPC, Trainer, Move, TM } = require("../../models");
 const jwt = require("jsonwebtoken");
 
 router.get("/", async (req, res) => {
@@ -17,6 +17,7 @@ router.get("/", async (req, res) => {
           ],
         },
         { model: User },
+        // { model: TM },
       ],
     });
     res.status(200).json(trainers);
@@ -25,6 +26,37 @@ router.get("/", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+//get trainers TMs route
+router.get("/:id/tms", async (req, res) => {
+  try {
+    const trainers = await Trainer.findByPk(req.params.id, {
+      include: [
+        // {
+        //   model: Pokemon,
+        //   as: "pokemons",
+        //   include: [
+        //     { model: Move, as: "move1" },
+        //     { model: Move, as: "move2" },
+        //     { model: Move, as: "move3" },
+        //     { model: Move, as: "move4" },
+        //   ],
+        // },
+        { 
+          model: TM, 
+          where: { inInventory: true },
+        },
+      ],
+    });
+    res.status(200).json(trainers);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+
+
 
 router.get("/:id", async (req, res) => {
   try {
@@ -70,6 +102,103 @@ router.get("/main/:id", async (req, res) => {
       ],
     });
     res.status(200).json(trainer);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//Route to get numSpins
+router.get("/spinNum/:id", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+
+    // Accessing the value of numSpins
+    const numSpins = trainer.numSpins;
+
+    res.status(200).json({ numSpins });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//Route to get NumWins
+router.get("/numwins/:id", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+
+    // Accessing the value of numWins
+    const numWins = trainer.numWins;
+
+    res.status(200).json({ numWins });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//Route to update numSpins for insomnia
+router.put("/spinNum/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { numSpins } = req.body;
+
+    // Update the numSpins value in the database
+    await Trainer.update(
+      { numSpins },
+      {
+        where: { id },
+      }
+    );
+
+    res.status(200).json({ message: "numSpins updated successfully" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});   
+
+//Route to auto add spin
+router.put("/spin-add/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const trainer = await Trainer.findByPk(id);
+
+    trainer.numSpins++;
+
+    await trainer.save();
+
+    res.status(200).json({ message: "numSpins updated successfully" });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -237,7 +366,7 @@ router.put("/:id/hp/:name", async (req, res) => {
   }
 });
 
-//route for getting switching iscaught boolean
+//route for switching iscaught boolean
 router.put("/:id/iscaught/:name", async (req, res) => {
   const pokemonName = req.params.name;
   try {
@@ -268,12 +397,136 @@ router.put("/:id/iscaught/:name", async (req, res) => {
         .status(404)
         .json({ error: "Pokemon not found or already caught" });
     }
+    const numSpins = trainer.numSpins;
 
     pokemon.isCaught = true;
 
+    if (numSpins > 0) {
+      trainer.numSpins--;
+    }
+
     await pokemon.save();
 
+    await trainer.save();
     res.json(pokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
+//route for switching inInventory boolean
+router.put("/:id/isnewmove/:name", async (req, res) => {
+  const moveName = req.params.name;
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+        { 
+          model: TM, 
+        },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const TMz = trainer.TMs.find(
+      (p) => p.TM_name === moveName && p.inInventory === false
+    );
+    if (!TMz) {
+      return res
+        .status(404)
+        .json({ error: "TM not found or already in your possesion" });
+    }
+
+    const numSpins = trainer.numSpins;
+
+    TMz.inInventory = true;
+
+    if (numSpins > 0) {
+      trainer.numSpins--;
+    }
+
+    await TMz.save();
+
+    await trainer.save();
+    res.json(TMz);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
+//route for adding spins to trainer
+router.put("/:id/numspins-add", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    trainer.numSpins++;
+
+    await trainer.save();
+    res.json(trainer);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
+//route for subtracting spins from trainer
+router.put("/:id/numspins-sub", async (req, res) => {
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    trainer.numSpins = trainer.numSpins - 1;
+
+    await trainer.save();
+    
+    res.json(trainer);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
@@ -327,6 +580,8 @@ router.put("/:id/ismain/:name", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+
+
 
 //create a new trainer
 router.post("/", async (req, res) => {
@@ -573,6 +828,7 @@ router.put("/:id/increment-num-wins", async (req, res) => {
       hpChange = 10;
     }
 
+    let pokemonNewLevel = pokemon.level;
     await pokemon.save();
     // Increment the numWins field by one
     trainer.numWins += 1;
@@ -580,9 +836,14 @@ router.put("/:id/increment-num-wins", async (req, res) => {
     await trainer.save();
     // console.log(trainer);
     // console.log(pokemon);
-    res
-      .status(200)
-      .json({ trainer, pokemon, experienceGained, levelChange, hpChange });
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceGained,
+      levelChange,
+      hpChange,
+      pokemonNewLevel,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
@@ -638,15 +899,21 @@ router.put("/:id/increment-num-loss", async (req, res) => {
       hpChange = 10;
     }
 
+    let pokemonNewLevel = pokemon.level;
     await pokemon.save();
     // Increment the numWins field by one
     trainer.numLosses += 1;
 
     await trainer.save();
 
-    res
-      .status(200)
-      .json({ trainer, pokemon, experienceChange, levelChange, hpChange });
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceChange,
+      levelChange,
+      hpChange,
+      pokemonNewLevel,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
@@ -654,11 +921,11 @@ router.put("/:id/increment-num-loss", async (req, res) => {
 });
 
 //route to change move 1, needs an INT on the request body
-router.put("/:id/pokemon/:name/update-move1", async (req, res) => {
-  const trainerId = req.params.id;
-  const pokemonName = req.params.name;
-  const move1Id = req.body.move1Id; // Assuming the move1Id is provided in the request body
 
+//updates stage 1 in gyms for pokemon
+router.put("/:id/increment-num-wins-stage-1/:gymId", async (req, res) => {
+  const trainerId = req.params.id;
+  const gymId = req.params.gymId;
   try {
     const trainer = await Trainer.findByPk(trainerId, {
       include: [
@@ -675,33 +942,97 @@ router.put("/:id/pokemon/:name/update-move1", async (req, res) => {
         { model: User },
       ],
     });
-
     if (!trainer) {
       return res.status(404).json({ error: "Trainer not found" });
     }
 
-    const pokemon = trainer.pokemons.find((p) => p.name === pokemonName);
-
+    const pokemon = trainer.pokemons.find((p) => p.isMain === true);
     if (!pokemon) {
       return res.status(404).json({ error: "Pokemon not found" });
     }
 
-    pokemon.move1Id = move1Id;
+    // Increment battlesWon by one
+    pokemon.battlesWon++;
+    const experienceGained = Math.floor(Math.random() * 10) + 1; // Random value between 1 and 10
+    pokemon.experience += experienceGained;
+
+    let levelChange = 0;
+    let hpChange = 0;
+    let gymStageChange = "";
+
+    if (pokemon.experience >= 10) {
+      pokemon.hp += 10;
+      pokemon.experience = 0;
+      pokemon.level++;
+      levelChange = 1;
+      hpChange = 10;
+    }
+
+    let pokemonNewLevel = pokemon.level;
+
+    console.log(gymId);
+    //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
+    if (gymId === "1") {
+      if (pokemon.gymOneStage === 1) pokemon.gymOneStage++;
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
+      console.log("You have beaten stage 1 of gym 1!");
+    } else if (gymId === "2") {
+      if (pokemon.gymTwoStage === 1) pokemon.gymTwoStage++;
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
+      console.log("You have beaten stage 1 of gym 2!");
+    } else if (gymId === "3") {
+      if (pokemon.gymThreeStage === 1) pokemon.gymThreeStage++;
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
+      console.log("You have beaten stage 1 of gym 3!");
+    } else if (gymId === "4") {
+      if (pokemon.gymFourStage === 1) pokemon.gymFourStage++;
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
+      console.log("You have beaten stage 1 of gym 4!");
+    } else if (gymId === "5") {
+      if (pokemon.gymFiveStage === 1) pokemon.gymFiveStage++;
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
+      console.log("You have beaten stage 1 of gym 5!");
+    } else if (gymId === "6") {
+      if (pokemon.gymSixStage === 1) pokemon.gymSixStage++;
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
+      console.log("You have beaten stage 1 of gym 6!");
+    } else if (gymId === "7") {
+      if (pokemon.gymSevenStage === 1) pokemon.gymSevenStage++;
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
+      console.log("You have beaten stage 1 of gym 7!");
+    } else if (gymId === "8") {
+      if (pokemon.gymEightStage === 1) pokemon.gymEightStage++;
+      gymStageChange = "You have beaten the Gym leader's first pokemon!";
+      console.log("You have beaten stage 1 of gym 8!");
+    } else {
+      // Invalid gymId
+      console.log("Invalid gymId");
+    }
 
     await pokemon.save();
+    // Increment the numWins field by one
+    trainer.numWins += 1;
 
-    res.json(pokemon);
+    await trainer.save();
+    // console.log(trainer);
+    // console.log(pokemon);
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceGained,
+      levelChange,
+      hpChange,
+      gymStageChange,
+      pokemonNewLevel,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
   }
 });
-//route to change move 1, needs an INT on the request body
-router.put("/:id/pokemon/:name/update-move4", async (req, res) => {
+router.put("/:id/increment-num-wins-stage-2/:gymId", async (req, res) => {
   const trainerId = req.params.id;
-  const pokemonName = req.params.name;
-  const move4Id = req.body.move4Id; // Assuming the move4Id is provided in the request body
-
+  const gymId = req.params.gymId;
   try {
     const trainer = await Trainer.findByPk(trainerId, {
       include: [
@@ -718,33 +1049,96 @@ router.put("/:id/pokemon/:name/update-move4", async (req, res) => {
         { model: User },
       ],
     });
-
     if (!trainer) {
       return res.status(404).json({ error: "Trainer not found" });
     }
 
-    const pokemon = trainer.pokemons.find((p) => p.name === pokemonName);
-
+    const pokemon = trainer.pokemons.find((p) => p.isMain === true);
     if (!pokemon) {
       return res.status(404).json({ error: "Pokemon not found" });
     }
 
-    pokemon.move4Id = move4Id;
+    // Increment battlesWon by one
+    pokemon.battlesWon++;
+    const experienceGained = Math.floor(Math.random() * 10) + 1; // Random value between 1 and 10
+    pokemon.experience += experienceGained;
+
+    let levelChange = 0;
+    let hpChange = 0;
+    let gymStageChange = "";
+
+    if (pokemon.experience >= 10) {
+      pokemon.hp += 10;
+      pokemon.experience = 0;
+      pokemon.level++;
+      levelChange = 1;
+      hpChange = 10;
+    }
+
+    let pokemonNewLevel = pokemon.level;
+
+    //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
+    if (gymId === "1") {
+      if (pokemon.gymOneStage === 2) pokemon.gymOneStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 1!");
+    } else if (gymId === "2") {
+      if (pokemon.gymTwoStage === 2) pokemon.gymTwoStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 2!");
+    } else if (gymId === "3") {
+      if (pokemon.gymThreeStage === 2) pokemon.gymThreeStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 3!");
+    } else if (gymId === "4") {
+      if (pokemon.gymFourStage === 2) pokemon.gymFourStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 4!");
+    } else if (gymId === "5") {
+      if (pokemon.gymFiveStage === 2) pokemon.gymFiveStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 5!");
+    } else if (gymId === "6") {
+      if (pokemon.gymSixStage === 2) pokemon.gymSixStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 6!");
+    } else if (gymId === "7") {
+      if (pokemon.gymSevenStage === 2) pokemon.gymSevenStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 7!");
+    } else if (gymId === "8") {
+      if (pokemon.gymEightStage === 2) pokemon.gymEightStage++;
+      gymStageChange = "You have progressed to the next stage of the Gym!";
+      console.log("You have beaten stage 2 of gym 8!");
+    } else {
+      // Invalid gymId
+      console.log("Invalid gymId");
+    }
 
     await pokemon.save();
+    // Increment the numWins field by one
+    trainer.numWins += 1;
 
-    res.json(pokemon);
+    await trainer.save();
+    // console.log(trainer);
+    // console.log(pokemon);
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceGained,
+      levelChange,
+      hpChange,
+      gymStageChange,
+      pokemonNewLevel,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
   }
 });
-//route to change move 1, needs an INT on the request body
-router.put("/:id/pokemon/:name/update-move2", async (req, res) => {
+router.put("/:id/increment-num-wins-stage-3/:gymId", async (req, res) => {
   const trainerId = req.params.id;
-  const pokemonName = req.params.name;
-  const move2Id = req.body.move2Id; // Assuming the move2Id is provided in the request body
-
+  const gymId = req.params.gymId;
   try {
     const trainer = await Trainer.findByPk(trainerId, {
       include: [
@@ -761,68 +1155,117 @@ router.put("/:id/pokemon/:name/update-move2", async (req, res) => {
         { model: User },
       ],
     });
-
     if (!trainer) {
       return res.status(404).json({ error: "Trainer not found" });
     }
 
-    const pokemon = trainer.pokemons.find((p) => p.name === pokemonName);
-
+    const pokemon = trainer.pokemons.find((p) => p.isMain === true);
     if (!pokemon) {
       return res.status(404).json({ error: "Pokemon not found" });
     }
 
-    pokemon.move2Id = move2Id;
+    // Increment battlesWon by one
+    pokemon.battlesWon++;
+    const experienceGained = Math.floor(Math.random() * 10) + 1; // Random value between 1 and 10
+    pokemon.experience += experienceGained;
+
+    let levelChange = 0;
+    let hpChange = 0;
+    let gymStageChange = "";
+
+    if (pokemon.experience >= 10) {
+      pokemon.hp += 10;
+      pokemon.experience = 0;
+      pokemon.level++;
+      levelChange = 1;
+      hpChange = 10;
+    }
+
+    let pokemonNewLevel = pokemon.level;
+
+    console.log(trainer);
+    //this checks to see if you are on the right stage(for instance if yo uhave already beaten stage 1, it wont increment)
+    if (gymId === "1") {
+      if (pokemon.gymOneStage === 3) pokemon.gymOneStage = 1;
+      pokemon.boulderBadgeVictory++;
+      trainer.boulder_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Boulder Badge!";
+      console.log("You have beaten stage 3 of gym 1!");
+    } else if (gymId === "2") {
+      if (pokemon.gymTwoStage === 3) pokemon.gymTwoStage = 1;
+      pokemon.cascadeBadgeVictory++;
+      trainer.cascade_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Cascade Badge!";
+      console.log("You have beaten stage 3 of gym 2!");
+    } else if (gymId === "3") {
+      if (pokemon.gymThreeStage === 3) pokemon.gymThreeStage = 1;
+      pokemon.thunderBadgeVictory++;
+      trainer.thunder_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Thunder Badge!";
+      console.log("You have beaten stage 3 of gym 3!");
+    } else if (gymId === "4") {
+      if (pokemon.gymFourStage === 3) pokemon.gymFourStage = 1;
+      pokemon.rainbowBadgeVictory++;
+      trainer.rainbow_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Rainbow Badge!";
+      console.log("You have beaten stage 3 of gym 4!");
+    } else if (gymId === "5") {
+      if (pokemon.gymFiveStage === 3) pokemon.gymFiveStage = 1;
+      pokemon.marshBadgeVictory++;
+      trainer.marsh_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Marsh Badge!";
+      console.log("You have beaten stage 3 of gym 5!");
+    } else if (gymId === "6") {
+      if (pokemon.gymSixStage === 3) pokemon.gymSixStage = 1;
+      pokemon.soulBadgeVictory++;
+      trainer.soul_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Soul Badge!";
+      console.log("You have beaten stage 3 of gym 6!");
+    } else if (gymId === "7") {
+      if (pokemon.gymSevenStage === 3) pokemon.gymSevenStage = 1;
+      pokemon.volcanoBadgeVictory++;
+      trainer.volcano_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Volcano Badge!";
+      console.log("You have beaten stage 3 of gym 7!");
+    } else if (gymId === "8") {
+      if (pokemon.gymEightStage === 3) pokemon.gymEightStage = 1;
+      pokemon.earthBadgeVictory++;
+      trainer.earth_badge = true;
+      gymStageChange =
+        "You have beaten the Gym master's final pokemon and earned the Earth Badge!";
+      console.log("You have beaten stage 3 of gym 8!");
+    } else {
+      // Invalid gymId
+      console.log("Invalid gymId");
+    }
 
     await pokemon.save();
+    // Increment the numWins field by one
+    trainer.numWins += 1;
 
-    res.json(pokemon);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: "Server error" });
-  }
-});
-//route to change move 1, needs an INT on the request body
-router.put("/:id/pokemon/:name/update-move3", async (req, res) => {
-  const trainerId = req.params.id;
-  const pokemonName = req.params.name;
-  const move3Id = req.body.move3Id; // Assuming the move3Id is provided in the request body
-
-  try {
-    const trainer = await Trainer.findByPk(trainerId, {
-      include: [
-        {
-          model: Pokemon,
-          as: "pokemons",
-          include: [
-            { model: Move, as: "move1" },
-            { model: Move, as: "move2" },
-            { model: Move, as: "move3" },
-            { model: Move, as: "move4" },
-          ],
-        },
-        { model: User },
-      ],
+    await trainer.save();
+    // console.log(trainer);
+    // console.log(pokemon);
+    res.status(200).json({
+      trainer,
+      pokemon,
+      experienceGained,
+      levelChange,
+      hpChange,
+      gymStageChange,
+      pokemonNewLevel,
     });
-
-    if (!trainer) {
-      return res.status(404).json({ error: "Trainer not found" });
-    }
-
-    const pokemon = trainer.pokemons.find((p) => p.name === pokemonName);
-
-    if (!pokemon) {
-      return res.status(404).json({ error: "Pokemon not found" });
-    }
-
-    pokemon.move3Id = move3Id;
-
-    await pokemon.save();
-
-    res.json(pokemon);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
   }
 });
+
 module.exports = router;

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Pokemon, Gym, NPC, Trainer, Move } = require("../../models");
+const { User, Pokemon, Gym, NPC, Trainer, Move, TM } = require("../../models");
 
 //get all moves
 router.get("/", async (req, res) => {

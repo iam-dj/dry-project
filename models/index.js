@@ -5,6 +5,7 @@ const User = require("./User");
 const Trainer = require("./Trainer");
 const NPC = require("./NPC");
 const PokemonReference = require("./PokemonReference");
+const TM = require("./TM");
 const { move } = require("../controllers");
 
 Trainer.belongsTo(User, {
@@ -16,6 +17,10 @@ User.hasOne(Trainer, {
 });
 
 Trainer.hasMany(Pokemon);
+
+Trainer.hasMany(TM);
+
+TM.belongsTo(Trainer);
 
 Pokemon.belongsTo(Trainer);
 
@@ -45,6 +50,8 @@ Pokemon.belongsTo(Move, { as: "move2" });
 Pokemon.belongsTo(Move, { as: "move3" });
 Pokemon.belongsTo(Move, { as: "move4" });
 
+// TM.belongsTo(Move, { as: "" });
+
 Gym.hasOne(NPC, {
   // foreignKey: "GymId",
   // as: "npc",
@@ -69,4 +76,5 @@ module.exports = {
   User: User,
   Trainer: Trainer,
   PokemonReference: PokemonReference,
+  TM: TM,
 };
