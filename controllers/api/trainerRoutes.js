@@ -55,6 +55,9 @@ router.get("/:id/tms", async (req, res) => {
   }
 });
 
+
+
+
 router.get("/:id", async (req, res) => {
   try {
     const trainers = await Trainer.findByPk(req.params.id, {
@@ -406,6 +409,59 @@ router.put("/:id/iscaught/:name", async (req, res) => {
 
     await trainer.save();
     res.json(pokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
+//route for switching inInventory boolean
+router.put("/:id/isnewmove/:name", async (req, res) => {
+  const moveName = req.params.name;
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+        { 
+          model: TM, 
+        },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const TMz = trainer.TMs.find(
+      (p) => p.TM_name === moveName && p.inInventory === false
+    );
+    if (!TMz) {
+      return res
+        .status(404)
+        .json({ error: "TM not found or already in your possesion" });
+    }
+
+    const numSpins = trainer.numSpins;
+
+    TMz.inInventory = true;
+
+    if (numSpins > 0) {
+      trainer.numSpins--;
+    }
+
+    await TMz.save();
+
+    await trainer.save();
+    res.json(TMz);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
