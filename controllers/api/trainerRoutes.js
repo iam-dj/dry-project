@@ -366,6 +366,48 @@ router.put("/:id/hp/:name", async (req, res) => {
   }
 });
 
+//route to update gym-nameBadegVictory
+router.put("/:id/badgevictory/:name", async (req, res) => {
+  const pokemonName = req.params.name;
+  try {
+    const trainer = await Trainer.findByPk(req.params.id, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+        },
+        { model: User },
+      ],
+    });
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find(
+      (p) => p.name === pokemonName && p.isMain === true
+    );
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    // Update HP by 15
+    pokemon.boulderBadgeVictory = 2;
+
+    await pokemon.save();
+
+    res.json("updated pokemon");
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
 //route for switching iscaught boolean
 router.put("/:id/iscaught/:name", async (req, res) => {
   const pokemonName = req.params.name;
@@ -1030,6 +1072,10 @@ router.put("/:id/increment-num-wins-stage-1/:gymId", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+
+// update my wins to test route
+
+
 router.put("/:id/increment-num-wins-stage-2/:gymId", async (req, res) => {
   const trainerId = req.params.id;
   const gymId = req.params.gymId;
@@ -1136,6 +1182,7 @@ router.put("/:id/increment-num-wins-stage-2/:gymId", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
+
 router.put("/:id/increment-num-wins-stage-3/:gymId", async (req, res) => {
   const trainerId = req.params.id;
   const gymId = req.params.gymId;
