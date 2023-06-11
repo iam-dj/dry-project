@@ -16,6 +16,13 @@ cloudinary.config({
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+app.options(
+  "*",
+  cors({
+    origin: "https://drypokemon.netlify.app", // Replace with your desired origin
+    optionsSuccessStatus: 200,
+  })
+);
 
 app.use(routes);
 
