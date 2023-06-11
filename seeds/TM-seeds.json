@@ -1,7 +1,7 @@
 [
   {
     "TM_name": "Pound",
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 1,
       "name": "Pound",
@@ -13,7 +13,7 @@
   },
   {
     "TM_name": "Karate Chop",
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 2,
       "type": "Normal",
@@ -26,7 +26,7 @@
   {
     "TM_name": "Double Slap",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 3,
       "name": "Double Slap",
@@ -39,7 +39,7 @@
   {
     "TM_name": "Comet Punch",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 4,
       "name": "Comet Punch",
@@ -52,7 +52,7 @@
   {
     "TM_name": "Mega Punch",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 5,
       "name": "Mega Punch",
@@ -65,7 +65,7 @@
   {
     "TM_name": "Pay Day",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 6,
       "name": "Pay Day",
@@ -78,7 +78,7 @@
   {
     "TM_name": "Fire Punch",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 7,
       "name": "Fire Punch",
@@ -91,7 +91,7 @@
   {
     "TM_name": "Ice Punch",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 8,
       "name": "Ice Punch",
@@ -104,7 +104,7 @@
   {
     "TM_name": "Thunder Punch",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 9,
       "name": "Thunder Punch",
@@ -117,7 +117,7 @@
   {
     "TM_name": "Scratch",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 10,
       "name": "Scratch",
@@ -130,7 +130,7 @@
   {
     "TM_name": "Vice Grip",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 11,
       "name": "Vice Grip",
@@ -143,7 +143,7 @@
   {
     "TM_name": "Guillotine",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 12,
       "name": "Guillotine",
@@ -156,7 +156,7 @@
   {
     "TM_name": "Razor Wind",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 13,
       "name": "Razor Wind",
@@ -169,7 +169,7 @@
   {
     "TM_name": "Swords Dance",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 14,
       "name": "Swords Dance",
@@ -182,7 +182,7 @@
   {
     "TM_name": "Cut",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 15,
       "name": "Cut",
@@ -195,7 +195,7 @@
   {
     "TM_name": "Gust",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 16,
       "name": "Gust",
@@ -208,7 +208,7 @@
   {
     "TM_name": "Wing Attack",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 17,
       "name": "Wing Attack",
@@ -221,7 +221,7 @@
   {
     "TM_name": "Fly",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 18,
       "name": "Fly",
@@ -234,7 +234,7 @@
   {
     "TM_name": "Bind",
 
-    "inInventory": true,
+    "inInventory": false,
     "move": {
       "id": 19,
       "name": "Bind",
