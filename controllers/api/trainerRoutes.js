@@ -490,16 +490,16 @@ router.put("/:id/isnewmove/:name", async (req, res) => {
   try {
     const trainer = await Trainer.findByPk(req.params.id, {
       include: [
-        {
-          model: Pokemon,
-          as: "pokemons",
-          include: [
-            { model: Move, as: "move1" },
-            { model: Move, as: "move2" },
-            { model: Move, as: "move3" },
-            { model: Move, as: "move4" },
-          ],
-        },
+        // {
+        //   model: Pokemon,
+        //   as: "pokemons",
+        //   include: [
+        //     { model: Move, as: "move1" },
+        //     { model: Move, as: "move2" },
+        //     { model: Move, as: "move3" },
+        //     { model: Move, as: "move4" },
+        //   ],
+        // },
         { model: User },
         {
           model: TM,
@@ -515,8 +515,8 @@ router.put("/:id/isnewmove/:name", async (req, res) => {
     );
     if (!TMz) {
       return res
-        .status(404)
-        .json({ error: "TM not found or already in your possesion" });
+        .status(200)
+        .json({ msg: "TM is in your possesion" });
     }
 
     const numSpins = trainer.numSpins;
