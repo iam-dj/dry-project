@@ -211,7 +211,7 @@
     "id": 27,
     "name": "Sand Attack",
     "type": "Ground",
-    "power": null,
+    "power": 20,
     "description": "Sand is hurled in the target's face, reducing its accuracy.",
     "accuracy": 100
   },
@@ -243,7 +243,7 @@
     "id": 31,
     "name": "Horn Drill",
     "type": "Normal",
-    "power": null,
+    "power": 80,
     "description": "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.",
     "accuracy": 30
   },
@@ -299,7 +299,7 @@
     "id": 38,
     "name": "Tail Whip",
     "type": "Normal",
-    "power": null,
+    "power": 15,
     "description": "The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stats.",
     "accuracy": 100
   },
@@ -323,7 +323,7 @@
     "id": 41,
     "name": "Leer",
     "type": "Normal",
-    "power": null,
+    "power": 20,
     "description": "The opposing Pokémon are stared at with sharp eyes. This lowers their Defense stat.",
     "accuracy": 100
   },
@@ -339,7 +339,7 @@
     "id": 43,
     "name": "Growl",
     "type": "Normal",
-    "power": null,
+    "power": 20,
     "description": "The user growls in an endearing way, making opposing Pokémon less wary and lowering their Attack stats.",
     "accuracy": 100
   },
@@ -347,7 +347,7 @@
     "id": 44,
     "name": "Roar",
     "type": "Ground",
-    "power": null,
+    "power": 70,
     "description": "The target is scared off and replaced by another Pokémon in its party. In the wild, the battle ends.",
     "accuracy": null
   },
@@ -355,7 +355,7 @@
     "id": 45,
     "name": "Sing",
     "type": "Fairy",
-    "power": null,
+    "power": 60,
     "description": "A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.",
     "accuracy": 55
   },
@@ -363,23 +363,15 @@
     "id": 46,
     "name": "Supersonic",
     "type": "Flying",
-    "power": null,
+    "power": 30,
     "description": "The user generates odd sound waves from its body. It may confuse the target.",
     "accuracy": 55
-  },
-  {
-    "id": 47,
-    "name": "Sonic Boom",
-    "type": "Flying",
-    "power": null,
-    "description": "The target is hit with a destructive shock wave that always inflicts 20 HP damage.",
-    "accuracy": 90
   },
   {
     "id": 48,
     "name": "Disable",
     "type": "Normal",
-    "power": null,
+    "power": 40,
     "description": "For four turns, this move prevents the target from using the move it last used.",
     "accuracy": 100
   },
@@ -411,7 +403,7 @@
     "id": 52,
     "name": "Mist",
     "type": "Water",
-    "power": null,
+    "power": 60,
     "description": "The user cloaks itself and its allies in a white mist that prevents any of their stats from being lowered for five turns.",
     "accuracy": null
   },
@@ -515,7 +507,7 @@
     "id": 65,
     "name": "Low Kick",
     "type": "Fighting",
-    "power": null,
+    "power": 60,
     "description": "A powerful low kick that makes the target fall over. It inflicts greater damage on heavier targets.",
     "accuracy": 100
   },
@@ -523,7 +515,7 @@
     "id": 66,
     "name": "Counter",
     "type": "Fighting",
-    "power": null,
+    "power": 50,
     "description": "A retaliation move that counters any physical attack, inflicting double the damage taken.",
     "accuracy": 100
   },
@@ -531,7 +523,7 @@
     "id": 67,
     "name": "Seismic Toss",
     "type": "Fighting",
-    "power": null,
+    "power": 80,
     "description": "The target is thrown using the power of gravity. It inflicts damage equal to the user's level.",
     "accuracy": 100
   },
@@ -563,7 +555,7 @@
     "id": 71,
     "name": "Leech Seed",
     "type": "Grass",
-    "power": null,
+    "power": 40,
     "description": "A seed is planted on the target. It steals some HP from the target every turn.",
     "accuracy": 90
   },
@@ -571,7 +563,7 @@
     "id": 72,
     "name": "Growth",
     "type": "Normal",
-    "power": null,
+    "power": 0,
     "description": "The user's body grows all at once, raising the Attack and Sp. Atk stats.",
     "accuracy": null
   },
@@ -595,7 +587,7 @@
     "id": 75,
     "name": "Poison Powder",
     "type": "Poison",
-    "power": null,
+    "power": 45,
     "description": "The user scatters a cloud of poisonous dust that poisons the target.",
     "accuracy": 75
   },
@@ -603,7 +595,7 @@
     "id": 76,
     "name": "Stun Spore",
     "type": "Grass",
-    "power": null,
+    "power": 60,
     "description": "The user scatters a cloud of paralyzing powder. It may leave the target with paralysis.",
     "accuracy": 75
   },
@@ -611,7 +603,7 @@
     "id": 77,
     "name": "Sleep Powder",
     "type": "Bug",
-    "power": null,
+    "power": 35,
     "description": "The user scatters a big cloud of sleep-inducing dust around the target.",
     "accuracy": 75
   },
@@ -627,7 +619,7 @@
     "id": 79,
     "name": "String Shot",
     "type": "Bug",
-    "power": null,
+    "power": 45,
     "description": "The targets are bound with silk blown from the user's mouth. This silk reduces the targets' Speed stat.",
     "accuracy": 95
   },
@@ -635,7 +627,7 @@
     "id": 80,
     "name": "Dragon Rage",
     "type": "Dragon",
-    "power": null,
+    "power": 80,
     "description": "This attack hits the target with a shock wave of pure rage. This attack always inflicts 40 HP damage.",
     "accuracy": 100
   },
@@ -643,7 +635,7 @@
     "id": 81,
     "name": "Sonic Boom",
     "type": "Flying",
-    "power": null,
+    "power": 50,
     "description": "The target is hit with a destructive shock wave that always inflicts 20 HP damage.",
     "accuracy": 90
   },
@@ -683,7 +675,7 @@
     "id": 86,
     "name": "Swords Dance",
     "type": "Grass",
-    "power": null,
+    "power": 60,
     "description": "A frenetic dance to uplift the fighting spirit. This sharply raises the user's Attack stat.",
     "accuracy": null
   },
@@ -783,14 +775,7 @@
     "description": "The user lashes out with a quick, spinning kick. It may also make the target flinch.",
     "accuracy": 85
   },
-  {
-    "id": 99,
-    "name": "Sand Attack",
-    "type": "Ground",
-    "power": null,
-    "description": "Sand is hurled in the target's face, reducing its accuracy.",
-    "accuracy": 100
-  },
+
   {
     "id": 100,
     "name": "Headbutt",
@@ -819,7 +804,7 @@
     "id": 103,
     "name": "Mimic",
     "type": "Bug",
-    "power": null,
+    "power": 30,
     "description": "The user copies the target's last move. The move can be used during battle until the Pokémon is switched out.",
     "accuracy": null
   },
@@ -827,7 +812,7 @@
     "id": 104,
     "name": "Screech",
     "type": "Bug",
-    "power": null,
+    "power": 30,
     "description": "An earsplitting screech is emitted to sharply reduce the target's Defense stat.",
     "accuracy": 85
   },
@@ -835,7 +820,7 @@
     "id": 105,
     "name": "Double Team",
     "type": "Fighting",
-    "power": null,
+    "power": 55,
     "description": "By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.",
     "accuracy": null
   },
@@ -843,7 +828,7 @@
     "id": 106,
     "name": "Recover",
     "type": "Bug",
-    "power": null,
+    "power": 15,
     "description": "Restoring its own cells, the user restores its own HP by half of its max HP.",
     "accuracy": null
   },
@@ -851,7 +836,7 @@
     "id": 107,
     "name": "Harden",
     "type": "Bug",
-    "power": null,
+    "power": 15,
     "description": "The user stiffens its body's muscles to raise its Defense stat.",
     "accuracy": null
   },
@@ -859,7 +844,7 @@
     "id": 108,
     "name": "Minimize",
     "type": "Bug",
-    "power": null,
+    "power": 15,
     "description": "The user compresses its body to make itself look smaller, which sharply raises its evasiveness.",
     "accuracy": null
   },
@@ -867,7 +852,7 @@
     "id": 109,
     "name": "Smokescreen",
     "type": "Normal",
-    "power": null,
+    "power": 20,
     "description": "The user releases an obscuring cloud of smoke or ink. It reduces the target's accuracy.",
     "accuracy": 100
   },
@@ -875,7 +860,7 @@
     "id": 110,
     "name": "Confuse Ray",
     "type": "Psychic",
-    "power": null,
+    "power": 30,
     "description": "The target is exposed to a sinister ray that triggers confusion.",
     "accuracy": 100
   },
@@ -883,7 +868,7 @@
     "id": 111,
     "name": "Withdraw",
     "type": "Water",
-    "power": null,
+    "power": 15,
     "description": "The user withdraws its body into its hard shell, raising its Defense stat.",
     "accuracy": null
   },
@@ -891,7 +876,7 @@
     "id": 112,
     "name": "Defense Curl",
     "type": "Bug",
-    "power": null,
+    "power": 15,
     "description": "The user curls up to conceal weak spots and raise its Defense stat.",
     "accuracy": null
   },
@@ -899,7 +884,7 @@
     "id": 113,
     "name": "Barrier",
     "type": "Bug",
-    "power": null,
+    "power": 15,
     "description": "The user throws up a sturdy wall that sharply raises its Defense stat.",
     "accuracy": null
   },
@@ -907,7 +892,7 @@
     "id": 114,
     "name": "Light Screen",
     "type": "Normal",
-    "power": null,
+    "power": 10,
     "description": "A wondrous wall of light is put up to suppress damage from special attacks for five turns.",
     "accuracy": null
   },
@@ -915,7 +900,7 @@
     "id": 115,
     "name": "Haze",
     "type": "Grass",
-    "power": null,
+    "power": 30,
     "description": "The user creates a haze that eliminates every stat change among all Pokémon engaged in battle.",
     "accuracy": null
   },
@@ -923,7 +908,7 @@
     "id": 116,
     "name": "Reflect",
     "type": "Normal",
-    "power": null,
+    "power": 30,
     "description": "A wondrous wall of light is put up to suppress damage from physical attacks for five turns.",
     "accuracy": null
   },
@@ -939,7 +924,7 @@
     "id": 118,
     "name": "Bide",
     "type": "Bug",
-    "power": null,
+    "power": 30,
     "description": "The user endures attacks for two turns, then strikes back to cause double the damage taken.",
     "accuracy": null
   },
@@ -949,13 +934,13 @@
     "type": "Psychic",
     "power": 60,
     "description": "The user waggles its finger, triggering a move. There is no telling what will happen.",
-    "accuracy": null
+    "accuracy": 30
   },
   {
     "id": 120,
     "name": "Mirror Move",
     "type": "Psychic",
-    "power": null,
+    "power": 35,
     "description": "The user counters the target by mimicking the target's last move.",
     "accuracy": null
   },
@@ -1059,7 +1044,7 @@
     "id": 133,
     "name": "Amnesia",
     "type": "Normal",
-    "power": null,
+    "power": 15,
     "description": "The user temporarily empties its mind to forget its concerns. It sharply raises the user's Sp. Def stat.",
     "accuracy": null
   },
@@ -1067,7 +1052,7 @@
     "id": 134,
     "name": "Kinesis",
     "type": "Psychic",
-    "power": null,
+    "power": 45,
     "description": "The user distracts the target by bending a spoon. It lowers the target's accuracy.",
     "accuracy": 80
   },
@@ -1075,7 +1060,7 @@
     "id": 135,
     "name": "Soft-Boiled",
     "type": "Normal",
-    "power": null,
+    "power": 50,
     "description": "The user restores its own HP by up to half of its max HP.",
     "accuracy": null
   },
@@ -1091,7 +1076,7 @@
     "id": 137,
     "name": "Glare",
     "type": "Fighting",
-    "power": null,
+    "power": 45,
     "description": "The user intimidates the target with the pattern on its belly to cause paralysis.",
     "accuracy": 100
   },
@@ -1107,7 +1092,7 @@
     "id": 139,
     "name": "Poison Gas",
     "type": "Psychic",
-    "power": null,
+    "power": 70,
     "description": "A cloud of poison gas is sprayed in the face of opposing Pokémon, poisoning those hit.",
     "accuracy": 90
   },
@@ -1147,7 +1132,7 @@
     "id": 144,
     "name": "Transform",
     "type": "Normal",
-    "power": null,
+    "power": 20,
     "description": "The user transforms into a copy of the target right down to having the same move set.",
     "accuracy": null
   },
@@ -1171,7 +1156,7 @@
     "id": 147,
     "name": "Spore",
     "type": "Grass",
-    "power": null,
+    "power": 30,
     "description": "The user scatters bursts of spores that induce sleep.",
     "accuracy": 100
   },
@@ -1179,7 +1164,7 @@
     "id": 148,
     "name": "Flash",
     "type": "Electric",
-    "power": null,
+    "power": 30,
     "description": "The user flashes a bright light that cuts the target's accuracy.",
     "accuracy": 100
   },
@@ -1203,7 +1188,7 @@
     "id": 151,
     "name": "Acid Armor",
     "type": "Poison",
-    "power": null,
+    "power": 25,
     "description": "The user alters its cellular structure to liquefy itself and sharply raise its Defense stat.",
     "accuracy": null
   },
@@ -1227,7 +1212,7 @@
     "id": 154,
     "name": "Fury Swipes",
     "type": "Normal",
-    "power": 18,
+    "power": 45,
     "description": "The target is raked with sharp claws or scythes quickly two to five times in a row.",
     "accuracy": 80
   },
@@ -1243,7 +1228,7 @@
     "id": 156,
     "name": "Rest",
     "type": "Normal",
-    "power": null,
+    "power": 0,
     "description": "The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.",
     "accuracy": null
   },
@@ -1267,7 +1252,7 @@
     "id": 159,
     "name": "Sharpen",
     "type": "Normal",
-    "power": null,
+    "power": 0,
     "description": "The user reduces its polygon count to make itself more jagged, raising the Attack stat.",
     "accuracy": null
   },
@@ -1275,7 +1260,7 @@
     "id": 160,
     "name": "Conversion",
     "type": "Normal",
-    "power": null,
+    "power": 0,
     "description": "The user changes its type to become the same type as one of its moves.",
     "accuracy": null
   },
@@ -1291,7 +1276,7 @@
     "id": 162,
     "name": "Super Fang",
     "type": "Normal",
-    "power": null,
+    "power": 80,
     "description": "The user chomps hard on the target with its sharp front fangs. The target instantly loses half of its HP.",
     "accuracy": 90
   },
@@ -1307,7 +1292,7 @@
     "id": 164,
     "name": "Substitute",
     "type": "Normal",
-    "power": null,
+    "power": 20,
     "description": "The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.",
     "accuracy": null
   },
@@ -1323,7 +1308,7 @@
     "id": 166,
     "name": "Sketch",
     "type": "Normal",
-    "power": null,
+    "power": 0,
     "description": "It enables the user to permanently learn the move last used by the target. Once used, Sketch disappears.",
     "accuracy": null
   },
@@ -1347,7 +1332,7 @@
     "id": 169,
     "name": "Spider Web",
     "type": "Normal",
-    "power": null,
+    "power": 35,
     "description": "The user ensnares the target with thin, gooey silk so it can't flee from battle.",
     "accuracy": null
   },
@@ -1355,7 +1340,7 @@
     "id": 170,
     "name": "Mind Reader",
     "type": "Psychic",
-    "power": null,
+    "power": 20,
     "description": "The user senses the target's movements with its mind to ensure its next attack does not miss the target.",
     "accuracy": null
   },
@@ -1387,7 +1372,7 @@
     "id": 174,
     "name": "Curse",
     "type": "Ghost",
-    "power": null,
+    "power": 50,
     "description": "A move that works differently for the Ghost type than for all other types.",
     "accuracy": null
   },
@@ -1403,7 +1388,7 @@
     "id": 176,
     "name": "Conversion 2",
     "type": "Normal",
-    "power": null,
+    "power": 55,
     "description": "The user changes its type to make itself resistant to the type of the attack the opponent used last.",
     "accuracy": null
   },
@@ -1419,7 +1404,7 @@
     "id": 178,
     "name": "Cotton Spore",
     "type": "Poison",
-    "power": null,
+    "power": 50,
     "description": "The user releases cotton-like spores that cling to the opposing Pokémon, which harshly lowers their Speed stat.",
     "accuracy": 100
   },
@@ -1427,7 +1412,7 @@
     "id": 179,
     "name": "Reversal",
     "type": "Normal",
-    "power": null,
+    "power": 45,
     "description": "An all-out attack that becomes more powerful the less HP the user has.",
     "accuracy": 100
   },
@@ -1435,7 +1420,7 @@
     "id": 180,
     "name": "Spite",
     "type": "Normal",
-    "power": null,
+    "power": 70,
     "description": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.",
     "accuracy": 100
   },
@@ -1475,7 +1460,7 @@
     "id": 185,
     "name": "Focus Energy",
     "type": "Fighting",
-    "power": null,
+    "power": 60,
     "description": "The user takes a deep breath and focuses so that critical hits land more easily.",
     "accuracy": null
   },
@@ -2731,7 +2716,7 @@
     "id": 362,
     "name": "Grass Knot",
     "type": "Grass",
-    "power": null,
+    "power": 60,
     "description": "The user snares the target with grass and trips it. The heavier the target, the greater the move's power.",
     "accuracy": 100
   },
@@ -2795,7 +2780,7 @@
     "id": 370,
     "name": "Brave Bird",
     "type": "Fighting",
-    "power": 120,
+    "power": 100,
     "description": "The user tucks in its wings and charges from a low altitude. This also damages the user quite a lot.",
     "accuracy": 100
   },
@@ -2803,7 +2788,7 @@
     "id": 371,
     "name": "Return",
     "type": "Normal",
-    "power": null,
+    "power": 15,
     "description": "A full-power attack that grows more powerful the more the user likes its Trainer.",
     "accuracy": 100
   },
@@ -3056,7 +3041,7 @@
     "accuracy": 90
   },
   {
-    "id": 414,
+    "id": 533,
     "name": "Spark",
     "type": "Electric",
     "power": 65,
@@ -3110,5 +3095,950 @@
     "power": 40,
     "description": "The user whips up a vicious tornado to attack the opposing Pokémon. This may also make them flinch.",
     "accuracy": 100
+  },
+  {
+    "id": 414,
+    "name": "Synthesis",
+    "type": "Grass",
+    "power": 25,
+    "description": "The user restores its own HP. The amount of HP regained varies with the weather.",
+    "accuracy": null
+  },
+  {
+    "id": 415,
+    "name": "Magical Leaf",
+    "type": "Grass",
+    "power": 60,
+    "description": "The user's attack hits the target without fail. It also bypasses the target's stat changes.",
+    "accuracy": null
+  },
+  {
+    "id": 416,
+    "name": "Eruption",
+    "type": "Fire",
+    "power": 90,
+    "description": "The user attacks the opposing Pokémon with explosive fury. The lower the user's HP, the lower the move's power.",
+    "accuracy": 100
+  },
+  {
+    "id": 417,
+    "name": "Lava Plume",
+    "type": "Fire",
+    "power": 80,
+    "description": "The user torches everything around it in an inferno of scarlet flames. This may also leave those it hits with a burn.",
+    "accuracy": 100
+  },
+  {
+    "id": 418,
+    "name": "Scary Face",
+    "type": "Normal",
+    "power": 35,
+    "description": "The user frightens the target with a scary face to harshly lower its Speed stat.",
+    "accuracy": 100
+  },
+  {
+    "id": 419,
+    "name": "Ice Fang",
+    "type": "Ice",
+    "power": 65,
+    "description": "The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.",
+    "accuracy": 95
+  },
+  {
+    "id": 420,
+    "name": "Hypnosis",
+    "type": "Psychic",
+    "power": 35,
+    "description": "The user employs hypnotic suggestion to make the target fall into a deep sleep.",
+    "accuracy": 60
+  },
+  {
+    "id": 421,
+    "name": "Extrasensory",
+    "type": "Psychic",
+    "power": 80,
+    "description": "The user attacks with an odd, unseeable power. It may also make the target flinch.",
+    "accuracy": 100
+  },
+  {
+    "id": 422,
+    "name": "Roost",
+    "type": "Flying",
+    "power": 10,
+    "description": "The user lands and rests its body. It restores the user's HP by up to half of its max HP.",
+    "accuracy": null
+  },
+  {
+    "id": 423,
+    "name": "Silver Wind",
+    "type": "Bug",
+    "power": 60,
+    "description": "The target is attacked with a powdery wind. It may also raise all the user's stats at once.",
+    "accuracy": 100
+  },
+  {
+    "id": 424,
+    "name": "Mach Punch",
+    "type": "Fighting",
+    "power": 40,
+    "description": "The user throws a punch at blinding speed. It is certain to strike first.",
+    "accuracy": 100
+  },
+  {
+    "id": 425,
+    "name": "Shadow Sneak",
+    "type": "Ghost",
+    "power": 40,
+    "description": "The user extends its shadow and attacks the target from behind. It always goes first.",
+    "accuracy": 100
+  },
+  {
+    "id": 426,
+    "name": "Charm",
+    "type": "Fairy",
+    "power": 10,
+    "description": "The user gazes at the target charmingly, making it less wary. This harshly lowers its Attack stat.",
+    "accuracy": 100
+  },
+  {
+    "id": 427,
+    "name": "Sweet Kiss",
+    "type": "Fairy",
+    "power": 20,
+    "description": "The user kisses the target with a sweet, angelic cuteness that causes confusion.",
+    "accuracy": 75
+  },
+  {
+    "id": 428,
+    "name": "Thunder Wave",
+    "type": "Electric",
+    "power": 15,
+    "description": "A weak electric charge is launched at the target. It causes paralysis if it hits.",
+    "accuracy": 90
+  },
+  {
+    "id": 429,
+    "name": "Encore",
+    "type": "Normal",
+    "power": 40,
+    "description": "The user compels the target to keep using the move it encored for three turns.",
+    "accuracy": 100
+  },
+  {
+    "id": 430,
+    "name": "Safeguard",
+    "type": "Normal",
+    "power": 10,
+    "description": "The user creates a protective field that prevents status conditions for five turns.",
+    "accuracy": null
+  },
+  {
+    "id": 431,
+    "name": "Ancient Power",
+    "type": "Rock",
+    "power": 80,
+    "description": "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+    "accuracy": 100
+  },
+  {
+    "id": 432,
+    "name": "Fairy Wind",
+    "type": "Fairy",
+    "power": 40,
+    "description": "The user stirs up a fairy wind and strikes the target with it.",
+    "accuracy": 100
+  },
+  {
+    "id": 433,
+    "name": "Teleport",
+    "type": "Psychic",
+    "power": 0,
+    "description": "Use it to flee from any wild Pokémon. It can also warp to the last Pokémon Center visited.",
+    "accuracy": null
+  },
+  {
+    "id": 434,
+    "name": "Tailwind",
+    "type": "Flying",
+    "power": 15,
+    "description": "The user creates a gust of wind that lasts for four turns. It raises the Speed stat of all Pokémon on the user's side.",
+    "accuracy": null
+  },
+  {
+    "id": 435,
+    "name": "Ominous Wind",
+    "type": "Ghost",
+    "power": 60,
+    "description": "The user blasts the target with a gust of repulsive wind. It may also raise all the user's stats at once.",
+    "accuracy": 100
+  },
+  {
+    "id": 436,
+    "name": "Dragon Pulse",
+    "type": "Dragon",
+    "power": 85,
+    "description": "The target is attacked with a shock wave generated by the user's gaping mouth.",
+    "accuracy": 100
+  },
+  {
+    "id": 437,
+    "name": "Belly Drum",
+    "type": "Normal",
+    "power": 25,
+    "description": "The user maximizes its Attack stat in exchange for HP equal to half its max HP.",
+    "accuracy": null
+  },
+  {
+    "id": 438,
+    "name": "Mud Shot",
+    "type": "Ground",
+    "power": 55,
+    "description": "The user attacks by hurling a blob of mud at the target. It also reduces the target's Speed stat.",
+    "accuracy": 95
+  },
+  {
+    "id": 439,
+    "name": "Bullet Seed",
+    "type": "Grass",
+    "power": 25,
+    "description": "The user forcefully shoots seeds at the target. It hits two to five times in a row.",
+    "accuracy": 100
+  },
+  {
+    "id": 440,
+    "name": "Acrobatics",
+    "type": "Flying",
+    "power": 55,
+    "description": "The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.",
+    "accuracy": 100
+  },
+  {
+    "id": 441,
+    "name": "Double Hit",
+    "type": "Normal",
+    "power": 35,
+    "description": "The user slams the target with a pair of punches that hit twice in a row.",
+    "accuracy": 90
+  },
+  {
+    "id": 442,
+    "name": "Agility",
+    "type": "Psychic",
+    "power": 0,
+    "description": "The user relaxes and lightens its body to move faster. It sharply raises the Speed stat.",
+    "accuracy": 0
+  },
+  {
+    "id": 443,
+    "name": "Grass Whistle",
+    "type": "Grass",
+    "power": 0,
+    "description": "The user plays a pleasant melody that lulls the target into a deep sleep.",
+    "accuracy": 55
+  },
+  {
+    "id": 444,
+    "name": "Ingrain",
+    "type": "Grass",
+    "power": 0,
+    "description": "The user lays roots that restore its HP on every turn. But it also binds the user.",
+    "accuracy": 0
+  },
+  {
+    "id": 445,
+    "name": "Wood Hammer",
+    "type": "Grass",
+    "power": 120,
+    "description": "The user slams its target with a long, thick branch. The user can't move on the next turn.",
+    "accuracy": 100
+  },
+  {
+    "id": 446,
+    "name": "Pursuit",
+    "type": "Dark",
+    "power": 40,
+    "description": "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+    "accuracy": 100
+  },
+  {
+    "id": 447,
+    "name": "Foul Play",
+    "type": "Dark",
+    "power": 95,
+    "description": "The user turns the target's power against it. The higher the target's Attack stat, the greater the damage.",
+    "accuracy": 100
+  },
+  {
+    "id": 448,
+    "name": "Astonish",
+    "type": "Ghost",
+    "power": 30,
+    "description": "The user attacks the target while shouting in a startling fashion. It may also make the target flinch.",
+    "accuracy": 100
+  },
+  {
+    "id": 449,
+    "name": "Hidden Power",
+    "type": "Normal",
+    "power": 60,
+    "description": "A unique attack that varies in type and intensity depending on the user.",
+    "accuracy": 100
+  },
+  {
+    "id": 450,
+    "name": "Mirror Coat",
+    "type": "Psychic",
+    "power": 25,
+    "description": "A retaliation move that counters any special attack, inflicting double the damage taken.",
+    "accuracy": 100
+  },
+  {
+    "id": 451,
+    "name": "Destiny Bond",
+    "type": "Ghost",
+    "power": 60,
+    "description": "After using this move, if the user faints, the Pokémon that landed the knockout hit also faints.",
+    "accuracy": null
+  },
+  {
+    "id": 452,
+    "name": "Protect",
+    "type": "Normal",
+    "power": 15,
+    "description": "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.",
+    "accuracy": null
+  },
+
+  {
+    "id": 453,
+    "name": "Heavy Slam",
+    "type": "Steel",
+    "power": 90,
+    "description": "The user slams into the target with its heavy body. The more the user outweighs the target, the greater the move's power.",
+    "accuracy": 100
+  },
+  {
+    "id": 454,
+    "name": "Gyro Ball",
+    "type": "Steel",
+    "power": 75,
+    "description": "The user tackles the target with a spinning ball of steel. The slower the user, the greater the damage.",
+    "accuracy": 100
+  },
+  {
+    "id": 455,
+    "name": "Rollout",
+    "type": "Rock",
+    "power": 30,
+    "description": "The user continually rolls into the target over five turns. It becomes more powerful each time it hits.",
+    "accuracy": 90
+  },
+  {
+    "id": 456,
+    "name": "Drill Run",
+    "type": "Ground",
+    "power": 80,
+    "description": "The user crashes into its target while rotating its body like a drill. Critical hits land more easily.",
+    "accuracy": 95
+  },
+  {
+    "id": 457,
+    "name": "Dragon Breath",
+    "type": "Dragon",
+    "power": 60,
+    "description": "The user exhales a mighty gust that inflicts damage. It may also paralyze the target.",
+    "accuracy": 100
+  },
+  {
+    "id": 458,
+    "name": "Power Trick",
+    "type": "Psychic",
+    "power": 25,
+    "description": "The user employs its psychic power to switch its Attack with its Defense stat.",
+    "accuracy": null
+  },
+  {
+    "id": 459,
+    "name": "Megahorn",
+    "type": "Bug",
+    "power": 120,
+    "description": "The user charges at the target using its large and sturdy horn. This move has a high critical-hit ratio.",
+    "accuracy": 85
+  },
+  {
+    "id": 460,
+    "name": "Hammer Arm",
+    "type": "Fighting",
+    "power": 100,
+    "description": "The user swings and hits with its strong, heavy fist. It lowers the user's Speed stat.",
+    "accuracy": 90
+  },
+  {
+    "id": 461,
+    "name": "Powder Snow",
+    "type": "Ice",
+    "power": 40,
+    "description": "The user attacks with a chilling gust of powdery snow. It may freeze the target.",
+    "accuracy": 100
+  },
+  {
+    "id": 462,
+    "name": "Icy Wind",
+    "type": "Ice",
+    "power": 55,
+    "description": "The user attacks with a gust of chilled air. It lowers the opposing team's Speed stat.",
+    "accuracy": 95
+  },
+  {
+    "id": 463,
+    "name": "Rock Blast",
+    "type": "Rock",
+    "power": 25,
+    "description": "The user hurls hard rocks at the target. Two to five rocks are launched in quick succession.",
+    "accuracy": 90
+  },
+  {
+    "id": 464,
+    "name": "Lock-On",
+    "type": "Normal",
+    "power": 25,
+    "description": "The user takes aim and locks onto the target, ensuring that the next attack will hit.",
+    "accuracy": null
+  },
+  {
+    "id": 465,
+    "name": "Present",
+    "type": "Normal",
+    "power": 10,
+    "description": "The user presents a gift to the target. The gift's type depends on the season.",
+    "accuracy": 90
+  },
+  {
+    "id": 466,
+    "name": "Steel Wing",
+    "type": "Steel",
+    "power": 70,
+    "description": "The target is hit with wings of steel. This may also raise the user's Defense stat.",
+    "accuracy": 90
+  },
+  {
+    "id": 467,
+    "name": "Snarl",
+    "type": "Dark",
+    "power": 55,
+    "description": "The user emits a low, menacing growl at the target. This may also lower the target's Special Attack stat.",
+    "accuracy": 95
+  },
+  {
+    "id": 468,
+    "name": "Rock Smash",
+    "type": "Fighting",
+    "power": 40,
+    "description": "The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.",
+    "accuracy": 100
+  },
+  {
+    "id": 469,
+    "name": "Milk Drink",
+    "type": "Normal",
+    "power": 85,
+    "description": "The user restores its own HP by up to half of its maximum HP.",
+    "accuracy": null
+  },
+  {
+    "id": 470,
+    "name": "Plasma Fists",
+    "type": "Electric",
+    "power": 100,
+    "description": "The user's fists become surrounded by plasma and it strikes the target. This move changes Normal-type moves into Electric-type moves for the remainder of the turn.",
+    "accuracy": 100
+  },
+  {
+    "id": 471,
+    "name": "Blue Flare",
+    "type": "Fire",
+    "power": 130,
+    "description": "The user sends out a sinister blue flame to engulf the target. This may also burn the target.",
+    "accuracy": 85
+  },
+  {
+    "id": 472,
+    "name": "Sacred Fire",
+    "type": "Fire",
+    "power": 100,
+    "description": "The user creates a sacred flame and hurls it at the target. This may also burn the target and reduce its accuracy.",
+    "accuracy": 95
+  },
+  {
+    "id": 473,
+    "name": "V-create",
+    "type": "Fire",
+    "power": 180,
+    "description": "The user unleashes a powerful fiery attack. It also sharply lowers the user's Defense, Sp. Def, and Speed stats.",
+    "accuracy": 95
+  },
+  {
+    "id": 474,
+    "name": "Blast Burn",
+    "type": "Fire",
+    "power": 150,
+    "description": "The user unleashes an intense fire attack that scorches everything in its path. The user can't move on the next turn.",
+    "accuracy": 90
+  },
+  {
+    "id": 475,
+    "name": "Frenzy Plant",
+    "type": "Grass",
+    "power": 150,
+    "description": "The user slams the target with an enormous tree. The user can't move on the next turn.",
+    "accuracy": 90
+  },
+  {
+    "id": 476,
+    "name": "Bloom Doom",
+    "type": "Grass",
+    "power": 160,
+    "description": "The user gathers energy and unleashes a powerful blast of blooming flowers. This move has no additional effects.",
+    "accuracy": 100
+  },
+  {
+    "id": 477,
+    "name": "Hydro Cannon",
+    "type": "Water",
+    "power": 150,
+    "description": "The user unleashes a powerful water blast. The user can't move on the next turn.",
+    "accuracy": 90
+  },
+  {
+    "id": 478,
+    "name": "Muddy Water",
+    "type": "Water",
+    "power": 90,
+    "description": "The user attacks by shooting muddy water at the opposing Pokémon. This may also lower their accuracy.",
+    "accuracy": 85
+  },
+  {
+    "id": 479,
+    "name": "Psystrike",
+    "type": "Psychic",
+    "power": 100,
+    "description": "The user materializes an odd psychic wave to attack the target. This also bypasses the target's stat changes.",
+    "accuracy": 100
+  },
+  {
+    "id": 480,
+    "name": "Precipice Blades",
+    "type": "Ground",
+    "power": 120,
+    "description": "The user attacks by hurling a mass of hard rocks at the opposing Pokémon. This may also lower their Defense stat.",
+    "accuracy": 85
+  },
+  {
+    "id": 481,
+    "name": "Shadow Force",
+    "type": "Ghost",
+    "power": 120,
+    "description": "The user disappears, then strikes the target on the next turn. This move hits even if the target protects itself.",
+    "accuracy": 100
+  },
+  {
+    "id": 482,
+    "name": "Hex",
+    "type": "Ghost",
+    "power": 65,
+    "description": "The user bewitches the target with a sinister spell. This move's power is doubled if the target is affected by a status condition.",
+    "accuracy": 100
+  },
+  {
+    "id": 483,
+    "name": "Boomburst",
+    "type": "Normal",
+    "power": 140,
+    "description": "The user attacks everything around it with the destructive power of a terrible, explosive sound. This also damages the user.",
+    "accuracy": 100
+  },
+  {
+    "id": 484,
+    "name": "Rock Wrecker",
+    "type": "Rock",
+    "power": 150,
+    "description": "The user launches a huge boulder at the target to attack. It must rest on the next turn, however.",
+    "accuracy": 90
+  },
+  {
+    "id": 485,
+    "name": "Dragon Claw",
+    "type": "Dragon",
+    "power": 80,
+    "description": "The user slashes the target with sharp claws. This move has a high critical-hit ratio.",
+    "accuracy": 100
+  },
+  {
+    "id": 486,
+    "name": "Sky Uppercut",
+    "type": "Fighting",
+    "power": 85,
+    "description": "The user attacks the target with an uppercut thrown skyward with force. This may also make the target flinch.",
+    "accuracy": 90
+  },
+  {
+    "id": 487,
+    "name": "Blaze Kick",
+    "type": "Fire",
+    "power": 85,
+    "description": "The user launches a fiery kick with a high critical-hit ratio. This may also leave the target with a burn.",
+    "accuracy": 90
+  },
+  {
+    "id": 488,
+    "name": "Blaze Burn",
+    "type": "Fire",
+    "power": 120,
+    "description": "The user unleashes an intense burst of flames, engulfing the target in scorching heat. This move has a high chance to burn the target.",
+    "accuracy": 90
+  },
+  {
+    "id": 489,
+    "name": "Fake Out",
+    "type": "Normal",
+    "power": 40,
+    "description": "The user feigns an attack and strikes the target with a surprise blow. It always goes first and makes the target flinch.",
+    "accuracy": 100
+  },
+  {
+    "id": 490,
+    "name": "Nature Power",
+    "type": "Normal",
+    "power": 20,
+    "description": "An attack that makes use of nature's power. Its effects vary depending on the user's environment.",
+    "accuracy": null
+  },
+  {
+    "id": 491,
+    "name": "Torment",
+    "type": "Dark",
+    "power": 40,
+    "description": "The user torments and enrages the target, making it incapable of using the same move consecutively.",
+    "accuracy": 100
+  },
+  {
+    "id": 492,
+    "name": "Brine",
+    "type": "Water",
+    "power": 65,
+    "description": "If the target's HP is below half, this attack will hit with double the power.",
+    "accuracy": 100
+  },
+  {
+    "id": 493,
+    "name": "Calm Mind",
+    "type": "Psychic",
+    "power": 0,
+    "description": "The user quietly focuses its mind and calms its spirit, raising its Special Attack and Special Defense stats.",
+    "accuracy": null
+  },
+  {
+    "id": 494,
+    "name": "Draining Kiss",
+    "type": "Fairy",
+    "power": 50,
+    "description": "The user steals the target's energy with a kiss. The user's HP is restored by a portion of the damage inflicted.",
+    "accuracy": 100
+  },
+  {
+    "id": 495,
+    "name": "Quiver Dance",
+    "type": "Bug",
+    "power": 0,
+    "description": "The user performs a beautiful dance, boosting its Special Attack, Special Defense, and Speed stats.",
+    "accuracy": null
+  },
+  {
+    "id": 496,
+    "name": "Spore",
+    "type": "Grass",
+    "power": 10,
+    "description": "The user scatters a cloud of spores that induces sleep in the target.",
+    "accuracy": 100
+  },
+  {
+    "id": 497,
+    "name": "Phantom Force",
+    "type": "Ghost",
+    "power": 100,
+    "description": "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+    "accuracy": 100
+  },
+  {
+    "id": 498,
+    "name": "Uproar",
+    "type": "Normal",
+    "power": 90,
+    "description": "The user attacks in an uproar for three turns. During this time, no Pokémon can fall asleep.",
+    "accuracy": 100
+  },
+  {
+    "id": 499,
+    "name": "Echoed Voice",
+    "type": "Normal",
+    "power": 40,
+    "description": "The user emits an echoing voice. The power of this move increases if used in succession.",
+    "accuracy": 100
+  },
+  {
+    "id": 500,
+    "name": "Arm Thrust",
+    "type": "Fighting",
+    "power": 15,
+    "description": "The user delivers multiple punches to the target. This move hits two to five times in a row.",
+    "accuracy": 100
+  },
+  {
+    "id": 501,
+    "name": "Vital Throw",
+    "type": "Fighting",
+    "power": 70,
+    "description": "The user attacks last. In return, this move does more damage if the target's Speed stat is higher.",
+    "accuracy": 100
+  },
+  {
+    "id": 502,
+    "name": "Force Palm",
+    "type": "Fighting",
+    "power": 60,
+    "description": "The user strikes the target with a forceful palm. This may also paralyze the target.",
+    "accuracy": 100
+  },
+  {
+    "id": 503,
+    "name": "Bounce",
+    "type": "Flying",
+    "power": 85,
+    "description": "The user bounces up high, then drops on the target on the second turn. This may also leave the target with paralysis.",
+    "accuracy": 85
+  },
+  {
+    "id": 504,
+    "name": "Attract",
+    "type": "Normal",
+    "power": 5,
+    "description": "If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.",
+    "accuracy": 100
+  },
+  {
+    "id": 505,
+    "name": "Rock Tomb",
+    "type": "Rock",
+    "power": 60,
+    "description": "Boulders are hurled at the target. This also lowers the target's Speed stat.",
+    "accuracy": 95
+  },
+  {
+    "id": 506,
+    "name": "Psych Up",
+    "type": "Normal",
+    "power": 10,
+    "description": "The user hypnotizes itself into copying any stat change made by the target.",
+    "accuracy": null
+  },
+  {
+    "id": 507,
+    "name": "Overheat",
+    "type": "Fire",
+    "power": 130,
+    "description": "The user attacks the target at full power. However, this also lowers the user's Special Attack stat.",
+    "accuracy": 90
+  },
+  {
+    "id": 508,
+    "name": "Moonlight",
+    "type": "Fairy",
+    "power": 5,
+    "description": "The user restores its own HP. The amount of HP regained varies with the weather.",
+    "accuracy": null
+  },
+  {
+    "id": 509,
+    "name": "Toxic",
+    "type": "Poison",
+    "power": 60,
+    "description": "A move that leaves the target badly poisoned. Its poison damage worsens every turn.",
+    "accuracy": 90
+  },
+  {
+    "id": 510,
+    "name": "Gastro Acid",
+    "type": "Poison",
+    "power": 80,
+    "description": "The user suppresses the target's ability and powers up its own ability to use moves.",
+    "accuracy": 100
+  },
+  {
+    "id": 511,
+    "name": "Night Slash",
+    "type": "Dark",
+    "power": 70,
+    "description": "The user slashes the target with dark energy. This may also critically strike the target.",
+    "accuracy": 100
+  },
+  {
+    "id": 512,
+    "name": "Whirlpool",
+    "type": "Water",
+    "power": 35,
+    "description": "Traps the target in a violent swirling whirlpool for four to five turns.",
+    "accuracy": 85
+  },
+  {
+    "id": 513,
+    "name": "Sand Tomb",
+    "type": "Ground",
+    "power": 35,
+    "description": "The user traps the target in a harsh sandstorm for four to five turns.",
+    "accuracy": 85
+  },
+  {
+    "id": 514,
+    "name": "Needle Arm",
+    "type": "Grass",
+    "power": 60,
+    "description": "The user attacks by wildly swinging its thorny arms. This may also make the target flinch.",
+    "accuracy": 100
+  },
+  {
+    "id": 515,
+    "name": "Crush Claw",
+    "type": "Normal",
+    "power": 75,
+    "description": "The user slashes the target with sharp claws. This may also lower the target's Defense stat.",
+    "accuracy": 95
+  },
+  {
+    "id": 516,
+    "name": "Poison Jab",
+    "type": "Poison",
+    "power": 80,
+    "description": "The user stabs the target with a toxic stinger. This may also poison the target.",
+    "accuracy": 100
+  },
+  {
+    "id": 517,
+    "name": "Knock Off",
+    "type": "Dark",
+    "power": 65,
+    "description": "The user slaps down the target's held item, preventing that item from being used in the battle.",
+    "accuracy": 100
+  },
+  {
+    "id": 518,
+    "name": "Rapid Spin",
+    "type": "Normal",
+    "power": 50,
+    "description": "A spinning attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+    "accuracy": 100
+  },
+  {
+    "id": 520,
+    "name": "Sucker Punch",
+    "type": "Dark",
+    "power": 70,
+    "description": "This move enables the user to attack first. It fails if the target is not readying an attack.",
+    "accuracy": 100
+  },
+  {
+    "id": 521,
+    "name": "Ice Ball",
+    "type": "Ice",
+    "power": 30,
+    "description": "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+    "accuracy": 90
+  },
+  {
+    "id": 522,
+    "name": "Magnet Bomb",
+    "type": "Steel",
+    "power": 60,
+    "description": "The user launches steel bombs that stick to the target. This attack never misses.",
+    "accuracy": null
+  },
+  {
+    "id": 523,
+    "name": "Doom Desire",
+    "type": "Steel",
+    "power": 140,
+    "description": "Two turns after this move is used, the user blasts the target with a concentrated bundle of light.",
+    "accuracy": 100
+  },
+  {
+    "id": 524,
+    "name": "Bullet Punch",
+    "type": "Steel",
+    "power": 40,
+    "description": "The user strikes the target with tough punches as fast as bullets. This move always goes first.",
+    "accuracy": 100
+  },
+  {
+    "id": 525,
+    "name": "Superpower",
+    "type": "Fighting",
+    "power": 120,
+    "description": "The user attacks the target with great physical power. However, it also lowers the user's Attack and Defense stats.",
+    "accuracy": 100
+  },
+  {
+    "id": 526,
+    "name": "Mist Ball",
+    "type": "Psychic",
+    "power": 70,
+    "description": "The user creates a misty orb and fires it at the target. This may lower the target's Special Attack stat.",
+    "accuracy": 100
+  },
+  {
+    "id": 527,
+    "name": "Luster Purge",
+    "type": "Psychic",
+    "power": 70,
+    "description": "The user emits a powerful burst of light. This may also lower the target's Special Defense stat.",
+    "accuracy": 100
+  },
+  {
+    "id": 528,
+    "name": "Dark Void",
+    "type": "Dark",
+    "power": 120,
+    "description": "The user releases a sinister, dream-inducing aura. It inflicts damage and may cause the target to fall asleep.",
+    "accuracy": 50
+  },
+  {
+    "id": 529,
+    "name": "Origin Pulse",
+    "type": "Water",
+    "power": 110,
+    "description": "The user summons a huge wave that crashes down on the target. This can also hit adjacent opponents.",
+    "accuracy": 85
+  },
+  {
+    "id": 530,
+    "name": "Roar of Time",
+    "type": "Dragon",
+    "power": 150,
+    "description": "The user blasts the target with power that distorts even time. The user must rest on the next turn.",
+    "accuracy": 90
+  },
+  {
+    "id": 531,
+    "name": "Psycho Boost",
+    "type": "Psychic",
+    "power": 140,
+    "description": "The user attacks the target at full power. However, this also sharply lowers the user's Special Attack stat.",
+    "accuracy": 90
+  },
+  {
+    "id": 532,
+    "name": "Dragon Rush",
+    "type": "Dragon",
+    "power": 100,
+    "description": "The user tackles the target while exhibiting overwhelming menace. This may also make the target flinch.",
+    "accuracy": 75
   }
 ]
