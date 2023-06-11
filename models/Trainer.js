@@ -40,7 +40,7 @@ Trainer.init(
     numSpins: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 0,
+      defaultValue: 10,
     },
 
     boulder_badge: {

@@ -1,8 +1,9 @@
 const router = require("express").Router();
+const { where } = require("sequelize");
 const { User, Pokemon, Gym, NPC, Trainer, Move, TM } = require("../../models");
 const jwt = require("jsonwebtoken");
 
-router.get("/", async (req, res) => {
+router.get("/insomnia", async (req, res) => {
   try {
     const trainers = await Trainer.findAll({
       include: [
@@ -17,9 +18,35 @@ router.get("/", async (req, res) => {
           ],
         },
         { model: User },
+        { model: TM },
+      ],
+    });
+    res.status(200).json(trainers);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+router.get("/", async (req, res) => {
+  try {
+    const trainers = await Trainer.findAll({
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+          where: { isMain: true },
+        },
+        { model: User },
         // { model: TM },
       ],
     });
+
     res.status(200).json(trainers);
   } catch (error) {
     console.log(error);
@@ -42,21 +69,21 @@ router.get("/:id/tms", async (req, res) => {
         //     { model: Move, as: "move4" },
         //   ],
         // },
-        { 
-          model: TM, 
+        {
+          model: TM,
           where: { inInventory: true },
         },
       ],
     });
+
+    console.log(trainers);
+
     res.status(200).json(trainers);
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
   }
 });
-
-
-
 
 router.get("/:id", async (req, res) => {
   try {
@@ -185,7 +212,7 @@ router.put("/spinNum/:id", async (req, res) => {
     console.log(error);
     res.status(500).json(error);
   }
-});   
+});
 
 //Route to auto add spin
 router.put("/spin-add/:id", async (req, res) => {
@@ -474,8 +501,8 @@ router.put("/:id/isnewmove/:name", async (req, res) => {
           ],
         },
         { model: User },
-        { 
-          model: TM, 
+        {
+          model: TM,
         },
       ],
     });
@@ -567,7 +594,7 @@ router.put("/:id/numspins-sub", async (req, res) => {
     trainer.numSpins = trainer.numSpins - 1;
 
     await trainer.save();
-    
+
     res.json(trainer);
   } catch (err) {
     console.error(err);
@@ -622,8 +649,6 @@ router.put("/:id/ismain/:name", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
-
-
 
 //create a new trainer
 router.post("/", async (req, res) => {
@@ -1075,7 +1100,6 @@ router.put("/:id/increment-num-wins-stage-1/:gymId", async (req, res) => {
 
 // update my wins to test route
 
-
 router.put("/:id/increment-num-wins-stage-2/:gymId", async (req, res) => {
   const trainerId = req.params.id;
   const gymId = req.params.gymId;
@@ -1309,6 +1333,239 @@ router.put("/:id/increment-num-wins-stage-3/:gymId", async (req, res) => {
       gymStageChange,
       pokemonNewLevel,
     });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
+router.put("/:id/pokemon/:name/update-move1/:tmName", async (req, res) => {
+  const trainerId = req.params.id;
+  const pokemonName = req.params.name;
+  const tmName = req.params.tmName;
+
+  try {
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+          where: { isMain: true },
+        },
+        { model: User },
+        { model: TM, where: { inInventory: true } },
+      ],
+    });
+
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find(
+      (p) => p.name === pokemonName && p.isMain === true
+    );
+
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    const tm = trainer.TMs.find((t) => t.TM_name === tmName);
+
+    if (!tm) {
+      return res.status(404).json({ message: "tm not found" });
+    }
+
+    const move = tm.move;
+
+    pokemon.move1Id = move.id;
+    tm.inInventory = false;
+
+    await pokemon.save();
+    await tm.save();
+    await trainer.save();
+
+    res.json(pokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+//route to change move 1, needs an INT on the request body
+router.put("/:id/pokemon/:name/update-move2/:tmName", async (req, res) => {
+  const trainerId = req.params.id;
+  const pokemonName = req.params.name;
+  const tmName = req.params.tmName;
+
+  try {
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+          where: { isMain: true },
+        },
+        { model: User },
+        { model: TM, where: { inInventory: true } },
+      ],
+    });
+
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find(
+      (p) => p.name === pokemonName && p.isMain === true
+    );
+
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    const tm = trainer.TMs.find((t) => t.TM_name === tmName && t.inInventory);
+
+    if (!tm) {
+      return res.status(404).json({ message: "tm not found" });
+    }
+
+    const move = tm.move;
+
+    pokemon.move2Id = move.id;
+    tm.inInventory = false;
+
+    await pokemon.save();
+    await tm.save();
+    await trainer.save();
+
+    res.json(pokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+
+//route to change move 1, needs an INT on the request body
+router.put("/:id/pokemon/:name/update-move3/:tmName", async (req, res) => {
+  const trainerId = req.params.id;
+  const pokemonName = req.params.name;
+  const tmName = req.params.tmName;
+
+  try {
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+          where: { isMain: true },
+        },
+        { model: User },
+        { model: TM, where: { inInventory: true } },
+      ],
+    });
+
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find(
+      (p) => p.name === pokemonName && p.isMain === true
+    );
+
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    const tm = trainer.TMs.find((t) => t.TM_name === tmName && t.inInventory);
+
+    if (!tm) {
+      return res.status(404).json({ message: "tm not found" });
+    }
+
+    const move = tm.move;
+
+    pokemon.move3Id = move.id;
+    tm.inInventory = false;
+
+    await pokemon.save();
+    await tm.save();
+    await trainer.save();
+
+    res.json(pokemon);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Server error" });
+  }
+});
+//route to change move 1, needs an INT on the request body
+router.put("/:id/pokemon/:name/update-move4/:tmName", async (req, res) => {
+  const trainerId = req.params.id;
+  const pokemonName = req.params.name;
+  const tmName = req.params.tmName;
+
+  try {
+    const trainer = await Trainer.findByPk(trainerId, {
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+          where: { isMain: true },
+        },
+        { model: User },
+        { model: TM, where: { inInventory: true } },
+      ],
+    });
+
+    if (!trainer) {
+      return res.status(404).json({ error: "Trainer not found" });
+    }
+
+    const pokemon = trainer.pokemons.find(
+      (p) => p.name === pokemonName && p.isMain === true
+    );
+
+    if (!pokemon) {
+      return res.status(404).json({ error: "Pokemon not found" });
+    }
+
+    const tm = trainer.TMs.find((t) => t.TM_name === tmName && t.inInventory);
+
+    if (!tm) {
+      return res.status(404).json({ message: "tm not found" });
+    }
+
+    const move = tm.move;
+
+    pokemon.move4Id = move.id;
+    tm.inInventory = false;
+
+    await pokemon.save();
+    await tm.save();
+    await trainer.save();
+
+    res.json(pokemon);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
