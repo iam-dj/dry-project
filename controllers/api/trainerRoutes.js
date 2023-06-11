@@ -524,6 +524,16 @@ router.put("/:id/isnewmove/:name", async (req, res) => {
         //     { model: Move, as: "move4" },
         //   ],
         // },
+        // {
+        //   model: Pokemon,
+        //   as: "pokemons",
+        //   include: [
+        //     { model: Move, as: "move1" },
+        //     { model: Move, as: "move2" },
+        //     { model: Move, as: "move3" },
+        //     { model: Move, as: "move4" },
+        //   ],
+        // },
         { model: User },
         {
           model: TM,
