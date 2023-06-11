@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
           ],
         },
         { model: User },
-        // { model: TM },
+        { model: TM },
       ],
     });
     res.status(200).json(trainers);
@@ -42,21 +42,21 @@ router.get("/:id/tms", async (req, res) => {
         //     { model: Move, as: "move4" },
         //   ],
         // },
-        { 
-          model: TM, 
-          where: { inInventory: true },
+        {
+          model: TM,
         },
       ],
     });
-    res.status(200).json(trainers);
+
+    const filteredTrainers = trainers.filter(
+      (trainer) => trainer.inInventory === true
+    );
+    res.status(200).json(filteredTrainers);
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
   }
 });
-
-
-
 
 router.get("/:id", async (req, res) => {
   try {
@@ -185,7 +185,7 @@ router.put("/spinNum/:id", async (req, res) => {
     console.log(error);
     res.status(500).json(error);
   }
-});   
+});
 
 //Route to auto add spin
 router.put("/spin-add/:id", async (req, res) => {
@@ -474,8 +474,8 @@ router.put("/:id/isnewmove/:name", async (req, res) => {
           ],
         },
         { model: User },
-        { 
-          model: TM, 
+        {
+          model: TM,
         },
       ],
     });
@@ -567,7 +567,7 @@ router.put("/:id/numspins-sub", async (req, res) => {
     trainer.numSpins = trainer.numSpins - 1;
 
     await trainer.save();
-    
+
     res.json(trainer);
   } catch (err) {
     console.error(err);
@@ -622,8 +622,6 @@ router.put("/:id/ismain/:name", async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 });
-
-
 
 //create a new trainer
 router.post("/", async (req, res) => {
@@ -1074,7 +1072,6 @@ router.put("/:id/increment-num-wins-stage-1/:gymId", async (req, res) => {
 });
 
 // update my wins to test route
-
 
 router.put("/:id/increment-num-wins-stage-2/:gymId", async (req, res) => {
   const trainerId = req.params.id;

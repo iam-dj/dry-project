@@ -27,6 +27,7 @@
     "id": 4,
     "name": "Comet Punch",
     "type": "Normal",
+    "inInventory": true,
     "power": 18,
     "description": "The target is hit with a flurry of punches that strike two to five times in a row.",
     "accuracy": 85
@@ -75,6 +76,7 @@
     "id": 10,
     "name": "Scratch",
     "type": "Normal",
+    "inInventory": true,
     "power": 40,
     "description": "Hard, pointed, sharp claws rake the target to inflict damage.",
     "accuracy": 100
@@ -83,6 +85,7 @@
     "id": 11,
     "name": "Vice Grip",
     "type": "Normal",
+    "inInventory": true,
     "power": 55,
     "description": "The target is gripped and squeezed from both sides to inflict damage.",
     "accuracy": 100
@@ -123,6 +126,7 @@
     "id": 16,
     "name": "Gust",
     "type": "Flying",
+    "inInventory": true,
     "power": 40,
     "description": "A gust of wind is whipped up by wings and launched at the target to inflict damage.",
     "accuracy": 100
@@ -147,6 +151,7 @@
     "id": 19,
     "name": "Bind",
     "type": "Normal",
+    "inInventory": true,
     "power": 15,
     "description": "Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.",
     "accuracy": 85
@@ -172,6 +177,7 @@
     "name": "Stomp",
     "type": "Normal",
     "power": 65,
+    "inInventory": true,
     "description": "The target is stomped with a big foot. It may also make the target flinch.",
     "accuracy": 100
   },
