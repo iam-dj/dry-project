@@ -1,8 +1,9 @@
 const router = require("express").Router();
+const { where } = require("sequelize");
 const { User, Pokemon, Gym, NPC, Trainer, Move, TM } = require("../../models");
 const jwt = require("jsonwebtoken");
 
-router.get("/", async (req, res) => {
+router.get("/insomnia", async (req, res) => {
   try {
     const trainers = await Trainer.findAll({
       include: [
@@ -20,6 +21,32 @@ router.get("/", async (req, res) => {
         { model: TM },
       ],
     });
+    res.status(200).json(trainers);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+router.get("/", async (req, res) => {
+  try {
+    const trainers = await Trainer.findAll({
+      include: [
+        {
+          model: Pokemon,
+          as: "pokemons",
+          include: [
+            { model: Move, as: "move1" },
+            { model: Move, as: "move2" },
+            { model: Move, as: "move3" },
+            { model: Move, as: "move4" },
+          ],
+          where: { isMain: true },
+        },
+        { model: User },
+        // { model: TM },
+      ],
+    });
+
     res.status(200).json(trainers);
   } catch (error) {
     console.log(error);
