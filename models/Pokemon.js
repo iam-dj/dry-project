@@ -19,6 +19,10 @@ Pokemon.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    generation: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     level: {
       type: DataTypes.INTEGER,
       allowNull: false,
