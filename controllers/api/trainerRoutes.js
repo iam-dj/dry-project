@@ -40,7 +40,7 @@ router.get("/", async (req, res) => {
             { model: Move, as: "move3" },
             { model: Move, as: "move4" },
           ],
-          where: { isMain: true },
+          // where: { isMain: true },
         },
         { model: User },
         // { model: TM },
@@ -71,14 +71,14 @@ router.get("/:id/tms", async (req, res) => {
         // },
         {
           model: TM,
+          where: { inInventory: true },
         },
       ],
     });
 
-    const filteredTrainers = trainers.filter(
-      (trainer) => trainer.inInventory === true
-    );
-    res.status(200).json(filteredTrainers);
+    console.log(trainers);
+
+    res.status(200).json(trainers);
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
