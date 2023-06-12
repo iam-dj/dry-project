@@ -540,7 +540,7 @@ router.put("/:id/isnewmove/:name", async (req, res) => {
     if (!TMz) {
       return res
         .status(200)
-        .json({ error: "TM not found or already in your possesion" });
+        .json({ msg: "TM not found or already in your possesion" });
     }
 
     const numSpins = trainer.numSpins;
