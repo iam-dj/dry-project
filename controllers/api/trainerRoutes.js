@@ -85,6 +85,7 @@ router.get("/:id/tms", async (req, res) => {
   }
 });
 
+//Get trainer by id and their pokemon
 router.get("/:id", async (req, res) => {
   try {
     const trainers = await Trainer.findByPk(req.params.id, {
@@ -100,6 +101,32 @@ router.get("/:id", async (req, res) => {
           ],
         },
         { model: User },
+      ],
+    });
+    res.status(200).json(trainers);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//get newmove
+router.get("/:id/getmove", async (req, res) => {
+  try {
+    const trainers = await Trainer.findByPk(req.params.id, {
+      include: [
+        // {
+        //   model: Pokemon,
+        //   as: "pokemons",
+        //   include: [
+        //     { model: Move, as: "move1" },
+        //     { model: Move, as: "move2" },
+        //     { model: Move, as: "move3" },
+        //     { model: Move, as: "move4" },
+        //   ],
+        // },
+        { model: User },
+        { model: TM },
       ],
     });
     res.status(200).json(trainers);
